@@ -13,17 +13,41 @@
 @end
 
 @implementation ViewController
+@synthesize ball;
+
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+    ballSpeed = CGPointMake (12, 12);
+    [NSTimer scheduledTimerWithTimeInterval:0.06
+                                     target:self
+                                   selector:@selector(ballMove)
+                                   userInfo:nil
+                                    repeats:YES];
 }
+
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+
+-(void) ballMove
+{
+    ball.center = CGPointMake(ball.center.x + ballSpeed.x,
+                          ball.center.y + ballSpeed.y);
+    
+    if(ball.center.x+18 >= self.view.bounds.size.width || ball.center.x <= 18) {
+    ballSpeed.x = -ballSpeed.x;
+    }
+    
+    if(ball.center.y+18 >= self.view.bounds.size.height || ball.center.y <= 18) {
+    ballSpeed.y = -ballSpeed.y;
+    }
+}
+
 
 @end

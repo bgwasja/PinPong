@@ -9,5 +9,10 @@
 #import <UIKit/UIKit.h>
 
 @interface ViewController : UIViewController
+{
+    CGPoint ballSpeed;
+}
+
+@property (strong, nonatomic) IBOutlet UIImageView *ball;
 
 @end
