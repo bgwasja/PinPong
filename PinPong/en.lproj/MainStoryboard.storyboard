@@ -12,21 +12,35 @@
                         <rect key="frame" x="0.0" y="20" width="320" height="548"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="ping pong ball.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="Spm-XP-TLU">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="play-field.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="I5i-9m-k1g"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="ping pong ball.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="JGl-ei-S2P">
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="47" id="3LF-kO-FaU"/>
-                                    <constraint firstAttribute="height" constant="47" id="8pp-Hm-ooT"/>
+                                    <constraint firstAttribute="height" constant="38" id="9nZ-0S-hL2"/>
+                                    <constraint firstAttribute="width" constant="38" id="YgF-D4-76c"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="board.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="2e3-yz-pgN">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="41" id="omb-u4-NVA"/>
+                                    <constraint firstAttribute="width" constant="166" id="qre-gM-ldm"/>
                                 </constraints>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="Spm-XP-TLU" firstAttribute="top" secondItem="3" secondAttribute="top" constant="250" id="HE7-IF-mkb"/>
-                            <constraint firstItem="Spm-XP-TLU" firstAttribute="centerX" secondItem="3" secondAttribute="centerX" type="default" id="a4S-16-ENg"/>
+                            <constraint firstItem="JGl-ei-S2P" firstAttribute="centerX" secondItem="2e3-yz-pgN" secondAttribute="centerX" type="default" id="Et8-eK-DNc"/>
+                            <constraint firstItem="JGl-ei-S2P" firstAttribute="centerY" secondItem="I5i-9m-k1g" secondAttribute="centerY" type="default" id="Iby-oj-555"/>
+                            <constraint firstItem="I5i-9m-k1g" firstAttribute="centerX" secondItem="JGl-ei-S2P" secondAttribute="centerX" type="default" id="Uab-Uq-wbR"/>
+                            <constraint firstItem="I5i-9m-k1g" firstAttribute="leading" secondItem="3" secondAttribute="leading" type="default" id="VWg-0c-JYF"/>
+                            <constraint firstAttribute="bottom" secondItem="2e3-yz-pgN" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="nN3-Nb-2AG"/>
+                            <constraint firstItem="I5i-9m-k1g" firstAttribute="top" secondItem="3" secondAttribute="top" type="default" id="ne1-u1-Vuq"/>
+                            <constraint firstItem="I5i-9m-k1g" firstAttribute="trailing" secondItem="3" secondAttribute="trailing" type="default" id="oJC-c0-3TP"/>
+                            <constraint firstItem="I5i-9m-k1g" firstAttribute="bottom" secondItem="3" secondAttribute="bottom" type="default" id="yZO-wA-56M"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="ball" destination="Spm-XP-TLU" id="2F4-jq-wvP"/>
+                        <outlet property="ball" destination="JGl-ei-S2P" id="C1t-Gf-I1s"/>
+                        <outlet property="board" destination="2e3-yz-pgN" id="V5Z-x6-JlI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
@@ -34,7 +48,9 @@
         </scene>
     </scenes>
     <resources>
+        <image name="board.jpg" width="2832" height="888"/>
         <image name="ping pong ball.jpg" width="200" height="200"/>
+        <image name="play-field.jpg" width="275" height="400"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>

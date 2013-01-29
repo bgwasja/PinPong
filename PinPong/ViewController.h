@@ -14,5 +14,6 @@
 }
 
 @property (strong, nonatomic) IBOutlet UIImageView *ball;
+@property (strong, nonatomic) IBOutlet UIImageView *board;
 
 @end
