@@ -7,9 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		AAB61C5616B7EA7000010386 /* play-field.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AAB61C5516B7EA7000010386 /* play-field.jpg */; };
-		AAB61C7016B81C4D00010386 /* board.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AAB61C6F16B81C4D00010386 /* board.jpg */; };
-		AAD35E3616B6BE7300A87A42 /* ping pong ball.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AAD35E3516B6BE7300A87A42 /* ping pong ball.jpg */; };
+		AAD4274416BA8ED6007E2777 /* ball.png in Resources */ = {isa = PBXBuildFile; fileRef = AAD4274316BA8ED6007E2777 /* ball.png */; };
+		AAD4274616BA9006007E2777 /* board1.png in Resources */ = {isa = PBXBuildFile; fileRef = AAD4274516BA9006007E2777 /* board1.png */; };
+		AAD4274816BA90B8007E2777 /* board2.png in Resources */ = {isa = PBXBuildFile; fileRef = AAD4274716BA90B8007E2777 /* board2.png */; };
+		AAD4274A16BA9605007E2777 /* play-field.png in Resources */ = {isa = PBXBuildFile; fileRef = AAD4274916BA9605007E2777 /* play-field.png */; };
 		AAEA20CD16B5A9000019C0A4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAEA20CC16B5A9000019C0A4 /* UIKit.framework */; };
 		AAEA20CF16B5A9000019C0A4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAEA20CE16B5A9000019C0A4 /* Foundation.framework */; };
 		AAEA20D116B5A9000019C0A4 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAEA20D016B5A9000019C0A4 /* CoreGraphics.framework */; };
@@ -24,9 +25,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		AAB61C5516B7EA7000010386 /* play-field.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "play-field.jpg"; sourceTree = "<group>"; };
-		AAB61C6F16B81C4D00010386 /* board.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = board.jpg; sourceTree = "<group>"; };
-		AAD35E3516B6BE7300A87A42 /* ping pong ball.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "ping pong ball.jpg"; sourceTree = "<group>"; };
+		AAD4274316BA8ED6007E2777 /* ball.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ball.png; sourceTree = "<group>"; };
+		AAD4274516BA9006007E2777 /* board1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = board1.png; sourceTree = "<group>"; };
+		AAD4274716BA90B8007E2777 /* board2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = board2.png; sourceTree = "<group>"; };
+		AAD4274916BA9605007E2777 /* play-field.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "play-field.png"; sourceTree = "<group>"; };
 		AAEA20C816B5A9000019C0A4 /* PinPong.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PinPong.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AAEA20CC16B5A9000019C0A4 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		AAEA20CE16B5A9000019C0A4 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -102,9 +104,10 @@
 		AAEA20D316B5A9000019C0A4 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				AAB61C6F16B81C4D00010386 /* board.jpg */,
-				AAB61C5516B7EA7000010386 /* play-field.jpg */,
-				AAD35E3516B6BE7300A87A42 /* ping pong ball.jpg */,
+				AAD4274916BA9605007E2777 /* play-field.png */,
+				AAD4274716BA90B8007E2777 /* board2.png */,
+				AAD4274516BA9006007E2777 /* board1.png */,
+				AAD4274316BA8ED6007E2777 /* ball.png */,
 				AAEA20D416B5A9000019C0A4 /* PinPong-Info.plist */,
 				AAEA20D516B5A9000019C0A4 /* InfoPlist.strings */,
 				AAEA20D816B5A9000019C0A4 /* main.m */,
@@ -172,9 +175,10 @@
 				AAEA20E116B5A9000019C0A4 /* Default@2x.png in Resources */,
 				AAEA20E316B5A9000019C0A4 /* Default-568h@2x.png in Resources */,
 				AAEA20E616B5A9000019C0A4 /* MainStoryboard.storyboard in Resources */,
-				AAD35E3616B6BE7300A87A42 /* ping pong ball.jpg in Resources */,
-				AAB61C5616B7EA7000010386 /* play-field.jpg in Resources */,
-				AAB61C7016B81C4D00010386 /* board.jpg in Resources */,
+				AAD4274416BA8ED6007E2777 /* ball.png in Resources */,
+				AAD4274616BA9006007E2777 /* board1.png in Resources */,
+				AAD4274816BA90B8007E2777 /* board2.png in Resources */,
+				AAD4274A16BA9605007E2777 /* play-field.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
