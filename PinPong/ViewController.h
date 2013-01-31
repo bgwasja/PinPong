@@ -11,6 +11,7 @@
 @interface ViewController : UIViewController
 {
     CGPoint ballSpeed;
+    NSTimer *timer;
     int scores1;
     int scores2;
 }

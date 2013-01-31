@@ -39,7 +39,7 @@
 
 -(void)ballTimer
 {
-    [NSTimer scheduledTimerWithTimeInterval:0.009
+    timer = [NSTimer scheduledTimerWithTimeInterval:0.009
                                      target:self
                                    selector:@selector(ballMove)
                                    userInfo:nil
@@ -59,7 +59,7 @@
     [self gameOver];
     [self playRobot];
     [self scorePlayers];
-   
+    
     ball.center = CGPointMake(ball.center.x + ballSpeed.x,
                           ball.center.y + ballSpeed.y);
     
@@ -110,12 +110,12 @@
 
 -(void)gameOver
 {
-    NSString *str;
-    if (scores1 == 2 || scores2 == 2) {
-        if (scores1 == 2) {
+    if (scores1 == 15 || scores2 == 15) {
+        NSString *str;
+        if (scores1 == 15) {
             str = [NSString stringWithFormat:@"You win !!!"];
         }
-        if (scores2 == 2) {
+        if (scores2 == 15) {
             str = [NSString stringWithFormat:@"You lost !!!"];
         }
         
@@ -124,9 +124,12 @@
                                                              delegate:self
                                                     cancelButtonTitle:@"OK"
                                                     otherButtonTitles:nil];
-        [alert show];
         scores1 = 0;
         scores2 = 0;
+        if ([timer isValid]) {
+            [timer invalidate];
+        }
+        [alert show];
     }
 }
 
