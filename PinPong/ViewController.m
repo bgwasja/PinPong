@@ -110,12 +110,12 @@
 
 -(void)gameOver
 {
-    if (scores1 == 15 || scores2 == 15) {
+    if (scores1 == 5 || scores2 == 5) {
         NSString *str;
-        if (scores1 == 15) {
+        if (scores1 == 5) {
             str = [NSString stringWithFormat:@"You win !!!"];
         }
-        if (scores2 == 15) {
+        if (scores2 == 5) {
             str = [NSString stringWithFormat:@"You lost !!!"];
         }
         
@@ -124,12 +124,13 @@
                                                              delegate:self
                                                     cancelButtonTitle:@"OK"
                                                     otherButtonTitles:nil];
-        scores1 = 0;
-        scores2 = 0;
+   
         if ([timer isValid]) {
             [timer invalidate];
         }
         [alert show];
+        scores1 = 0;
+        scores2 = 0;
     }
 }
 
