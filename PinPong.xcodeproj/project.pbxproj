@@ -11,6 +11,7 @@
 		AAD4274616BA9006007E2777 /* board1.png in Resources */ = {isa = PBXBuildFile; fileRef = AAD4274516BA9006007E2777 /* board1.png */; };
 		AAD4274816BA90B8007E2777 /* board2.png in Resources */ = {isa = PBXBuildFile; fileRef = AAD4274716BA90B8007E2777 /* board2.png */; };
 		AAD4274A16BA9605007E2777 /* play-field.png in Resources */ = {isa = PBXBuildFile; fileRef = AAD4274916BA9605007E2777 /* play-field.png */; };
+		AAD4274D16BAC49A007E2777 /* Ball.m in Sources */ = {isa = PBXBuildFile; fileRef = AAD4274C16BAC49A007E2777 /* Ball.m */; };
 		AAEA20CD16B5A9000019C0A4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAEA20CC16B5A9000019C0A4 /* UIKit.framework */; };
 		AAEA20CF16B5A9000019C0A4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAEA20CE16B5A9000019C0A4 /* Foundation.framework */; };
 		AAEA20D116B5A9000019C0A4 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAEA20D016B5A9000019C0A4 /* CoreGraphics.framework */; };
@@ -29,6 +30,8 @@
 		AAD4274516BA9006007E2777 /* board1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = board1.png; sourceTree = "<group>"; };
 		AAD4274716BA90B8007E2777 /* board2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = board2.png; sourceTree = "<group>"; };
 		AAD4274916BA9605007E2777 /* play-field.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "play-field.png"; sourceTree = "<group>"; };
+		AAD4274B16BAC49A007E2777 /* Ball.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Ball.h; sourceTree = "<group>"; };
+		AAD4274C16BAC49A007E2777 /* Ball.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Ball.m; sourceTree = "<group>"; };
 		AAEA20C816B5A9000019C0A4 /* PinPong.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PinPong.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AAEA20CC16B5A9000019C0A4 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		AAEA20CE16B5A9000019C0A4 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -96,6 +99,8 @@
 				AAEA20E416B5A9000019C0A4 /* MainStoryboard.storyboard */,
 				AAEA20E716B5A9000019C0A4 /* ViewController.h */,
 				AAEA20E816B5A9000019C0A4 /* ViewController.m */,
+				AAD4274B16BAC49A007E2777 /* Ball.h */,
+				AAD4274C16BAC49A007E2777 /* Ball.m */,
 				AAEA20D316B5A9000019C0A4 /* Supporting Files */,
 			);
 			path = PinPong;
@@ -192,6 +197,7 @@
 				AAEA20D916B5A9000019C0A4 /* main.m in Sources */,
 				AAEA20DD16B5A9000019C0A4 /* AppDelegate.m in Sources */,
 				AAEA20E916B5A9000019C0A4 /* ViewController.m in Sources */,
+				AAD4274D16BAC49A007E2777 /* Ball.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

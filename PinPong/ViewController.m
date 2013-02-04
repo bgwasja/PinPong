@@ -13,7 +13,6 @@
 @end
 
 @implementation ViewController
-@synthesize ball;
 @synthesize board;
 @synthesize board2;
 @synthesize scoreLabel1;
@@ -40,28 +39,21 @@
 -(void)ballTimer
 {
     timer = [NSTimer scheduledTimerWithTimeInterval:0.009
-                                     target:self
-                                   selector:@selector(ballMove)
-                                   userInfo:nil
-                                    repeats:YES];
+                                             target:self
+                                           selector:@selector(startGame)
+                                           userInfo:nil
+                                            repeats:YES];
 }
 
 
--(void)scorePlayers
-{
-    scoreLabel1.text = [NSString stringWithFormat:@"%d",scores1];
-    scoreLabel2.text = [NSString stringWithFormat:@"%d",scores2];
-}
-
-
--(void) ballMove
+-(void) startGame
 {
     [self gameOver];
     [self playRobot];
     [self scorePlayers];
     
     ball.center = CGPointMake(ball.center.x + ballSpeed.x,
-                          ball.center.y + ballSpeed.y);
+                              ball.center.y + ballSpeed.y);
     
     if(ball.center.x+10 >= self.view.bounds.size.width || ball.center.x <= 10) {
         ballSpeed.x = -ballSpeed.x;
@@ -72,7 +64,7 @@
             ballSpeed.y = -ballSpeed.y;
         }
     }
-
+    
     if (ball.center.y <= 10) {
         ballSpeed.y = -ballSpeed.y;
         scores1 ++;
@@ -93,15 +85,22 @@
 }
 
 
+-(void)scorePlayers
+{
+    scoreLabel1.text = [NSString stringWithFormat:@"%d",scores1];
+    scoreLabel2.text = [NSString stringWithFormat:@"%d",scores2];
+}
+
+
 -(void)playRobot
 {
     if (ball.center.y <= self.view.center.y) {
         if (ball.center.x < board2.center.x) {
-            CGPoint p = CGPointMake(board2.center.x-1.2, board2.center.y);
+            CGPoint p = CGPointMake(board2.center.x-2, board2.center.y);
             board2.center = p;
         }
         if (ball.center.x > board2.center.x) {
-            CGPoint p = CGPointMake(board2.center.x+1.2, board2.center.y);
+            CGPoint p = CGPointMake(board2.center.x+2, board2.center.y);
             board2.center = p;
         }
     }
@@ -124,10 +123,6 @@
                                                              delegate:self
                                                     cancelButtonTitle:@"OK"
                                                     otherButtonTitles:nil];
-   
-        if ([timer isValid]) {
-            [timer invalidate];
-        }
         [alert show];
         scores1 = 0;
         scores2 = 0;
