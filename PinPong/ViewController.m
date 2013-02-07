@@ -37,7 +37,7 @@
         [balls addObject:ball];
     }
     
-    gameTimer = [NSTimer scheduledTimerWithTimeInterval:0.009
+    gameTimer = [NSTimer scheduledTimerWithTimeInterval:0.01
                                      target:self
                                    selector:@selector(timer)
                                    userInfo:nil
@@ -81,7 +81,22 @@
 
 - (Ball*) nearestBall
 {
+    Ball* ball1 = [balls objectAtIndex:0];
+    Ball* ball2 = [balls objectAtIndex:1];
+    Ball* ball3 = [balls objectAtIndex:2];
     
+    if (((ball1.center.y - board2.center.y) < (ball2.center.y - board2.center.y)) && ((ball1.center.y - board2.center.y) < (ball3.center.y - board2.center.y))) {
+        return ball1;
+    }
+    
+    if (((ball2.center.y - board2.center.y) < (ball3.center.y - board2.center.y)) && ((ball2.center.y - board2.center.y) < (ball1.center.y - board2.center.y))) {
+        return ball2;
+    }
+    
+    if (((ball3.center.y - board2.center.y) < (ball1.center.y - board2.center.y)) && ((ball3.center.y - board2.center.y) < (ball2.center.y - board2.center.y))) {
+        return ball3;
+    }
+    return 0;
 }
 
 
