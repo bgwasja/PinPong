@@ -21,7 +21,7 @@
 @synthesize balls;
 
 
-- (void)viewDidLoad
+-(void)viewDidLoad
 {
     [super viewDidLoad];
     scores1 = 0;
@@ -45,7 +45,7 @@
 }
 
 
-- (void)didReceiveMemoryWarning
+-(void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
@@ -79,7 +79,7 @@
 }
 
 
-- (Ball*) nearestBall
+-(Ball*) nearestBall
 {
     Ball* ball1 = [balls objectAtIndex:0];
     Ball* ball2 = [balls objectAtIndex:1];
@@ -97,15 +97,6 @@
         return ball3;
     }
     return 0;
-    
-    
-    if (ball1.center.y <= 10 || ball2.center.y <= 10 || ball3.center.y <= 10) {
-        scores1++;
-    }
-    
-    if (self.view.center.y+10 >= ball1.bounds.size.height || self.view.center.y+10 >= ball2.bounds.size.height || self.view.center.y+10 >= ball3.bounds.size.height) {
-        scores2++;
-    }
 }
 
 
@@ -151,7 +142,7 @@
 }
 
 
-- (void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event
+-(void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event
 {
     UITouch *touch = [[event allTouches] anyObject];
     CGPoint touchLocation = [touch locationInView:touch.view];
