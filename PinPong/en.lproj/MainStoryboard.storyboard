@@ -13,12 +13,6 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="play-field.png" translatesAutoresizingMaskIntoConstraints="NO" id="I5i-9m-k1g"/>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="ball.png" translatesAutoresizingMaskIntoConstraints="NO" id="JGl-ei-S2P">
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="26" id="Zey-3F-QoD"/>
-                                    <constraint firstAttribute="width" constant="26" id="bw4-xj-VbJ"/>
-                                </constraints>
-                            </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="board1.png" translatesAutoresizingMaskIntoConstraints="NO" id="2e3-yz-pgN">
                                 <constraints>
                                     <constraint firstAttribute="height" constant="12" id="7bd-WF-mEd"/>
@@ -73,14 +67,12 @@
                             <constraint firstItem="IIT-X5-R1G" firstAttribute="baseline" secondItem="1Cs-5i-vnb" secondAttribute="baseline" type="default" id="EAt-Op-W7x"/>
                             <constraint firstItem="ev8-nM-bbj" firstAttribute="baseline" secondItem="gXA-fk-JBC" secondAttribute="baseline" type="default" id="Ip2-LF-cdU"/>
                             <constraint firstItem="ev8-nM-bbj" firstAttribute="top" secondItem="gXA-fk-JBC" secondAttribute="top" type="default" id="Jvc-hJ-uHK"/>
-                            <constraint firstItem="JGl-ei-S2P" firstAttribute="centerX" secondItem="Vcu-C6-VlN" secondAttribute="centerX" type="default" id="LMk-Xh-4rY"/>
                             <constraint firstItem="IIT-X5-R1G" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="50" id="U6z-WK-RuU"/>
                             <constraint firstItem="I5i-9m-k1g" firstAttribute="leading" secondItem="3" secondAttribute="leading" type="default" id="VWg-0c-JYF"/>
                             <constraint firstItem="Vcu-C6-VlN" firstAttribute="trailing" secondItem="2e3-yz-pgN" secondAttribute="trailing" type="default" id="elQ-ZK-erb"/>
                             <constraint firstItem="2e3-yz-pgN" firstAttribute="centerX" secondItem="I5i-9m-k1g" secondAttribute="centerX" type="default" id="h3l-fR-7gl"/>
                             <constraint firstItem="Vcu-C6-VlN" firstAttribute="top" secondItem="3" secondAttribute="top" constant="24" id="kmw-Zk-hTM"/>
                             <constraint firstItem="1Cs-5i-vnb" firstAttribute="leading" secondItem="3" secondAttribute="leading" type="default" id="miy-xg-Twa"/>
-                            <constraint firstItem="JGl-ei-S2P" firstAttribute="centerY" secondItem="I5i-9m-k1g" secondAttribute="centerY" type="default" id="nCh-1g-cTM"/>
                             <constraint firstItem="I5i-9m-k1g" firstAttribute="top" secondItem="3" secondAttribute="top" type="default" id="ne1-u1-Vuq"/>
                             <constraint firstItem="I5i-9m-k1g" firstAttribute="trailing" secondItem="3" secondAttribute="trailing" type="default" id="oJC-c0-3TP"/>
                             <constraint firstAttribute="bottom" secondItem="2e3-yz-pgN" secondAttribute="bottom" constant="23" id="r1j-eE-ocP"/>
@@ -91,7 +83,6 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="ball" destination="JGl-ei-S2P" id="C1t-Gf-I1s"/>
                         <outlet property="board" destination="2e3-yz-pgN" id="V5Z-x6-JlI"/>
                         <outlet property="board2" destination="Vcu-C6-VlN" id="s33-QE-fiw"/>
                         <outlet property="scoreLabel1" destination="IIT-X5-R1G" id="0Ak-gR-jsf"/>
@@ -103,11 +94,24 @@
         </scene>
     </scenes>
     <resources>
-        <image name="ball.png" width="126" height="126"/>
         <image name="board1.png" width="80" height="15"/>
         <image name="board2.png" width="80" height="15"/>
         <image name="play-field.png" width="275" height="400"/>
     </resources>
+    <classes>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+        <class className="ViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="board" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="board2" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="scoreLabel1" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="scoreLabel2" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

@@ -7,9 +7,17 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ViewController.h"
 
-@interface Ball : UIImageView
+@class ViewController;
 
-@property(strong, nonatomic)UIImageView *ball;
+@interface Ball : UIImageView {
+    CGPoint ballSpeed;
+}
+
+@property(assign, nonatomic) CGPoint ballSpeed;
+@property(retain, nonatomic) ViewController *cntrl;
+
+-(void) updateBall;
 
 @end

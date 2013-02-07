@@ -13,10 +13,12 @@
 @end
 
 @implementation ViewController
+
 @synthesize board;
 @synthesize board2;
 @synthesize scoreLabel1;
 @synthesize scoreLabel2;
+@synthesize balls;
 
 
 - (void)viewDidLoad
@@ -24,8 +26,22 @@
     [super viewDidLoad];
     scores1 = 0;
     scores2 = 0;
-    ballSpeed = CGPointMake (3, 3);
-    [self ballTimer];
+    
+    balls = [[NSMutableArray alloc] init];
+    
+    for (int i = 0; i < 3; i++) {
+        Ball* ball = [[Ball alloc] initWithFrame:CGRectMake(100, 100, 26, 26)];
+        ball.cntrl = self;
+        ball.ballSpeed = CGPointMake(3+i, 3+i);
+        [self.view addSubview:ball];
+        [balls addObject:ball];
+    }
+    
+    gameTimer = [NSTimer scheduledTimerWithTimeInterval:0.009
+                                     target:self
+                                   selector:@selector(timer)
+                                   userInfo:nil
+                                    repeats:YES];
 }
 
 
@@ -35,65 +51,21 @@
     // Dispose of any resources that can be recreated.
 }
 
-
--(void)ballTimer
+-(void)timer
 {
-    timer = [NSTimer scheduledTimerWithTimeInterval:0.009
-                                             target:self
-                                           selector:@selector(startGame)
-                                           userInfo:nil
-                                            repeats:YES];
-}
-
-
--(void) startGame
-{
-    [self gameOver];
+    for (Ball* ball in self.balls) {
+        [ball updateBall];
+    }
     [self playRobot];
-    [self scorePlayers];
-    
-    ball.center = CGPointMake(ball.center.x + ballSpeed.x,
-                              ball.center.y + ballSpeed.y);
-    
-    if(ball.center.x+10 >= self.view.bounds.size.width || ball.center.x <= 10) {
-        ballSpeed.x = -ballSpeed.x;
-    }
-    
-    if (CGRectIntersectsRect (ball.frame, board.frame)) {
-        if(ball.center.y+25 > board.center.y) {
-            ballSpeed.y = -ballSpeed.y;
-        }
-    }
-    
-    if (ball.center.y <= 10) {
-        ballSpeed.y = -ballSpeed.y;
-        scores1 ++;
-        NSLog(@"Player-%d",scores1);
-    }
-    
-    if (ball.center.y+10 >= self.view.bounds.size.height) {
-        ballSpeed.y = -ballSpeed.y;
-        scores2 ++;
-        NSLog(@"Robot-%d", scores2);
-    }
-    
-    if(CGRectIntersectsRect(ball.frame, board2.frame)) {
-        if(ball.center.y-20 < board2.center.y) {
-            ballSpeed.y = -ballSpeed.y;
-        }
-    }
+    [self updateScore];
+    [self gameOver];
 }
 
-
--(void)scorePlayers
-{
-    scoreLabel1.text = [NSString stringWithFormat:@"%d",scores1];
-    scoreLabel2.text = [NSString stringWithFormat:@"%d",scores2];
-}
 
 
 -(void)playRobot
 {
+    Ball* ball = [self nearestBall];
     if (ball.center.y <= self.view.center.y) {
         if (ball.center.x < board2.center.x) {
             CGPoint p = CGPointMake(board2.center.x-2, board2.center.y);
@@ -104,6 +76,19 @@
             board2.center = p;
         }
     }
+}
+
+
+- (Ball*) nearestBall
+{
+    
+}
+
+
+-(void)updateScore
+{
+    scoreLabel1.text = [NSString stringWithFormat:@"%d",scores1];
+    scoreLabel2.text = [NSString stringWithFormat:@"%d",scores2];
 }
 
 
@@ -137,7 +122,5 @@
     CGPoint xLocation = CGPointMake(touchLocation.x, board.center.y);
     board.center = xLocation;
 }
-
-
 
 @end
