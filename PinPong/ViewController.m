@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "LevelEndViewController.h"
 
 @interface ViewController ()
 
@@ -19,6 +20,7 @@
 @synthesize scoreLabel1;
 @synthesize scoreLabel2;
 @synthesize balls;
+@synthesize statusGameString;
 
 
 -(void)viewDidLoad
@@ -26,10 +28,11 @@
     [super viewDidLoad];
     scores1 = 0;
     scores2 = 0;
+    addBall=3;
     
     balls = [[NSMutableArray alloc] init];
     
-    for (int i = 0; i < 3; i++) {
+    for (int i = 0; i < addBall; i++) {
         Ball* ball = [[Ball alloc] initWithFrame:CGRectMake(100, 100, 26, 26)];
         ball.cntrl = self;
         ball.ballSpeed = CGPointMake(3+i, 3+i);
@@ -59,7 +62,13 @@
     }
     [self playRobot];
     [self updateScore];
-    [self gameOver];
+    [self levelOver];
+}
+
+
+- (IBAction)addBallButtonTapped:(id)sender {
+    addBall++;
+    [self viewDidLoad];
 }
 
 
@@ -119,25 +128,16 @@
 }
 
 
--(void)gameOver
+-(void)levelOver
 {
     if (scores1 == 15 || scores2 == 15) {
-        NSString *str;
         if (scores1 == 15) {
-            str = [NSString stringWithFormat:@"You win !!!"];
+            statusGameString = [NSString stringWithFormat:@"You win !!!"];
         }
         if (scores2 == 15) {
-            str = [NSString stringWithFormat:@"You lost !!!"];
+            statusGameString = [NSString stringWithFormat:@"You loser !!!"];
         }
-        
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Game over !!!"
-                                                              message:str
-                                                             delegate:self
-                                                    cancelButtonTitle:@"OK"
-                                                    otherButtonTitles:nil];
-        [alert show];
-        scores1 = 0;
-        scores2 = 0;
+    [self performSegueWithIdentifier:@"level" sender:self];
     }
 }
 
@@ -149,5 +149,17 @@
     CGPoint xLocation = CGPointMake(touchLocation.x, board.center.y);
     board.center = xLocation;
 }
+
+
+- (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([segue.identifier isEqualToString:@"level"]) {
+        LevelEndViewController* c = (LevelEndViewController*)segue.destinationViewController;
+        c.view;
+        [c setScore1:[scoreLabel1.text intValue]];
+        [c setScore2:[scoreLabel2.text intValue]];
+        [c setStatusGame:statusGameString];
+    }
+}
+
 
 @end
