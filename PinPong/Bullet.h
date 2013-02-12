@@ -1,16 +1,15 @@
 //
-//  Ball.h
+//  Bullet.h
 //  PinPong
 //
-//  Created by wasja on 1/31/13.
+//  Created by wasja on 2/10/13.
 //  Copyright (c) 2013 wasja. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 #import "MovableObject.h"
 
-@interface Ball : MovableObject {
-
+@interface Bullet : MovableObject {
 }
 
 -(void) collideOccuredWithObject:(MovableObject*) collideObject;

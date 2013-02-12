@@ -8,8 +8,16 @@
 
 #import "ViewController.h"
 #import "LevelEndViewController.h"
+#import "Ball.h"
+#import "Bullet.h"
+#import "Wall.h"
 
-@interface ViewController ()
+@interface ViewController () {
+  //  Wall* topWall;
+  //  Wall* bottomWall;
+  //  Wall* leftWall;
+  //  Wall* rightWall;
+}
 
 @end
 
@@ -19,32 +27,79 @@
 @synthesize board2;
 @synthesize scoreLabel1;
 @synthesize scoreLabel2;
-@synthesize balls;
+@synthesize objects;
 @synthesize statusGameString;
-
+@synthesize topWall;
+@synthesize bottomWall;
+@synthesize leftWall;
+@synthesize rightWall;
 
 -(void)viewDidLoad
 {
     [super viewDidLoad];
     scores1 = 0;
     scores2 = 0;
-    addBall=3;
     
-    balls = [[NSMutableArray alloc] init];
+    objects = [[NSMutableArray alloc] init];
     
-    for (int i = 0; i < addBall; i++) {
-        Ball* ball = [[Ball alloc] initWithFrame:CGRectMake(100, 100, 26, 26)];
-        ball.cntrl = self;
-        ball.ballSpeed = CGPointMake(3+i, 3+i);
-        [self.view addSubview:ball];
-        [balls addObject:ball];
-    }
+    [self addBall];
+    [self addWall];
     
     gameTimer = [NSTimer scheduledTimerWithTimeInterval:0.02
                                      target:self
                                    selector:@selector(timer)
                                    userInfo:nil
                                     repeats:YES];
+}
+
+
+-(void) addWall
+{
+    topWall = [[Wall alloc] initWithFrame:CGRectMake(0, 0, 320, 10)];
+    bottomWall = [[Wall alloc] initWithFrame:CGRectMake(0, 450, 310, 10)];
+    leftWall = [[Wall alloc] initWithFrame:CGRectMake(0, 0, 10, 480)];
+    rightWall = [[Wall alloc] initWithFrame:CGRectMake(310, 0, 10, 480)];
+    
+    topWall.cntrl = self;
+    bottomWall.cntrl = self;
+    leftWall.cntrl = self;
+    rightWall.cntrl = self;
+    
+    topWall.objectSpeed = CGPointMake(0, 0);
+    bottomWall.objectSpeed = CGPointMake(0, 0);
+    leftWall.objectSpeed = CGPointMake(0, 0);
+    rightWall.objectSpeed = CGPointMake(0, 0);
+
+    [self.view addSubview:topWall];
+    [self.view addSubview:bottomWall];
+    [self.view addSubview:leftWall];
+    [self.view addSubview:rightWall];
+}
+
+
+- (void) addBall
+{
+    Ball* ball = [[Ball alloc] initWithFrame:CGRectMake(100, 100, 26, 26)];
+    ball.cntrl = self;
+    ball.objectSpeed = CGPointMake(3, 3);
+    [self.view addSubview:ball];
+    [objects addObject:ball];
+}
+
+
+-(void) deleteBall
+{
+ //   [objects removeObjectsInArray:objects];
+}
+
+
+- (void)addBulletPlayer1
+{
+    Bullet* bullet = [[Bullet alloc] initWithFrame:CGRectMake(board.center.x, board.center.y-100 , 20, 40)];
+    bullet.cntrl = self;
+    bullet.objectSpeed = CGPointMake(0, -5);
+    [self.view addSubview:bullet];
+    [objects addObject:bullet];
 }
 
 
@@ -57,31 +112,50 @@
 
 -(void)timer
 {
-    for (Ball* ball in self.balls) {
-        [ball updateBall];
+    for (MovableObject* mv in self.objects ) {
+        [mv updateObject];
     }
+    
+    NSMutableArray* objectsToDelete = [NSMutableArray array];
+    for (MovableObject* mv in self.objects ) {
+        if (mv.needDelete) {
+            [objectsToDelete addObject:mv];
+            [mv removeFromSuperview];
+        }
+    }
+    
+    [self.objects removeObjectsInArray:objectsToDelete];
+    
     [self playRobot];
+    [self movementFire];
     [self updateScore];
     [self levelOver];
 }
 
 
 - (IBAction)addBallButtonTapped:(id)sender {
-    addBall++;
-    [self viewDidLoad];
+    [self addBall];
 }
 
 
 -(void)playRobot
 {
     Ball* ball = [self nearestBall];
+    
+    static int speed = 3;
+    Ball* lastBall = nil;
+    if (lastBall != ball) {
+        lastBall = ball;
+        speed = 1 + rand() % 6;
+    }
+    
     if (ball.center.y <= self.view.center.y) {
         if (ball.center.x < board2.center.x) {
-            CGPoint p = CGPointMake(board2.center.x-5, board2.center.y);
+            CGPoint p = CGPointMake(board2.center.x-speed, board2.center.y);
             board2.center = p;
         }
         if (ball.center.x > board2.center.x) {
-            CGPoint p = CGPointMake(board2.center.x+5, board2.center.y);
+            CGPoint p = CGPointMake(board2.center.x+speed, board2.center.y);
             board2.center = p;
         }
     }
@@ -90,39 +164,32 @@
 
 -(Ball*) nearestBall
 {
-    Ball* ball1 = [balls objectAtIndex:0];
-    Ball* ball2 = [balls objectAtIndex:1];
-    Ball* ball3 = [balls objectAtIndex:2];
+    Ball* nearestBall = nil;
+    float minDistance = MAXFLOAT;
     
-    if (((ball1.center.y - board2.center.y) <= (ball2.center.y - board2.center.y)) && ((ball1.center.y - board2.center.y) <= (ball3.center.y - board2.center.y))) {
-        return ball1;
+    for (Ball* ball in self.objects) {
+        float distance = ball.center.y - board2.center.y;
+        if (distance < minDistance) {
+            minDistance = distance;
+            nearestBall = ball;
+        }
     }
-    
-    if (((ball2.center.y - board2.center.y) <= (ball3.center.y - board2.center.y)) && ((ball2.center.y - board2.center.y) <= (ball1.center.y - board2.center.y))) {
-        return ball2;
-    }
-    
-    if (((ball3.center.y - board2.center.y) <= (ball1.center.y - board2.center.y)) && ((ball3.center.y - board2.center.y) <= (ball2.center.y - board2.center.y))) {
-        return ball3;
-    }
-    return 0;
+    return nearestBall;
+}
+
+
+- (void) onPlayer1HaveScore {
+    scores1++;
+}
+
+
+- (void) onPlayer2HaveScore {
+    scores2++;
 }
 
 
 -(void)updateScore
 {
-    Ball* ball1 = [balls objectAtIndex:0];
-    Ball* ball2 = [balls objectAtIndex:1];
-    Ball* ball3 = [balls objectAtIndex:2];
-    
-    if ((ball1.center.y <= 10) || (ball2.center.y <= 10) || (ball3.center.y <= 10)) {
-        scores1++;
-    }
-    
-    if ((ball1.center.y+10 > self.view.bounds.size.height) || (ball2.center.y+10 > self.view.bounds.size.height) || (ball3.center.y+10 > self.view.bounds.size.height)) {
-        scores2++;
-    }
-
     scoreLabel1.text = [NSString stringWithFormat:@"%d",scores1];
     scoreLabel2.text = [NSString stringWithFormat:@"%d",scores2];
 }
@@ -159,6 +226,19 @@
         [c setScore2:[scoreLabel2.text intValue]];
         [c setStatusGame:statusGameString];
     }
+}
+
+
+-(void) movementFire
+{
+    UISwipeGestureRecognizer *swipeUp = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(addBulletPlayer1)];
+    swipeUp.direction = UISwipeGestureRecognizerDirectionUp;
+    [self.view addGestureRecognizer:swipeUp];
+}
+
+-(void)fireAnimation
+{
+    ////
 }
 
 

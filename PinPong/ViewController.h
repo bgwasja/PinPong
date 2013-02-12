@@ -8,11 +8,10 @@
 
 #import <UIKit/UIKit.h>
 #import "AppDelegate.h"
-#import "Ball.h"
 
-@class Ball;
+@class Wall;
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController <UIGestureRecognizerDelegate>
 {
     int scores1;
     int scores2;
@@ -24,14 +23,22 @@
 @property (strong, nonatomic) IBOutlet UIImageView *board2;
 @property (strong, nonatomic) IBOutlet UILabel *scoreLabel1;
 @property (strong, nonatomic) IBOutlet UILabel *scoreLabel2;
-@property (retain, nonatomic) NSMutableArray* balls;
+@property (retain, nonatomic) NSMutableArray* objects;
 @property (retain, nonatomic) NSString *statusGameString;
+@property (strong, nonatomic) Wall *topWall;
+@property (strong, nonatomic) Wall *bottomWall;
+@property (strong, nonatomic) Wall *leftWall;
+@property (strong, nonatomic) Wall *rightWall;
 
 - (IBAction)addBallButtonTapped:(id)sender;
 
+-(void)onPlayer1HaveScore;
+-(void)onPlayer2HaveScore;
 -(void)playRobot;
 -(void)updateScore;
 -(void)levelOver;
 -(void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event;
+-(void)movementFire;
+-(void)fireAnimation;
 
 @end
