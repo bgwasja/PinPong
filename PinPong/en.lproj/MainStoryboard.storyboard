@@ -117,14 +117,10 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="play-field.png" translatesAutoresizingMaskIntoConstraints="NO" id="I5i-9m-k1g"/>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="board1.png" translatesAutoresizingMaskIntoConstraints="NO" id="2e3-yz-pgN">
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="12" id="7bd-WF-mEd"/>
-                                </constraints>
-                            </imageView>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Player:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Cs-5i-vnb">
                                 <constraints>
                                     <constraint firstAttribute="width" constant="64" id="N1g-FW-oYO"/>
+                                    <constraint firstAttribute="height" constant="21" id="reO-Gz-KTl"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                 <color key="textColor" red="0.45490199329999997" green="0.46666669849999998" blue="0.50196081400000003" alpha="1" colorSpace="deviceRGB"/>
@@ -149,18 +145,11 @@
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ev8-nM-bbj">
                                 <constraints>
                                     <constraint firstAttribute="width" constant="20" id="Tkn-x1-UmX"/>
-                                    <constraint firstAttribute="height" constant="21" id="anM-OU-HTs"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
                                 <color key="textColor" red="0.45490199329999997" green="0.46666669849999998" blue="0.50196081400000003" alpha="1" colorSpace="deviceRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="board2.png" translatesAutoresizingMaskIntoConstraints="NO" id="Vcu-C6-VlN">
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="84" id="J24-g6-U3X"/>
-                                    <constraint firstAttribute="height" constant="12" id="otf-Q3-C3m"/>
-                                </constraints>
-                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M62-z8-2Up">
                                 <constraints>
                                     <constraint firstAttribute="width" constant="26" id="RrK-bX-YDk"/>
@@ -182,33 +171,26 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="M62-z8-2Up" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="1lE-eo-SLY"/>
+                            <constraint firstAttribute="trailing" secondItem="gXA-fk-JBC" secondAttribute="trailing" constant="39" id="5mx-cg-xSM"/>
                             <constraint firstItem="ev8-nM-bbj" firstAttribute="baseline" secondItem="gXA-fk-JBC" secondAttribute="baseline" type="default" id="7lJ-AY-FER"/>
-                            <constraint firstItem="Vcu-C6-VlN" firstAttribute="leading" secondItem="2e3-yz-pgN" secondAttribute="leading" type="default" id="8Gr-GC-Yig"/>
                             <constraint firstItem="1Cs-5i-vnb" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="9Sm-gw-hQG"/>
                             <constraint firstItem="IIT-X5-R1G" firstAttribute="baseline" secondItem="1Cs-5i-vnb" secondAttribute="baseline" type="default" id="L0W-6I-3bQ"/>
                             <constraint firstAttribute="bottom" secondItem="M62-z8-2Up" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="SCI-3R-1g1"/>
                             <constraint firstItem="ev8-nM-bbj" firstAttribute="top" secondItem="gXA-fk-JBC" secondAttribute="top" type="default" id="SvB-ER-kQz"/>
                             <constraint firstItem="IIT-X5-R1G" firstAttribute="top" secondItem="gXA-fk-JBC" secondAttribute="top" type="default" id="Uga-3P-WHJ"/>
                             <constraint firstItem="I5i-9m-k1g" firstAttribute="leading" secondItem="3" secondAttribute="leading" type="default" id="VWg-0c-JYF"/>
+                            <constraint firstItem="1Cs-5i-vnb" firstAttribute="top" secondItem="3" secondAttribute="top" constant="8" id="WgK-y9-ehS"/>
                             <constraint firstAttribute="trailing" secondItem="ev8-nM-bbj" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="YLb-fh-rqw"/>
-                            <constraint firstItem="Vcu-C6-VlN" firstAttribute="top" secondItem="3" secondAttribute="top" constant="24" id="at2-Pe-5KJ"/>
-                            <constraint firstItem="Vcu-C6-VlN" firstAttribute="centerX" secondItem="I5i-9m-k1g" secondAttribute="centerX" type="default" id="bfa-6p-9wb"/>
-                            <constraint firstAttribute="trailing" secondItem="gXA-fk-JBC" secondAttribute="trailing" constant="39" id="c61-Li-NaQ"/>
-                            <constraint firstItem="Vcu-C6-VlN" firstAttribute="trailing" secondItem="2e3-yz-pgN" secondAttribute="trailing" type="default" id="elQ-ZK-erb"/>
                             <constraint firstItem="IIT-X5-R1G" firstAttribute="top" secondItem="1Cs-5i-vnb" secondAttribute="top" type="default" id="gov-Fo-nfC"/>
                             <constraint firstItem="I5i-9m-k1g" firstAttribute="top" secondItem="3" secondAttribute="top" type="default" id="ne1-u1-Vuq"/>
                             <constraint firstItem="I5i-9m-k1g" firstAttribute="trailing" secondItem="3" secondAttribute="trailing" type="default" id="oJC-c0-3TP"/>
                             <constraint firstItem="IIT-X5-R1G" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="69" id="qCz-px-Pnk"/>
-                            <constraint firstAttribute="bottom" secondItem="2e3-yz-pgN" secondAttribute="bottom" constant="23" id="r1j-eE-ocP"/>
-                            <constraint firstItem="ev8-nM-bbj" firstAttribute="top" secondItem="3" secondAttribute="top" constant="8" id="sj8-Jg-XvY"/>
                             <constraint firstItem="IIT-X5-R1G" firstAttribute="baseline" secondItem="gXA-fk-JBC" secondAttribute="baseline" type="default" id="uvR-lK-Ag5"/>
                             <constraint firstItem="I5i-9m-k1g" firstAttribute="bottom" secondItem="3" secondAttribute="bottom" type="default" id="yZO-wA-56M"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="ByK-U6-4uc"/>
                     <connections>
-                        <outlet property="board" destination="2e3-yz-pgN" id="V5Z-x6-JlI"/>
-                        <outlet property="board2" destination="Vcu-C6-VlN" id="s33-QE-fiw"/>
                         <outlet property="scoreLabel1" destination="IIT-X5-R1G" id="0Ak-gR-jsf"/>
                         <outlet property="scoreLabel2" destination="ev8-nM-bbj" id="k4h-A1-KkZ"/>
                         <segue destination="SWb-Ua-lwg" kind="modal" identifier="level" id="yUx-Oc-8c7"/>
@@ -327,48 +309,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="board1.png" width="80" height="15"/>
-        <image name="board2.png" width="80" height="15"/>
         <image name="play-field.png" width="275" height="400"/>
     </resources>
-    <classes>
-        <class className="LevelEndViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/LevelEndViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="menuButtonTapped:"/>
-                <relationship kind="action" name="nextLevelButtonTapped:"/>
-                <relationship kind="outlet" name="robotScoreLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="statusGameLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="yourScoreLabel" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="LevelViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/LevelViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="menuTapped:"/>
-            </relationships>
-        </class>
-        <class className="NSLayoutConstraint" superclassName="NSObject">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
-        </class>
-        <class className="StartPageViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/StartPageViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="levelButtonTapped:"/>
-                <relationship kind="action" name="playButtonTapped:"/>
-            </relationships>
-        </class>
-        <class className="ViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/ViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="addBallButtonTapped:"/>
-                <relationship kind="outlet" name="board" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="board2" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="scoreLabel1" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="scoreLabel2" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

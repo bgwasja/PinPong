@@ -20,6 +20,7 @@
 		AAD4274D16BAC49A007E2777 /* Ball.m in Sources */ = {isa = PBXBuildFile; fileRef = AAD4274C16BAC49A007E2777 /* Ball.m */; };
 		AAD5F5FE16CA6BA300686334 /* Wall.m in Sources */ = {isa = PBXBuildFile; fileRef = AAD5F5FD16CA6BA300686334 /* Wall.m */; };
 		AAD5F60316CA70F500686334 /* wall.png in Resources */ = {isa = PBXBuildFile; fileRef = AAD5F60216CA70F500686334 /* wall.png */; };
+		AAD8B48216CD1B56000871D5 /* PlayerBoard.m in Sources */ = {isa = PBXBuildFile; fileRef = AAD8B48116CD1B56000871D5 /* PlayerBoard.m */; };
 		AAEA20CD16B5A9000019C0A4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAEA20CC16B5A9000019C0A4 /* UIKit.framework */; };
 		AAEA20CF16B5A9000019C0A4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAEA20CE16B5A9000019C0A4 /* Foundation.framework */; };
 		AAEA20D116B5A9000019C0A4 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAEA20D016B5A9000019C0A4 /* CoreGraphics.framework */; };
@@ -54,6 +55,8 @@
 		AAD5F5FC16CA6BA300686334 /* Wall.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Wall.h; sourceTree = "<group>"; };
 		AAD5F5FD16CA6BA300686334 /* Wall.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Wall.m; sourceTree = "<group>"; };
 		AAD5F60216CA70F500686334 /* wall.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = wall.png; sourceTree = "<group>"; };
+		AAD8B48016CD1B56000871D5 /* PlayerBoard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerBoard.h; sourceTree = "<group>"; };
+		AAD8B48116CD1B56000871D5 /* PlayerBoard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerBoard.m; sourceTree = "<group>"; };
 		AAEA20C816B5A9000019C0A4 /* PinPong.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PinPong.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AAEA20CC16B5A9000019C0A4 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		AAEA20CE16B5A9000019C0A4 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -127,6 +130,8 @@
 				AA95212A16C80C8700CCA06B /* Bullet.m */,
 				AAD5F5FC16CA6BA300686334 /* Wall.h */,
 				AAD5F5FD16CA6BA300686334 /* Wall.m */,
+				AAD8B48016CD1B56000871D5 /* PlayerBoard.h */,
+				AAD8B48116CD1B56000871D5 /* PlayerBoard.m */,
 				AAC62CEF16C4023E009AE1E6 /* StartPageViewController.h */,
 				AAC62CF016C4023E009AE1E6 /* StartPageViewController.m */,
 				AAC62CF316C402BB009AE1E6 /* LevelEndViewController.h */,
@@ -242,6 +247,7 @@
 				AA95212B16C80C8700CCA06B /* Bullet.m in Sources */,
 				AACC861416C9262900F4CA86 /* MovableObject.m in Sources */,
 				AAD5F5FE16CA6BA300686334 /* Wall.m in Sources */,
+				AAD8B48216CD1B56000871D5 /* PlayerBoard.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

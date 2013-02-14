@@ -11,20 +11,14 @@
 #import "Ball.h"
 #import "Bullet.h"
 #import "Wall.h"
+#import "PlayerBoard.h"
 
-@interface ViewController () {
-  //  Wall* topWall;
-  //  Wall* bottomWall;
-  //  Wall* leftWall;
-  //  Wall* rightWall;
-}
+@interface ViewController () 
 
 @end
 
 @implementation ViewController
 
-@synthesize board;
-@synthesize board2;
 @synthesize scoreLabel1;
 @synthesize scoreLabel2;
 @synthesize objects;
@@ -33,6 +27,9 @@
 @synthesize bottomWall;
 @synthesize leftWall;
 @synthesize rightWall;
+@synthesize board;
+@synthesize board2;
+
 
 -(void)viewDidLoad
 {
@@ -44,12 +41,33 @@
     
     [self addBall];
     [self addWall];
-    
+    [self movementFire];
+    [self addBoards];
+
     gameTimer = [NSTimer scheduledTimerWithTimeInterval:0.02
                                      target:self
                                    selector:@selector(timer)
                                    userInfo:nil
                                     repeats:YES];
+}
+
+
+
+
+-(void) addBoards
+{
+    board = [[PlayerBoard alloc]initWithFrame:CGRectMake(160, 420, 85, 12)];
+    board.backgroundColor = [UIColor redColor];
+    board.cntrl = self;
+    [self.view addSubview:board];
+    [self.objects addObject:board];
+    
+    board2 = [[PlayerBoard alloc]initWithFrame:CGRectMake(160, 30, 85, 12)];
+    board2.backgroundColor = [UIColor blackColor];
+    board2.cntrl = self;
+    board2.objectSpeed = CGPointMake(6, 0);
+    [self.view addSubview:board2];
+    [self.objects addObject:board2];
 }
 
 
@@ -74,6 +92,11 @@
     [self.view addSubview:bottomWall];
     [self.view addSubview:leftWall];
     [self.view addSubview:rightWall];
+    
+    [self.objects addObject:topWall];
+    [self.objects addObject:bottomWall];
+    [self.objects addObject:leftWall];
+    [self.objects addObject:rightWall];
 }
 
 
@@ -127,7 +150,6 @@
     [self.objects removeObjectsInArray:objectsToDelete];
     
     [self playRobot];
-    [self movementFire];
     [self updateScore];
     [self levelOver];
 }
@@ -235,6 +257,7 @@
     swipeUp.direction = UISwipeGestureRecognizerDirectionUp;
     [self.view addGestureRecognizer:swipeUp];
 }
+
 
 -(void)fireAnimation
 {

@@ -10,6 +10,7 @@
 #import "AppDelegate.h"
 
 @class Wall;
+@class PlayerBoard;
 
 @interface ViewController : UIViewController <UIGestureRecognizerDelegate>
 {
@@ -19,8 +20,6 @@
     int addBall;
 }
 
-@property (strong, nonatomic) IBOutlet UIImageView *board;
-@property (strong, nonatomic) IBOutlet UIImageView *board2;
 @property (strong, nonatomic) IBOutlet UILabel *scoreLabel1;
 @property (strong, nonatomic) IBOutlet UILabel *scoreLabel2;
 @property (retain, nonatomic) NSMutableArray* objects;
@@ -29,6 +28,9 @@
 @property (strong, nonatomic) Wall *bottomWall;
 @property (strong, nonatomic) Wall *leftWall;
 @property (strong, nonatomic) Wall *rightWall;
+@property (strong, nonatomic) PlayerBoard *board;
+@property (strong, nonatomic) PlayerBoard *board2;
+
 
 - (IBAction)addBallButtonTapped:(id)sender;
 
@@ -40,5 +42,6 @@
 -(void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event;
 -(void)movementFire;
 -(void)fireAnimation;
+-(void)addBoards;
 
 @end

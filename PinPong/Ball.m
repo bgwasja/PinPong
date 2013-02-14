@@ -23,11 +23,11 @@
 
 -(void) collideOccuredWithObject:(MovableObject*) collideObject {
    
-    if (collideObject == self.cntrl.topWall) {
+    if (collideObject == (MovableObject*)self.cntrl.topWall) {
         [self.cntrl onPlayer1HaveScore];
     }
     
-    if (collideObject == self.cntrl.bottomWall) {
+    if (collideObject == (MovableObject*)self.cntrl.bottomWall) {
         [self.cntrl onPlayer2HaveScore];
     }
 }
