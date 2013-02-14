@@ -52,17 +52,15 @@
 }
 
 
-
-
 -(void) addBoards
 {
-    board = [[PlayerBoard alloc]initWithFrame:CGRectMake(160, 420, 85, 12)];
+    board = [[PlayerBoard alloc]initWithFrame:CGRectMake(160, 420, 85, 15)];
     board.backgroundColor = [UIColor redColor];
     board.cntrl = self;
     [self.view addSubview:board];
     [self.objects addObject:board];
     
-    board2 = [[PlayerBoard alloc]initWithFrame:CGRectMake(160, 30, 85, 12)];
+    board2 = [[PlayerBoard alloc]initWithFrame:CGRectMake(160, 30, 85, 15)];
     board2.backgroundColor = [UIColor blackColor];
     board2.cntrl = self;
     board2.objectSpeed = CGPointMake(6, 0);

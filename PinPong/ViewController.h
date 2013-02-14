@@ -31,7 +31,6 @@
 @property (strong, nonatomic) PlayerBoard *board;
 @property (strong, nonatomic) PlayerBoard *board2;
 
-
 - (IBAction)addBallButtonTapped:(id)sender;
 
 -(void)onPlayer1HaveScore;

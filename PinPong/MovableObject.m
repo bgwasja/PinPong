@@ -29,7 +29,6 @@
 
 -(void)updateObject{
     
-    
     for (MovableObject* mv in cntrl.objects) {
         if (self != mv) {
             if (CGRectIntersectsRect(CGRectOffset(self.frame, objectSpeed.x, 0) , mv.frame)) {

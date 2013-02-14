@@ -14,7 +14,7 @@
 {
     self = [super initWithFrame:frame];
     if (self) {
-        self.image = [UIImage imageNamed:@"board1.png"];
+        self.image = [UIImage imageNamed:@"boards.png"];
     }
     return self;
 }
