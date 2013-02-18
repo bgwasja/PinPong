@@ -44,8 +44,8 @@
 
     self.center = CGPointMake(self.center.x + objectSpeed.x,
                               self.center.y + objectSpeed.y);
+
     
-//    
 //    
 //    
 //    if (self.center.x+10 >= cntrl.view.bounds.size.width) {

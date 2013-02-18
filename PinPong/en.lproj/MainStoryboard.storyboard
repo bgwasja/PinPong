@@ -56,11 +56,11 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="Xpx-e1-bb7" firstAttribute="trailing" secondItem="WnC-oc-5bT" secondAttribute="trailing" type="default" id="7nN-jL-nLc"/>
-                            <constraint firstItem="Xpx-e1-bb7" firstAttribute="centerX" secondItem="WCg-g6-uM7" secondAttribute="centerX" type="default" id="FBk-PA-faP"/>
+                            <constraint firstItem="mg9-Ii-Jqf" firstAttribute="centerX" secondItem="WnC-oc-5bT" secondAttribute="centerX" type="default" id="3GR-wY-qXD"/>
+                            <constraint firstItem="mg9-Ii-Jqf" firstAttribute="centerX" secondItem="WCg-g6-uM7" secondAttribute="centerX" type="default" id="4dC-uc-Qsw"/>
+                            <constraint firstAttribute="bottom" secondItem="Xpx-e1-bb7" secondAttribute="bottom" constant="119" id="Ddh-DR-fZK"/>
                             <constraint firstItem="WnC-oc-5bT" firstAttribute="top" secondItem="WCg-g6-uM7" secondAttribute="top" constant="252" id="Q8J-IH-Yzu"/>
-                            <constraint firstAttribute="bottom" secondItem="Xpx-e1-bb7" secondAttribute="bottom" constant="119" id="a5r-xu-7N4"/>
-                            <constraint firstItem="mg9-Ii-Jqf" firstAttribute="centerX" secondItem="WnC-oc-5bT" secondAttribute="centerX" type="default" id="iZc-gx-ypy"/>
+                            <constraint firstItem="WnC-oc-5bT" firstAttribute="trailing" secondItem="Xpx-e1-bb7" secondAttribute="trailing" type="default" id="dNT-wP-wMX"/>
                             <constraint firstItem="Xpx-e1-bb7" firstAttribute="leading" secondItem="WnC-oc-5bT" secondAttribute="leading" type="default" id="iuQ-al-97I"/>
                             <constraint firstItem="mg9-Ii-Jqf" firstAttribute="top" secondItem="WCg-g6-uM7" secondAttribute="top" constant="99" id="yb3-3n-FeX"/>
                         </constraints>
@@ -144,7 +144,7 @@
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ev8-nM-bbj">
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="20" id="Tkn-x1-UmX"/>
+                                    <constraint firstAttribute="width" constant="34" id="CSF-tf-sLz"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
                                 <color key="textColor" red="0.45490199329999997" green="0.46666669849999998" blue="0.50196081400000003" alpha="1" colorSpace="deviceRGB"/>
@@ -175,12 +175,12 @@
                             <constraint firstItem="ev8-nM-bbj" firstAttribute="baseline" secondItem="gXA-fk-JBC" secondAttribute="baseline" type="default" id="7lJ-AY-FER"/>
                             <constraint firstItem="1Cs-5i-vnb" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="9Sm-gw-hQG"/>
                             <constraint firstItem="IIT-X5-R1G" firstAttribute="baseline" secondItem="1Cs-5i-vnb" secondAttribute="baseline" type="default" id="L0W-6I-3bQ"/>
+                            <constraint firstAttribute="trailing" secondItem="ev8-nM-bbj" secondAttribute="trailing" constant="6" id="Lse-6v-pnt"/>
                             <constraint firstAttribute="bottom" secondItem="M62-z8-2Up" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="SCI-3R-1g1"/>
                             <constraint firstItem="ev8-nM-bbj" firstAttribute="top" secondItem="gXA-fk-JBC" secondAttribute="top" type="default" id="SvB-ER-kQz"/>
                             <constraint firstItem="IIT-X5-R1G" firstAttribute="top" secondItem="gXA-fk-JBC" secondAttribute="top" type="default" id="Uga-3P-WHJ"/>
                             <constraint firstItem="I5i-9m-k1g" firstAttribute="leading" secondItem="3" secondAttribute="leading" type="default" id="VWg-0c-JYF"/>
                             <constraint firstItem="1Cs-5i-vnb" firstAttribute="top" secondItem="3" secondAttribute="top" constant="8" id="WgK-y9-ehS"/>
-                            <constraint firstAttribute="trailing" secondItem="ev8-nM-bbj" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="YLb-fh-rqw"/>
                             <constraint firstItem="IIT-X5-R1G" firstAttribute="top" secondItem="1Cs-5i-vnb" secondAttribute="top" type="default" id="gov-Fo-nfC"/>
                             <constraint firstItem="I5i-9m-k1g" firstAttribute="top" secondItem="3" secondAttribute="top" type="default" id="ne1-u1-Vuq"/>
                             <constraint firstItem="I5i-9m-k1g" firstAttribute="trailing" secondItem="3" secondAttribute="trailing" type="default" id="oJC-c0-3TP"/>

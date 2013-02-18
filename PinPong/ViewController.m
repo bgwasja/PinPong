@@ -29,7 +29,9 @@
 @synthesize rightWall;
 @synthesize board;
 @synthesize board2;
-
+@synthesize bullet;
+@synthesize ball;
+@synthesize animationImage;
 
 -(void)viewDidLoad
 {
@@ -42,9 +44,9 @@
     [self addBall];
     [self addWall];
     [self movementFire];
-    [self addBoards];
+    [self addBoard];
 
-    gameTimer = [NSTimer scheduledTimerWithTimeInterval:0.02
+    gameTimer = [NSTimer scheduledTimerWithTimeInterval:0.006
                                      target:self
                                    selector:@selector(timer)
                                    userInfo:nil
@@ -52,7 +54,7 @@
 }
 
 
--(void) addBoards
+-(void) addBoard
 {
     board = [[PlayerBoard alloc]initWithFrame:CGRectMake(160, 420, 85, 15)];
     board.backgroundColor = [UIColor redColor];
@@ -100,25 +102,19 @@
 
 - (void) addBall
 {
-    Ball* ball = [[Ball alloc] initWithFrame:CGRectMake(100, 100, 26, 26)];
+    ball = [[Ball alloc] initWithFrame:CGRectMake(100, 100, 26, 26)];
     ball.cntrl = self;
-    ball.objectSpeed = CGPointMake(3, 3);
+    ball.objectSpeed = CGPointMake(1, 1);
     [self.view addSubview:ball];
     [objects addObject:ball];
 }
 
 
--(void) deleteBall
-{
- //   [objects removeObjectsInArray:objects];
-}
-
-
 - (void)addBulletPlayer1
 {
-    Bullet* bullet = [[Bullet alloc] initWithFrame:CGRectMake(board.center.x, board.center.y-100 , 20, 40)];
+    bullet = [[Bullet alloc] initWithFrame:CGRectMake(board.center.x, board.center.y-100 , 20, 40)];
     bullet.cntrl = self;
-    bullet.objectSpeed = CGPointMake(0, -5);
+    bullet.objectSpeed = CGPointMake(0, -1);
     [self.view addSubview:bullet];
     [objects addObject:bullet];
 }
@@ -162,7 +158,7 @@
 {
     Ball* ball = [self nearestBall];
     
-    static int speed = 3;
+    static int speed = 1;
     Ball* lastBall = nil;
     if (lastBall != ball) {
         lastBall = ball;
@@ -224,7 +220,7 @@
         if (scores2 == 15) {
             statusGameString = [NSString stringWithFormat:@"You loser !!!"];
         }
-    [self performSegueWithIdentifier:@"level" sender:self];
+ //   [self performSegueWithIdentifier:@"level" sender:self];
     }
 }
 
@@ -259,7 +255,28 @@
 
 -(void)fireAnimation
 {
-    ////
+    animationImage = [[UIImageView alloc] initWithFrame:CGRectMake (bullet.center.x, bullet.center.y, 15, 15)];
+    [self.view addSubview:animationImage];
+
+    animationImage.animationImages = [self creatAnimation:@"fireAnimation.jpg"];
+    animationImage.animationDuration = 0.9;
+    animationImage.animationRepeatCount = 1;
+    [animationImage startAnimating];
+}
+
+
+- (NSArray*)creatAnimation:(NSString*)fireAnimationName {
+    UIImage *image = [UIImage imageNamed:fireAnimationName];
+    NSMutableArray *animationImages = [NSMutableArray array];
+    
+    for (int i = 0; i<8; i++) {
+        CGImageRef imageRef = CGImageCreateWithImageInRect(image.CGImage,
+                                                           CGRectMake(i*100, 0, 100, 100));
+        UIImage *animationImage = [UIImage imageWithCGImage:imageRef];
+        [animationImages addObject:animationImage];
+        CGImageRelease(imageRef);
+    }
+    return animationImages;
 }
 
 

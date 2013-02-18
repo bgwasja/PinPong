@@ -30,6 +30,10 @@
     if (collideObject == (MovableObject*)self.cntrl.bottomWall) {
         [self.cntrl onPlayer2HaveScore];
     }
+    
+    if (collideObject == (MovableObject*)self.cntrl.bullet) {
+
+    }
 }
 
 @end

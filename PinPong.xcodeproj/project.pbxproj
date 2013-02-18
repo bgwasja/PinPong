@@ -31,6 +31,7 @@
 		AAEA20E316B5A9000019C0A4 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AAEA20E216B5A9000019C0A4 /* Default-568h@2x.png */; };
 		AAEA20E616B5A9000019C0A4 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AAEA20E416B5A9000019C0A4 /* MainStoryboard.storyboard */; };
 		AAEA20E916B5A9000019C0A4 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AAEA20E816B5A9000019C0A4 /* ViewController.m */; };
+		AAF4CFDA16D26BC2002ADAEB /* fireAnimation.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AAF4CFD916D26BC2002ADAEB /* fireAnimation.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -71,6 +72,7 @@
 		AAEA20E516B5A9000019C0A4 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		AAEA20E716B5A9000019C0A4 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		AAEA20E816B5A9000019C0A4 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		AAF4CFD916D26BC2002ADAEB /* fireAnimation.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = fireAnimation.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,6 +148,7 @@
 		AAEA20D316B5A9000019C0A4 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				AAF4CFD916D26BC2002ADAEB /* fireAnimation.jpg */,
 				AAD8B48416CD322B000871D5 /* boards.png */,
 				AAD5F60216CA70F500686334 /* wall.png */,
 				AA95212616C7EB8200CCA06B /* bullet.png */,
@@ -223,6 +226,7 @@
 				AA95212716C7EB8200CCA06B /* bullet.png in Resources */,
 				AAD5F60316CA70F500686334 /* wall.png in Resources */,
 				AAD8B48516CD322B000871D5 /* boards.png in Resources */,
+				AAF4CFDA16D26BC2002ADAEB /* fireAnimation.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

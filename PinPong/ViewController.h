@@ -11,6 +11,8 @@
 
 @class Wall;
 @class PlayerBoard;
+@class Bullet;
+@class Ball;
 
 @interface ViewController : UIViewController <UIGestureRecognizerDelegate>
 {
@@ -30,6 +32,9 @@
 @property (strong, nonatomic) Wall *rightWall;
 @property (strong, nonatomic) PlayerBoard *board;
 @property (strong, nonatomic) PlayerBoard *board2;
+@property (strong, nonatomic) Bullet *bullet;
+@property (strong, nonatomic) Ball *ball;
+@property (retain, nonatomic) IBOutlet UIImageView *animationImage;
 
 - (IBAction)addBallButtonTapped:(id)sender;
 
@@ -41,6 +46,7 @@
 -(void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event;
 -(void)movementFire;
 -(void)fireAnimation;
--(void)addBoards;
+-(void)addBoard;
+- (NSArray*)creatAnimation:(NSString*)fireAnimationName;
 
 @end

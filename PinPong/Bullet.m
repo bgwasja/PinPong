@@ -10,7 +10,6 @@
 
 @implementation Bullet
 
-
 - (id)initWithFrame:(CGRect)frame
 {
     self = [super initWithFrame:frame];
@@ -39,13 +38,18 @@
     
     if (collideObject == (MovableObject*)self.cntrl.board) {
         [self.cntrl fireAnimation];
-        [self.cntrl onPlayer2HaveScore];
     }
         
     if (collideObject == (MovableObject*)self.cntrl.board2) {
         [self.cntrl fireAnimation];
+    }
+    
+    if ([collideObject isKindOfClass:[MovableObject class]]) {
+//      self.cntrl.ball.needDelete = YES;
+        [self.cntrl fireAnimation];
         [self.cntrl onPlayer1HaveScore];
     }
+
 }
 
 
