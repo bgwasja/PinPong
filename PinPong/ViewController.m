@@ -265,8 +265,8 @@
 }
 
 
-- (NSArray*)creatAnimation:(NSString*)fireAnimationName {
-    UIImage *image = [UIImage imageNamed:fireAnimationName];
+- (NSArray*)creatAnimation:(NSString*)fireAnimation{
+    UIImage *image = [UIImage imageNamed:fireAnimation];
     NSMutableArray *animationImages = [NSMutableArray array];
     
     for (int i = 0; i<8; i++) {
