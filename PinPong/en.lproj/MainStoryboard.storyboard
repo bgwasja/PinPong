@@ -155,11 +155,12 @@
                         <outlet property="scoreLabel1" destination="IIT-X5-R1G" id="0Ak-gR-jsf"/>
                         <outlet property="scoreLabel2" destination="ev8-nM-bbj" id="k4h-A1-KkZ"/>
                         <segue destination="SWb-Ua-lwg" kind="modal" identifier="level" id="yUx-Oc-8c7"/>
+                        <segue destination="qOg-fc-pOc" kind="modal" identifier="gameOver" id="LHK-98-Ukn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-388" y="-111"/>
+            <point key="canvasLocation" x="-502" y="-131"/>
         </scene>
         <!--Level End View Controller-->
         <scene sceneID="5UW-aw-nUZ">
@@ -266,49 +267,67 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JhL-8R-vyr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="168" y="-111"/>
+            <point key="canvasLocation" x="87" y="-400"/>
+        </scene>
+        <!--Game Over View Controller-->
+        <scene sceneID="wG8-qy-WRT">
+            <objects>
+                <viewController id="qOg-fc-pOc" customClass="GameOverViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="egZ-nX-Paz">
+                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Game Over" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dpo-9N-xkH">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="83" id="FEV-NT-iXb"/>
+                                    <constraint firstAttribute="width" constant="154" id="afs-3D-S1M"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O6n-gd-eTk">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="124" id="cfZ-Jb-O2O"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Menu">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="jKx-3n-2lt" kind="modal" id="SXM-IN-mu6"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="O6n-gd-eTk" firstAttribute="top" secondItem="egZ-nX-Paz" secondAttribute="top" constant="271" id="5Ec-ar-XFD"/>
+                            <constraint firstItem="O6n-gd-eTk" firstAttribute="centerX" secondItem="egZ-nX-Paz" secondAttribute="centerX" type="default" id="QKA-e7-C7a"/>
+                            <constraint firstItem="O6n-gd-eTk" firstAttribute="centerX" secondItem="dpo-9N-xkH" secondAttribute="centerX" type="default" id="e5K-Bt-sMt"/>
+                            <constraint firstItem="dpo-9N-xkH" firstAttribute="top" secondItem="egZ-nX-Paz" secondAttribute="top" constant="62" id="leq-7c-1CL"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="g6A-47-QAq"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vah-xp-TYN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="87" y="282"/>
         </scene>
     </scenes>
     <resources>
         <image name="play-field.png" width="275" height="400"/>
     </resources>
-    <classes>
-        <class className="LevelEndViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/LevelEndViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="menuButtonTapped:"/>
-                <relationship kind="action" name="nextLevelButtonTapped:"/>
-                <relationship kind="outlet" name="robotScoreLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="statusGameLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="yourScoreLabel" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="NSLayoutConstraint" superclassName="NSObject">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
-        </class>
-        <class className="StartPageViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/StartPageViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="levelButtonTapped:"/>
-                <relationship kind="action" name="playButtonTapped:"/>
-            </relationships>
-        </class>
-        <class className="ViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/ViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="addBallButtonTapped:"/>
-                <relationship kind="outlet" name="animationImage" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="scoreLabel1" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="scoreLabel2" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="cSb-eA-mUP"/>
+        <segue reference="N4M-2e-frz"/>
+        <segue reference="SXM-IN-mu6"/>
     </inferredMetricsTieBreakers>
 </document>

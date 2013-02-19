@@ -42,7 +42,7 @@
     objects = [[NSMutableArray alloc] init];
 
     NSLog(@"%d",levelId);
-    for (int i = 1; i <= levelId; i++) {
+    for (int i = 0; i < levelId; i++) {
         [self addBall];
     }
     
@@ -149,6 +149,7 @@
     
     [self playRobot];
     [self updateScore];
+    [self gameOver];
     [self levelOver];
 }
 
@@ -225,6 +226,22 @@
             statusGameString = [NSString stringWithFormat:@"You loser !!!"];
         }
     [self performSegueWithIdentifier:@"level" sender:self];
+    }
+}
+
+
+-(void)gameOver
+{
+    if (levelId == 8) {
+        if (scores1 == 5 || scores2 == 5) {
+            if (scores1 == 5) {
+                statusGameString = [NSString stringWithFormat:@"You win !!!"];
+            }
+            if (scores2 == 5) {
+                statusGameString = [NSString stringWithFormat:@"You loser !!!"];
+            }
+        [self performSegueWithIdentifier:@"gameOver" sender:self];
+        }
     }
 }
 

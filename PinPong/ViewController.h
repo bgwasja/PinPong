@@ -43,6 +43,7 @@
 -(void)playRobot;
 -(void)updateScore;
 -(void)levelOver;
+-(void)gameOver;
 -(void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event;
 -(void)movementFire;
 -(void)fireAnimation;

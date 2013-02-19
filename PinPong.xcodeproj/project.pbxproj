@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AA59715A16D3B3D60050C0F4 /* GameOverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AA59715916D3B3D60050C0F4 /* GameOverViewController.m */; };
 		AA95212716C7EB8200CCA06B /* bullet.png in Resources */ = {isa = PBXBuildFile; fileRef = AA95212616C7EB8200CCA06B /* bullet.png */; };
 		AA95212B16C80C8700CCA06B /* Bullet.m in Sources */ = {isa = PBXBuildFile; fileRef = AA95212A16C80C8700CCA06B /* Bullet.m */; };
 		AAC62CF116C4023E009AE1E6 /* StartPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AAC62CF016C4023E009AE1E6 /* StartPageViewController.m */; };
@@ -34,6 +35,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AA59715816D3B3D60050C0F4 /* GameOverViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameOverViewController.h; sourceTree = "<group>"; };
+		AA59715916D3B3D60050C0F4 /* GameOverViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameOverViewController.m; sourceTree = "<group>"; };
 		AA95212616C7EB8200CCA06B /* bullet.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bullet.png; sourceTree = "<group>"; };
 		AA95212916C80C8700CCA06B /* Bullet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Bullet.h; sourceTree = "<group>"; };
 		AA95212A16C80C8700CCA06B /* Bullet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Bullet.m; sourceTree = "<group>"; };
@@ -133,6 +136,8 @@
 				AAC62CF016C4023E009AE1E6 /* StartPageViewController.m */,
 				AAC62CF316C402BB009AE1E6 /* LevelEndViewController.h */,
 				AAC62CF416C402BB009AE1E6 /* LevelEndViewController.m */,
+				AA59715816D3B3D60050C0F4 /* GameOverViewController.h */,
+				AA59715916D3B3D60050C0F4 /* GameOverViewController.m */,
 				AAEA20D316B5A9000019C0A4 /* Supporting Files */,
 				AACC861216C9262900F4CA86 /* MovableObject.h */,
 				AACC861316C9262900F4CA86 /* MovableObject.m */,
@@ -242,6 +247,7 @@
 				AACC861416C9262900F4CA86 /* MovableObject.m in Sources */,
 				AAD5F5FE16CA6BA300686334 /* Wall.m in Sources */,
 				AAD8B48216CD1B56000871D5 /* PlayerBoard.m in Sources */,
+				AA59715A16D3B3D60050C0F4 /* GameOverViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

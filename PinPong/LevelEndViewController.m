@@ -41,6 +41,7 @@
 }
 
 
+
 - (IBAction)nextLevelButtonTapped:(id)sender {
     [UIView beginAnimations:nil context:nil];
     [UIView setAnimationDuration:1.25];
@@ -52,10 +53,6 @@
     ////////////////////////////////////////////////////////////////////////////////
     
     levelId++;
-    if (levelId == 10) {
-        [statusGameLabel setText:@"Game Over"];
-        levelId = 1;
-    }
 }
 
 
