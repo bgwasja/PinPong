@@ -234,13 +234,7 @@
 {
     if (levelId == 8) {
         if (scores1 == 5 || scores2 == 5) {
-            if (scores1 == 5) {
-                statusGameString = [NSString stringWithFormat:@"You win !!!"];
-            }
-            if (scores2 == 5) {
-                statusGameString = [NSString stringWithFormat:@"You loser !!!"];
-            }
-        [self performSegueWithIdentifier:@"gameOver" sender:self];
+            [self performSegueWithIdentifier:@"gameOver" sender:self];
         }
     }
 }
