@@ -218,12 +218,14 @@
 
 -(void)levelOver
 {
-    if (scores1 == 5 || scores2 == 5) {
-        if (scores1 == 5) {
+    if (scores1 == intScore || scores2 == intScore) {
+        if (scores1 == intScore) {
             statusGameString = [NSString stringWithFormat:@"You win !!!"];
+            /// додати картинки
         }
-        if (scores2 == 5) {
+        if (scores2 == intScore) {
             statusGameString = [NSString stringWithFormat:@"You loser !!!"];
+            /// додати картинки
         }
     [self performSegueWithIdentifier:@"level" sender:self];
     }
@@ -232,8 +234,8 @@
 
 -(void)gameOver
 {
-    if (levelId == 8) {
-        if (scores1 == 5 || scores2 == 5) {
+    if (levelId == intMaxLevel) {
+        if (scores1 == intScore || scores2 == intScore) {
             [self performSegueWithIdentifier:@"gameOver" sender:self];
         }
     }

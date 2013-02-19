@@ -9,6 +9,9 @@
 #import <UIKit/UIKit.h>
 #import "AppDelegate.h"
 
+#define intScore 10
+#define intMaxLevel 8
+
 @class Wall;
 @class PlayerBoard;
 @class Bullet;
