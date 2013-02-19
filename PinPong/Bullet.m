@@ -44,8 +44,8 @@
         [self.cntrl fireAnimation];
     }
     
-    if ([collideObject isKindOfClass:[MovableObject class]]) {
-//      self.cntrl.ball.needDelete = YES;
+    if (collideObject == (MovableObject*)self.cntrl.ball ) {
+        ////
         [self.cntrl fireAnimation];
         [self.cntrl onPlayer1HaveScore];
     }

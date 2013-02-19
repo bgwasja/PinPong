@@ -8,6 +8,7 @@
 
 #import "LevelEndViewController.h"
 #import "ViewController.h"
+#import "MovableObject.h"
 
 @interface LevelEndViewController ()
 
@@ -39,11 +40,33 @@
     // Dispose of any resources that can be recreated.
 }
 
+
 - (IBAction)nextLevelButtonTapped:(id)sender {
- //   levelId++;
+    [UIView beginAnimations:nil context:nil];
+    [UIView setAnimationDuration:1.25];
+    [UIView setAnimationCurve:UIViewAnimationCurveEaseInOut];
+    [UIView setAnimationTransition:UIViewAnimationTransitionFlipFromRight
+                           forView:self.view
+                             cache:NO];
+    [UIView commitAnimations];
+    ////////////////////////////////////////////////////////////////////////////////
+    
+    levelId++;
+    if (levelId == 10) {
+        [statusGameLabel setText:@"Game Over"];
+        levelId = 1;
+    }
 }
 
+
 - (IBAction)menuButtonTapped:(id)sender {
+    [UIView beginAnimations:nil context:nil];
+    [UIView setAnimationDuration:1.25];
+    [UIView setAnimationCurve:UIViewAnimationCurveEaseInOut];
+    [UIView setAnimationTransition:UIViewAnimationTransitionFlipFromLeft
+                           forView:self.view
+                             cache:NO];
+    [UIView commitAnimations];
 }
 
 
@@ -51,9 +74,11 @@
     [yourScoreLabel setText:[NSString stringWithFormat:@"%d",score1]];
 }
 
+
 -(void) setScore2:(int)score2{
     [robotScoreLabel setText:[NSString stringWithFormat:@"%d",score2]];
 }
+
 
 -(void) setStatusGame:(NSString*)status{
     [statusGameLabel setText:[NSString stringWithString:status]];

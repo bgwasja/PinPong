@@ -47,6 +47,8 @@
 -(void)movementFire;
 -(void)fireAnimation;
 -(void)addBoard;
-- (NSArray*)creatAnimation:(NSString*)fireAnimation;
+-(NSArray*)creatAnimation:(NSString*)fireAnimation;
+-(void)ballAnimation;
+-(void)addBall;
 
 @end

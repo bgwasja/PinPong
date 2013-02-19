@@ -40,12 +40,13 @@
     scores2 = 0;
     
     objects = [[NSMutableArray alloc] init];
-    
+
+    NSLog(@"%d",levelId);
     [self addBall];
     [self addWall];
     [self movementFire];
     [self addBoard];
-
+    
     gameTimer = [NSTimer scheduledTimerWithTimeInterval:0.006
                                      target:self
                                    selector:@selector(timer)
@@ -156,7 +157,7 @@
 
 -(void)playRobot
 {
-    Ball* ball = [self nearestBall];
+    ball = [self nearestBall];
     
     static int speed = 1;
     Ball* lastBall = nil;
@@ -183,7 +184,7 @@
     Ball* nearestBall = nil;
     float minDistance = MAXFLOAT;
     
-    for (Ball* ball in self.objects) {
+    for (ball in self.objects) {
         float distance = ball.center.y - board2.center.y;
         if (distance < minDistance) {
             minDistance = distance;
@@ -213,14 +214,14 @@
 
 -(void)levelOver
 {
-    if (scores1 == 15 || scores2 == 15) {
-        if (scores1 == 15) {
+    if (scores1 == 5 || scores2 == 5) {
+        if (scores1 == 5) {
             statusGameString = [NSString stringWithFormat:@"You win !!!"];
         }
-        if (scores2 == 15) {
+        if (scores2 == 5) {
             statusGameString = [NSString stringWithFormat:@"You loser !!!"];
         }
- //   [self performSegueWithIdentifier:@"level" sender:self];
+    [self performSegueWithIdentifier:@"level" sender:self];
     }
 }
 
@@ -257,9 +258,19 @@
 {
     animationImage = [[UIImageView alloc] initWithFrame:CGRectMake (bullet.center.x, bullet.center.y, 15, 15)];
     [self.view addSubview:animationImage];
-
     animationImage.animationImages = [self creatAnimation:@"fireAnimation.jpg"];
     animationImage.animationDuration = 0.9;
+    animationImage.animationRepeatCount = 1;
+    [animationImage startAnimating];
+}
+
+
+-(void)ballAnimation
+{
+    animationImage = [[UIImageView alloc] initWithFrame:CGRectMake (ball.center.x, ball.center.y, 15, 15)];
+    [self.view addSubview:animationImage];
+    animationImage.animationImages = [self creatAnimation:@"fireAnimation.jpg"];
+    animationImage.animationDuration = 0.01;
     animationImage.animationRepeatCount = 1;
     [animationImage startAnimating];
 }
