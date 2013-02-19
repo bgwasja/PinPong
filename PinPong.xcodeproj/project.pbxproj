@@ -11,7 +11,6 @@
 		AA95212B16C80C8700CCA06B /* Bullet.m in Sources */ = {isa = PBXBuildFile; fileRef = AA95212A16C80C8700CCA06B /* Bullet.m */; };
 		AAC62CF116C4023E009AE1E6 /* StartPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AAC62CF016C4023E009AE1E6 /* StartPageViewController.m */; };
 		AAC62CF516C402BB009AE1E6 /* LevelEndViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AAC62CF416C402BB009AE1E6 /* LevelEndViewController.m */; };
-		AAC62CF816C407B1009AE1E6 /* LevelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AAC62CF716C407B1009AE1E6 /* LevelViewController.m */; };
 		AACC861416C9262900F4CA86 /* MovableObject.m in Sources */ = {isa = PBXBuildFile; fileRef = AACC861316C9262900F4CA86 /* MovableObject.m */; };
 		AAD4274416BA8ED6007E2777 /* ball.png in Resources */ = {isa = PBXBuildFile; fileRef = AAD4274316BA8ED6007E2777 /* ball.png */; };
 		AAD4274A16BA9605007E2777 /* play-field.png in Resources */ = {isa = PBXBuildFile; fileRef = AAD4274916BA9605007E2777 /* play-field.png */; };
@@ -42,8 +41,6 @@
 		AAC62CF016C4023E009AE1E6 /* StartPageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StartPageViewController.m; sourceTree = "<group>"; };
 		AAC62CF316C402BB009AE1E6 /* LevelEndViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LevelEndViewController.h; sourceTree = "<group>"; };
 		AAC62CF416C402BB009AE1E6 /* LevelEndViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LevelEndViewController.m; sourceTree = "<group>"; };
-		AAC62CF616C407B1009AE1E6 /* LevelViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LevelViewController.h; sourceTree = "<group>"; };
-		AAC62CF716C407B1009AE1E6 /* LevelViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LevelViewController.m; sourceTree = "<group>"; };
 		AACC861216C9262900F4CA86 /* MovableObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MovableObject.h; sourceTree = "<group>"; };
 		AACC861316C9262900F4CA86 /* MovableObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MovableObject.m; sourceTree = "<group>"; };
 		AAD4274316BA8ED6007E2777 /* ball.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ball.png; sourceTree = "<group>"; };
@@ -136,8 +133,6 @@
 				AAC62CF016C4023E009AE1E6 /* StartPageViewController.m */,
 				AAC62CF316C402BB009AE1E6 /* LevelEndViewController.h */,
 				AAC62CF416C402BB009AE1E6 /* LevelEndViewController.m */,
-				AAC62CF616C407B1009AE1E6 /* LevelViewController.h */,
-				AAC62CF716C407B1009AE1E6 /* LevelViewController.m */,
 				AAEA20D316B5A9000019C0A4 /* Supporting Files */,
 				AACC861216C9262900F4CA86 /* MovableObject.h */,
 				AACC861316C9262900F4CA86 /* MovableObject.m */,
@@ -243,7 +238,6 @@
 				AAD4274D16BAC49A007E2777 /* Ball.m in Sources */,
 				AAC62CF116C4023E009AE1E6 /* StartPageViewController.m in Sources */,
 				AAC62CF516C402BB009AE1E6 /* LevelEndViewController.m in Sources */,
-				AAC62CF816C407B1009AE1E6 /* LevelViewController.m in Sources */,
 				AA95212B16C80C8700CCA06B /* Bullet.m in Sources */,
 				AACC861416C9262900F4CA86 /* MovableObject.m in Sources */,
 				AAD5F5FE16CA6BA300686334 /* Wall.m in Sources */,

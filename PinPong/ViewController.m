@@ -42,7 +42,10 @@
     objects = [[NSMutableArray alloc] init];
 
     NSLog(@"%d",levelId);
-    [self addBall];
+    for (int i = 1; i <= levelId; i++) {
+        [self addBall];
+    }
+    
     [self addWall];
     [self movementFire];
     [self addBoard];
