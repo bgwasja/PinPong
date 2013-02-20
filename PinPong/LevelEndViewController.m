@@ -50,8 +50,7 @@
                            forView:self.view
                              cache:NO];
     [UIView commitAnimations];
-    ////////////////////////////////////////////////////////////////////////////////
-    
+
     levelId++;
 }
 

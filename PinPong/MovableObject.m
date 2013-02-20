@@ -31,7 +31,7 @@
     
     for (MovableObject* mv in cntrl.objects) {
         if (self != mv) {
-            if (CGRectIntersectsRect(CGRectOffset(self.frame, objectSpeed.x, 0) , mv.frame)) {
+            if (CGRectIntersectsRect(CGRectOffset(self.frame, objectSpeed.x, 0) , mv.frame) ) {
                 objectSpeed.x = -objectSpeed.x;
                 [self collideOccuredWithObject:mv];
             }

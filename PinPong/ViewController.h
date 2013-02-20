@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "AppDelegate.h"
 
-#define intScore 10
+#define intMaxScore 10
 #define intMaxLevel 8
 
 @class Wall;

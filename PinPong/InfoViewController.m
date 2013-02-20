@@ -1,19 +1,18 @@
 //
-//  StartPageViewController.m
+//  InfoViewController.m
 //  PinPong
 //
-//  Created by wasja on 2/7/13.
+//  Created by wasja on 2/20/13.
 //  Copyright (c) 2013 wasja. All rights reserved.
 //
 
-#import "StartPageViewController.h"
-#import "AppDelegate.h"
+#import "InfoViewController.h"
 
-@interface StartPageViewController ()
+@interface InfoViewController ()
 
 @end
 
-@implementation StartPageViewController
+@implementation InfoViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -28,16 +27,12 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
-    levelId = 1;
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
-}
-
-- (IBAction)playButtonTapped:(id)sender {
 }
 
 

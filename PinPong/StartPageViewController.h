@@ -12,6 +12,5 @@
 @interface StartPageViewController : UIViewController
 
 - (IBAction)playButtonTapped:(id)sender;
-- (IBAction)levelButtonTapped:(id)sender;
 
 @end
