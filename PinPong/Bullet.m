@@ -28,26 +28,28 @@
         [self.cntrl fireAnimation];
     }
     
-    if (collideObject == (MovableObject*)self.cntrl.bottomWall) {
-        [self.cntrl fireAnimation];
-    }
-    
     if (collideObject == (MovableObject*)self.cntrl.leftWall || collideObject == (MovableObject*)self.cntrl.rightWall) {
         [self.cntrl fireAnimation];
     }
     
-    if (collideObject == (MovableObject*)self.cntrl.board) {
-        [self.cntrl fireAnimation];
-    }
-        
     if (collideObject == (MovableObject*)self.cntrl.board2) {
+        [self.cntrl onPlayer1HaveScore];
         [self.cntrl fireAnimation];
     }
     
-    if (collideObject == (MovableObject*)self.cntrl.ball ) {
-        ////
+    if (collideObject == (MovableObject*)self.cntrl.ball) {
+        //// need delete ball
         [self.cntrl fireAnimation];
         [self.cntrl onPlayer1HaveScore];
+    }
+    
+    if (collideObject == (MovableObject*)self.cntrl.bulletRobot) {
+        [self.cntrl fireAnimation];
+        /// need delete bulletRobot
+    }
+    
+    if (collideObject == (MovableObject*)self.cntrl.block) {
+        [self.cntrl fireAnimation];
     }
 
 }

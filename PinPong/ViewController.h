@@ -16,12 +16,15 @@
 @class PlayerBoard;
 @class Bullet;
 @class Ball;
+@class BulletRobot;
+@class Block;
 
 @interface ViewController : UIViewController <UIGestureRecognizerDelegate>
 {
     int scores1;
     int scores2;
     NSTimer* gameTimer;
+    NSTimer* bulletRobotTimer;
     int addBall;
 }
 
@@ -36,8 +39,11 @@
 @property (strong, nonatomic) PlayerBoard *board;
 @property (strong, nonatomic) PlayerBoard *board2;
 @property (strong, nonatomic) Bullet *bullet;
+@property (strong, nonatomic) BulletRobot *bulletRobot;
 @property (strong, nonatomic) Ball *ball;
 @property (retain, nonatomic) IBOutlet UIImageView *animationImage;
+@property (strong, nonatomic) Block *block;
+
 
 - (IBAction)addBallButtonTapped:(id)sender;
 
@@ -54,5 +60,10 @@
 -(NSArray*)creatAnimation:(NSString*)fireAnimation;
 -(void)ballAnimation;
 -(void)addBall;
+-(void)addBulletPlayer1;
+-(void)addBulletPlayer2;
+-(void)bulletRobotFireAnimation;
+-(void)addBlock;
+-(void)levelGame;
 
 @end

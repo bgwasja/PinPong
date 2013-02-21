@@ -7,6 +7,7 @@
 //
 
 #import "GameOverViewController.h"
+#import "ViewController.h"
 
 @interface GameOverViewController ()
 
@@ -35,4 +36,9 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)menuButtonTapped:(id)sender {
+    levelId = 1;
+    speedBulletAnimation = 1.5;
+    NSLog(@"Level = %d , speedBulletAnimation = %f",levelId, speedBulletAnimation);
+}
 @end

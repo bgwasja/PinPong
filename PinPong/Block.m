@@ -1,20 +1,21 @@
 //
-//  PlayerBoard.m
+//  Block.m
 //  PinPong
 //
-//  Created by wasja on 2/14/13.
+//  Created by wasja on 2/21/13.
 //  Copyright (c) 2013 wasja. All rights reserved.
 //
 
-#import "PlayerBoard.h"
+#import "Block.h"
 
-@implementation PlayerBoard
+@implementation Block
 
 - (id)initWithFrame:(CGRect)frame
 {
     self = [super initWithFrame:frame];
     if (self) {
-        self.image = [UIImage imageNamed:@"boards.png"];
+        self.image = [UIImage imageNamed:@"block.jpg"];
+        objectSpeed = CGPointMake (0, 0);
     }
     return self;
 }

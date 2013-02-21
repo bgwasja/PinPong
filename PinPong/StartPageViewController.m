@@ -9,6 +9,7 @@
 #import "StartPageViewController.h"
 #import "AppDelegate.h"
 
+
 @interface StartPageViewController ()
 
 @end
@@ -29,6 +30,7 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     levelId = 1;
+    speedBulletAnimation = 1.5;
 }
 
 - (void)didReceiveMemoryWarning
@@ -40,5 +42,22 @@
 - (IBAction)playButtonTapped:(id)sender {
 }
 
+- (IBAction)emailButtonTapped:(id)sender {
+    MFMailComposeViewController *mailComposer = [[MFMailComposeViewController alloc] init];
+    mailComposer.mailComposeDelegate=self;
+    NSArray *emailAddresses = [[NSArray alloc] initWithObjects:@"me@company.com", nil];
+    NSString *sendSubject = [[NSString alloc] initWithFormat:@"PinPong Game"];
+    NSString *sendMessage = [[NSString alloc] initWithFormat:@"test game"];
+    
+    [mailComposer setToRecipients:emailAddresses];
+    [mailComposer setSubject:sendSubject];
+    [mailComposer setMessageBody:sendMessage isHTML:NO];
+    [self presentViewController:mailComposer animated:YES completion:NULL];
+}
+
+
+-(void) mailComposeController:(MFMailComposeViewController *)controller didFinishWithResult:(MFMailComposeResult)result error:(NSError *)error {
+    [self dismissViewControllerAnimated:YES completion:NULL];
+}
 
 @end

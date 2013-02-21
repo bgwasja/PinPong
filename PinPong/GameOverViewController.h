@@ -10,4 +10,6 @@
 
 @interface GameOverViewController : UIViewController
 
+- (IBAction)menuButtonTapped:(id)sender;
+
 @end

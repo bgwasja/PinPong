@@ -10,8 +10,10 @@
 #import "LevelEndViewController.h"
 #import "Ball.h"
 #import "Bullet.h"
+#import "BulletRobot.h"
 #import "Wall.h"
 #import "PlayerBoard.h"
+#import "Block.h"
 
 @interface ViewController () 
 
@@ -32,6 +34,8 @@
 @synthesize bullet;
 @synthesize ball;
 @synthesize animationImage;
+@synthesize bulletRobot;
+@synthesize block;
 
 -(void)viewDidLoad
 {
@@ -42,19 +46,33 @@
     objects = [[NSMutableArray alloc] init];
 
     NSLog(@"%d",levelId);
+    
     for (int i = 0; i < levelId; i++) {
-        [self addBall];
+    [self addBall];
+//  [self performSelector:@selector(addBall) withObject:nil afterDelay:2.0];
     }
     
     [self addWall];
     [self movementFire];
     [self addBoard];
+    [self levelGame];
     
     gameTimer = [NSTimer scheduledTimerWithTimeInterval:0.006
                                      target:self
                                    selector:@selector(timer)
                                    userInfo:nil
                                     repeats:YES];
+    
+    bulletRobotTimer = [NSTimer scheduledTimerWithTimeInterval:speedBulletAnimation
+                                                        target:self
+                                                      selector:@selector(addBulletPlayer2)
+                                                      userInfo:nil
+                                                       repeats:YES];
+}
+
+-(void)levelGame
+{
+    if (levelId >= 2) {[self addBlock];}
 }
 
 
@@ -124,6 +142,26 @@
 }
 
 
+- (void)addBulletPlayer2
+{
+    bulletRobot = [[BulletRobot alloc] initWithFrame:CGRectMake(board.center.x, board2.center.y , 20, 40)];
+    bulletRobot.cntrl = self;
+    bulletRobot.objectSpeed = CGPointMake(0, 1);
+    [self.view addSubview:bulletRobot];
+    [objects addObject:bulletRobot];
+}
+
+
+-(void)addBlock
+{
+    block = [[Block alloc] initWithFrame:CGRectMake(140, 140, 50, 50)];
+    block.cntrl = self;
+    block.objectSpeed = CGPointMake(0, 0);
+    [self.view addSubview:block];
+    [self.objects addObject:block];
+}
+
+
 -(void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
@@ -162,7 +200,6 @@
 -(void)playRobot
 {
     ball = [self nearestBall];
-    
     static int speed = 1;
     Ball* lastBall = nil;
     if (lastBall != ball) {
@@ -218,12 +255,12 @@
 
 -(void)levelOver
 {
-    if (scores1 == intMaxScore || scores2 == intMaxScore) {
-        if (scores1 == intMaxScore) {
+    if (scores1 >= intMaxScore || scores2 >= intMaxScore) {
+        if (scores1 >= intMaxScore) {
             statusGameString = [NSString stringWithFormat:@"You win !!!"];
             /// додати картинки
         }
-        if (scores2 == intMaxScore) {
+        if (scores2 >= intMaxScore) {
             statusGameString = [NSString stringWithFormat:@"You loser !!!"];
             /// додати картинки
         }
@@ -273,6 +310,17 @@
 -(void)fireAnimation
 {
     animationImage = [[UIImageView alloc] initWithFrame:CGRectMake (bullet.center.x, bullet.center.y, 15, 15)];
+    [self.view addSubview:animationImage];
+    animationImage.animationImages = [self creatAnimation:@"fireAnimation.jpg"];
+    animationImage.animationDuration = 0.9;
+    animationImage.animationRepeatCount = 1;
+    [animationImage startAnimating];
+}
+
+
+-(void)bulletRobotFireAnimation
+{
+    animationImage = [[UIImageView alloc] initWithFrame:CGRectMake (bulletRobot.center.x, bulletRobot.center.y, 15, 15)];
     [self.view addSubview:animationImage];
     animationImage.animationImages = [self creatAnimation:@"fireAnimation.jpg"];
     animationImage.animationDuration = 0.9;

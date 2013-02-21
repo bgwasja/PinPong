@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 
 int levelId;
+float speedBulletAnimation;
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 

@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AA0FEA6216D65B5400BE8A04 /* Block.m in Sources */ = {isa = PBXBuildFile; fileRef = AA0FEA6116D65B5400BE8A04 /* Block.m */; };
+		AA0FEA6616D65C6F00BE8A04 /* block.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AA0FEA6516D65C6F00BE8A04 /* block.jpg */; };
+		AA24BBE416D666A400644F5E /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA24BBE316D666A400644F5E /* MessageUI.framework */; };
+		AA52E9FA16D64E3300A8A1DE /* BulletRobot.m in Sources */ = {isa = PBXBuildFile; fileRef = AA52E9F916D64E3300A8A1DE /* BulletRobot.m */; };
+		AA52E9FD16D651E200A8A1DE /* bulletRobot.png in Resources */ = {isa = PBXBuildFile; fileRef = AA52E9FC16D651E200A8A1DE /* bulletRobot.png */; };
 		AA59715A16D3B3D60050C0F4 /* GameOverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AA59715916D3B3D60050C0F4 /* GameOverViewController.m */; };
 		AA95212716C7EB8200CCA06B /* bullet.png in Resources */ = {isa = PBXBuildFile; fileRef = AA95212616C7EB8200CCA06B /* bullet.png */; };
 		AA95212B16C80C8700CCA06B /* Bullet.m in Sources */ = {isa = PBXBuildFile; fileRef = AA95212A16C80C8700CCA06B /* Bullet.m */; };
@@ -36,6 +41,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AA0FEA6016D65B5400BE8A04 /* Block.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Block.h; sourceTree = "<group>"; };
+		AA0FEA6116D65B5400BE8A04 /* Block.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Block.m; sourceTree = "<group>"; };
+		AA0FEA6516D65C6F00BE8A04 /* block.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = block.jpg; sourceTree = "<group>"; };
+		AA24BBE316D666A400644F5E /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		AA52E9F816D64E3300A8A1DE /* BulletRobot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BulletRobot.h; sourceTree = "<group>"; };
+		AA52E9F916D64E3300A8A1DE /* BulletRobot.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BulletRobot.m; sourceTree = "<group>"; };
+		AA52E9FC16D651E200A8A1DE /* bulletRobot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bulletRobot.png; sourceTree = "<group>"; };
 		AA59715816D3B3D60050C0F4 /* GameOverViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameOverViewController.h; sourceTree = "<group>"; };
 		AA59715916D3B3D60050C0F4 /* GameOverViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameOverViewController.m; sourceTree = "<group>"; };
 		AA95212616C7EB8200CCA06B /* bullet.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bullet.png; sourceTree = "<group>"; };
@@ -83,6 +95,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AA24BBE416D666A400644F5E /* MessageUI.framework in Frameworks */,
 				AAEA20CD16B5A9000019C0A4 /* UIKit.framework in Frameworks */,
 				AAEA20CF16B5A9000019C0A4 /* Foundation.framework in Frameworks */,
 				AAEA20D116B5A9000019C0A4 /* CoreGraphics.framework in Frameworks */,
@@ -92,9 +105,29 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AA0FEA6416D65B6700BE8A04 /* Object */ = {
+			isa = PBXGroup;
+			children = (
+				AAD4274B16BAC49A007E2777 /* Ball.h */,
+				AAD4274C16BAC49A007E2777 /* Ball.m */,
+				AA95212916C80C8700CCA06B /* Bullet.h */,
+				AA95212A16C80C8700CCA06B /* Bullet.m */,
+				AA52E9F816D64E3300A8A1DE /* BulletRobot.h */,
+				AA52E9F916D64E3300A8A1DE /* BulletRobot.m */,
+				AAD5F5FC16CA6BA300686334 /* Wall.h */,
+				AAD5F5FD16CA6BA300686334 /* Wall.m */,
+				AAD8B48016CD1B56000871D5 /* PlayerBoard.h */,
+				AAD8B48116CD1B56000871D5 /* PlayerBoard.m */,
+				AA0FEA6016D65B5400BE8A04 /* Block.h */,
+				AA0FEA6116D65B5400BE8A04 /* Block.m */,
+			);
+			name = Object;
+			sourceTree = "<group>";
+		};
 		AAEA20BD16B5A9000019C0A4 = {
 			isa = PBXGroup;
 			children = (
+				AA24BBE316D666A400644F5E /* MessageUI.framework */,
 				AAEA20D216B5A9000019C0A4 /* PinPong */,
 				AAEA20CB16B5A9000019C0A4 /* Frameworks */,
 				AAEA20C916B5A9000019C0A4 /* Products */,
@@ -124,17 +157,9 @@
 			children = (
 				AAEA20DB16B5A9000019C0A4 /* AppDelegate.h */,
 				AAEA20DC16B5A9000019C0A4 /* AppDelegate.m */,
-				AAEA20E416B5A9000019C0A4 /* MainStoryboard.storyboard */,
+				AA0FEA6416D65B6700BE8A04 /* Object */,
 				AAEA20E716B5A9000019C0A4 /* ViewController.h */,
 				AAEA20E816B5A9000019C0A4 /* ViewController.m */,
-				AAD4274B16BAC49A007E2777 /* Ball.h */,
-				AAD4274C16BAC49A007E2777 /* Ball.m */,
-				AA95212916C80C8700CCA06B /* Bullet.h */,
-				AA95212A16C80C8700CCA06B /* Bullet.m */,
-				AAD5F5FC16CA6BA300686334 /* Wall.h */,
-				AAD5F5FD16CA6BA300686334 /* Wall.m */,
-				AAD8B48016CD1B56000871D5 /* PlayerBoard.h */,
-				AAD8B48116CD1B56000871D5 /* PlayerBoard.m */,
 				AAC62CEF16C4023E009AE1E6 /* StartPageViewController.h */,
 				AAC62CF016C4023E009AE1E6 /* StartPageViewController.m */,
 				AAC62CF316C402BB009AE1E6 /* LevelEndViewController.h */,
@@ -143,6 +168,7 @@
 				AA59715916D3B3D60050C0F4 /* GameOverViewController.m */,
 				AAEEA44516D4EF5D00F6C31F /* InfoViewController.h */,
 				AAEEA44616D4EF5D00F6C31F /* InfoViewController.m */,
+				AAEA20E416B5A9000019C0A4 /* MainStoryboard.storyboard */,
 				AAEA20D316B5A9000019C0A4 /* Supporting Files */,
 				AACC861216C9262900F4CA86 /* MovableObject.h */,
 				AACC861316C9262900F4CA86 /* MovableObject.m */,
@@ -153,6 +179,8 @@
 		AAEA20D316B5A9000019C0A4 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				AA0FEA6516D65C6F00BE8A04 /* block.jpg */,
+				AA52E9FC16D651E200A8A1DE /* bulletRobot.png */,
 				AAF4CFD916D26BC2002ADAEB /* fireAnimation.jpg */,
 				AAD8B48416CD322B000871D5 /* boards.png */,
 				AAD5F60216CA70F500686334 /* wall.png */,
@@ -232,6 +260,8 @@
 				AAD5F60316CA70F500686334 /* wall.png in Resources */,
 				AAD8B48516CD322B000871D5 /* boards.png in Resources */,
 				AAF4CFDA16D26BC2002ADAEB /* fireAnimation.jpg in Resources */,
+				AA52E9FD16D651E200A8A1DE /* bulletRobot.png in Resources */,
+				AA0FEA6616D65C6F00BE8A04 /* block.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -254,6 +284,8 @@
 				AAD8B48216CD1B56000871D5 /* PlayerBoard.m in Sources */,
 				AA59715A16D3B3D60050C0F4 /* GameOverViewController.m in Sources */,
 				AAEEA44716D4EF5D00F6C31F /* InfoViewController.m in Sources */,
+				AA52E9FA16D64E3300A8A1DE /* BulletRobot.m in Sources */,
+				AA0FEA6216D65B5400BE8A04 /* Block.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
