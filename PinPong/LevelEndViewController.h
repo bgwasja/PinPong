@@ -7,19 +7,25 @@
 //
 
 #import <UIKit/UIKit.h>
-//#import "AppDelegate.h"
 
-@interface LevelEndViewController : UIViewController
+@class ViewController;
+
+@interface LevelEndViewController : UIViewController{
+    float percentage;
+}
 
 @property (strong, nonatomic) IBOutlet UILabel *yourScoreLabel;
 @property (strong, nonatomic) IBOutlet UILabel *robotScoreLabel;
 @property (strong, nonatomic) IBOutlet UILabel *statusGameLabel;
+@property (strong, nonatomic) IBOutlet UIImageView *starImageView;
+@property (strong, nonatomic) NSArray *starImagesArray;
 
 - (IBAction)nextLevelButtonTapped:(id)sender;
 - (IBAction)menuButtonTapped:(id)sender;
 
--(void) setScore1:(int)score1;
--(void) setScore2:(int)score2;
--(void) setStatusGame:(NSString*)status;
+-(void)setScore1:(int)score1;
+-(void)setScore2:(int)score2;
+-(void)setStatusGame:(NSString*)status;
+-(void)setStar:(int)score1 :(int)score2;
 
 @end

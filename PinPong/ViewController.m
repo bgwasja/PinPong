@@ -48,8 +48,7 @@
     NSLog(@"%d",levelId);
     
     for (int i = 0; i < levelId; i++) {
-    [self addBall];
-//  [self performSelector:@selector(addBall) withObject:nil afterDelay:2.0];
+        [self addBall];
     }
     
     [self addWall];
@@ -134,7 +133,7 @@
 
 - (void)addBulletPlayer1
 {
-    bullet = [[Bullet alloc] initWithFrame:CGRectMake(board.center.x, board.center.y-100 , 20, 40)];
+    bullet = [[Bullet alloc] initWithFrame:CGRectMake(board.center.x, board.center.y-100, 20, 40)];
     bullet.cntrl = self;
     bullet.objectSpeed = CGPointMake(0, -1);
     [self.view addSubview:bullet];
@@ -144,7 +143,7 @@
 
 - (void)addBulletPlayer2
 {
-    bulletRobot = [[BulletRobot alloc] initWithFrame:CGRectMake(board.center.x, board2.center.y , 20, 40)];
+    bulletRobot = [[BulletRobot alloc] initWithFrame:CGRectMake(board.center.x, board2.center.y, 20, 40)];
     bulletRobot.cntrl = self;
     bulletRobot.objectSpeed = CGPointMake(0, 1);
     [self.view addSubview:bulletRobot];
@@ -264,7 +263,7 @@
             statusGameString = [NSString stringWithFormat:@"You loser !!!"];
             /// додати картинки
         }
-    [self performSegueWithIdentifier:@"level" sender:self];
+        [self performSegueWithIdentifier:@"level" sender:self];
     }
 }
 
@@ -333,7 +332,7 @@
     UIImage *image = [UIImage imageNamed:fireAnimation];
     NSMutableArray *animationImages = [NSMutableArray array];
     
-    for (int i = 0; i<8; i++) {
+    for (int i = 0; i < 8; i++) {
         CGImageRef imageRef = CGImageCreateWithImageInRect(image.CGImage,
                                                            CGRectMake(i*100, 0, 100, 100));
         UIImage *animationImage = [UIImage imageWithCGImage:imageRef];

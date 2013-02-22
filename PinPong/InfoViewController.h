@@ -10,5 +10,6 @@
 
 @interface InfoViewController : UIViewController
 
+- (IBAction)twitterButtonTapped:(id)sender;
 
 @end

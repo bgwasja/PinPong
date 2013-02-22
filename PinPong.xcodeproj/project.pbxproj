@@ -13,6 +13,8 @@
 		AA52E9FA16D64E3300A8A1DE /* BulletRobot.m in Sources */ = {isa = PBXBuildFile; fileRef = AA52E9F916D64E3300A8A1DE /* BulletRobot.m */; };
 		AA52E9FD16D651E200A8A1DE /* bulletRobot.png in Resources */ = {isa = PBXBuildFile; fileRef = AA52E9FC16D651E200A8A1DE /* bulletRobot.png */; };
 		AA59715A16D3B3D60050C0F4 /* GameOverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AA59715916D3B3D60050C0F4 /* GameOverViewController.m */; };
+		AA6F372816D7A18A006B495B /* Twitter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA6F372716D7A18A006B495B /* Twitter.framework */; };
+		AA6F372A16D7A63B006B495B /* twitterIcon.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = AA6F372916D7A63B006B495B /* twitterIcon.jpeg */; };
 		AA95212716C7EB8200CCA06B /* bullet.png in Resources */ = {isa = PBXBuildFile; fileRef = AA95212616C7EB8200CCA06B /* bullet.png */; };
 		AA95212B16C80C8700CCA06B /* Bullet.m in Sources */ = {isa = PBXBuildFile; fileRef = AA95212A16C80C8700CCA06B /* Bullet.m */; };
 		AAC62CF116C4023E009AE1E6 /* StartPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AAC62CF016C4023E009AE1E6 /* StartPageViewController.m */; };
@@ -50,6 +52,8 @@
 		AA52E9FC16D651E200A8A1DE /* bulletRobot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bulletRobot.png; sourceTree = "<group>"; };
 		AA59715816D3B3D60050C0F4 /* GameOverViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameOverViewController.h; sourceTree = "<group>"; };
 		AA59715916D3B3D60050C0F4 /* GameOverViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameOverViewController.m; sourceTree = "<group>"; };
+		AA6F372716D7A18A006B495B /* Twitter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Twitter.framework; path = System/Library/Frameworks/Twitter.framework; sourceTree = SDKROOT; };
+		AA6F372916D7A63B006B495B /* twitterIcon.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = twitterIcon.jpeg; sourceTree = "<group>"; };
 		AA95212616C7EB8200CCA06B /* bullet.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bullet.png; sourceTree = "<group>"; };
 		AA95212916C80C8700CCA06B /* Bullet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Bullet.h; sourceTree = "<group>"; };
 		AA95212A16C80C8700CCA06B /* Bullet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Bullet.m; sourceTree = "<group>"; };
@@ -95,6 +99,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AA6F372816D7A18A006B495B /* Twitter.framework in Frameworks */,
 				AA24BBE416D666A400644F5E /* MessageUI.framework in Frameworks */,
 				AAEA20CD16B5A9000019C0A4 /* UIKit.framework in Frameworks */,
 				AAEA20CF16B5A9000019C0A4 /* Foundation.framework in Frameworks */,
@@ -127,6 +132,7 @@
 		AAEA20BD16B5A9000019C0A4 = {
 			isa = PBXGroup;
 			children = (
+				AA6F372716D7A18A006B495B /* Twitter.framework */,
 				AA24BBE316D666A400644F5E /* MessageUI.framework */,
 				AAEA20D216B5A9000019C0A4 /* PinPong */,
 				AAEA20CB16B5A9000019C0A4 /* Frameworks */,
@@ -179,6 +185,7 @@
 		AAEA20D316B5A9000019C0A4 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				AA6F372916D7A63B006B495B /* twitterIcon.jpeg */,
 				AA0FEA6516D65C6F00BE8A04 /* block.jpg */,
 				AA52E9FC16D651E200A8A1DE /* bulletRobot.png */,
 				AAF4CFD916D26BC2002ADAEB /* fireAnimation.jpg */,
@@ -262,6 +269,7 @@
 				AAF4CFDA16D26BC2002ADAEB /* fireAnimation.jpg in Resources */,
 				AA52E9FD16D651E200A8A1DE /* bulletRobot.png in Resources */,
 				AA0FEA6616D65C6F00BE8A04 /* block.jpg in Resources */,
+				AA6F372A16D7A63B006B495B /* twitterIcon.jpeg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
