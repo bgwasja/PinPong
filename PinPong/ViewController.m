@@ -329,17 +329,6 @@
 }
 
 
--(void)ballAnimation
-{
-    animationImage = [[UIImageView alloc] initWithFrame:CGRectMake (ball.center.x, ball.center.y, 15, 15)];
-    [self.view addSubview:animationImage];
-    animationImage.animationImages = [self creatAnimation:@"fireAnimation.jpg"];
-    animationImage.animationDuration = 0.01;
-    animationImage.animationRepeatCount = 1;
-    [animationImage startAnimating];
-}
-
-
 - (NSArray*)creatAnimation:(NSString*)fireAnimation{
     UIImage *image = [UIImage imageNamed:fireAnimation];
     NSMutableArray *animationImages = [NSMutableArray array];

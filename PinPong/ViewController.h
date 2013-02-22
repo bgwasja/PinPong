@@ -44,7 +44,6 @@
 @property (retain, nonatomic) IBOutlet UIImageView *animationImage;
 @property (strong, nonatomic) Block *block;
 
-
 - (IBAction)addBallButtonTapped:(id)sender;
 
 -(void)onPlayer1HaveScore;
@@ -58,7 +57,6 @@
 -(void)fireAnimation;
 -(void)addBoard;
 -(NSArray*)creatAnimation:(NSString*)fireAnimation;
--(void)ballAnimation;
 -(void)addBall;
 -(void)addBulletPlayer1;
 -(void)addBulletPlayer2;

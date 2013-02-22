@@ -25,12 +25,10 @@
    
     if (collideObject == (MovableObject*)self.cntrl.topWall) {
         [self.cntrl onPlayer1HaveScore];
-        [self.cntrl ballAnimation];
     }
     
     if (collideObject == (MovableObject*)self.cntrl.bottomWall) {
         [self.cntrl onPlayer2HaveScore];
-        [self.cntrl ballAnimation];
     }
     
     if (collideObject == (MovableObject*)self.cntrl.bullet) {
