@@ -60,7 +60,7 @@
 //    
 //    if (CGRectIntersectsRect (self.frame, cntrl.board.frame)) {
 //        if(self.center.y+25 > cntrl.board.center.y) {
-//             objectSpeed.y = -objectSpeed.y;
+//            objectSpeed.y = -objectSpeed.y;
 //            [self collideOccuredWithObject:cntrl.board];
 //        }
 //    }
