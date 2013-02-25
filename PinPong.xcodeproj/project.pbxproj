@@ -32,7 +32,6 @@
 		AAD5F5FE16CA6BA300686334 /* Wall.m in Sources */ = {isa = PBXBuildFile; fileRef = AAD5F5FD16CA6BA300686334 /* Wall.m */; };
 		AAD5F60316CA70F500686334 /* wall.png in Resources */ = {isa = PBXBuildFile; fileRef = AAD5F60216CA70F500686334 /* wall.png */; };
 		AAD8B48216CD1B56000871D5 /* PlayerBoard.m in Sources */ = {isa = PBXBuildFile; fileRef = AAD8B48116CD1B56000871D5 /* PlayerBoard.m */; };
-		AAD8B48516CD322B000871D5 /* boards.png in Resources */ = {isa = PBXBuildFile; fileRef = AAD8B48416CD322B000871D5 /* boards.png */; };
 		AAEA20CD16B5A9000019C0A4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAEA20CC16B5A9000019C0A4 /* UIKit.framework */; };
 		AAEA20CF16B5A9000019C0A4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAEA20CE16B5A9000019C0A4 /* Foundation.framework */; };
 		AAEA20D116B5A9000019C0A4 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAEA20D016B5A9000019C0A4 /* CoreGraphics.framework */; };
@@ -85,7 +84,6 @@
 		AAD5F60216CA70F500686334 /* wall.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = wall.png; sourceTree = "<group>"; };
 		AAD8B48016CD1B56000871D5 /* PlayerBoard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerBoard.h; sourceTree = "<group>"; };
 		AAD8B48116CD1B56000871D5 /* PlayerBoard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerBoard.m; sourceTree = "<group>"; };
-		AAD8B48416CD322B000871D5 /* boards.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = boards.png; sourceTree = "<group>"; };
 		AAEA20C816B5A9000019C0A4 /* PinPong.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PinPong.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AAEA20CC16B5A9000019C0A4 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		AAEA20CE16B5A9000019C0A4 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -211,7 +209,6 @@
 				AA0FEA6516D65C6F00BE8A04 /* block.jpg */,
 				AA52E9FC16D651E200A8A1DE /* bulletRobot.png */,
 				AAF4CFD916D26BC2002ADAEB /* fireAnimation.jpg */,
-				AAD8B48416CD322B000871D5 /* boards.png */,
 				AAD5F60216CA70F500686334 /* wall.png */,
 				AA95212616C7EB8200CCA06B /* bullet.png */,
 				AAD4274316BA8ED6007E2777 /* ball.png */,
@@ -285,7 +282,6 @@
 				AAD4274416BA8ED6007E2777 /* ball.png in Resources */,
 				AA95212716C7EB8200CCA06B /* bullet.png in Resources */,
 				AAD5F60316CA70F500686334 /* wall.png in Resources */,
-				AAD8B48516CD322B000871D5 /* boards.png in Resources */,
 				AAF4CFDA16D26BC2002ADAEB /* fireAnimation.jpg in Resources */,
 				AA52E9FD16D651E200A8A1DE /* bulletRobot.png in Resources */,
 				AA0FEA6616D65C6F00BE8A04 /* block.jpg in Resources */,
