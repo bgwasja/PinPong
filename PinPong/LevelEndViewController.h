@@ -11,14 +11,14 @@
 @class ViewController;
 
 @interface LevelEndViewController : UIViewController{
-    float percentage;
+
 }
 
 @property (strong, nonatomic) IBOutlet UILabel *yourScoreLabel;
 @property (strong, nonatomic) IBOutlet UILabel *robotScoreLabel;
 @property (strong, nonatomic) IBOutlet UILabel *statusGameLabel;
 @property (strong, nonatomic) IBOutlet UIImageView *starImageView;
-@property (strong, nonatomic) NSArray *starImagesArray;
+
 
 - (IBAction)nextLevelButtonTapped:(id)sender;
 - (IBAction)menuButtonTapped:(id)sender;

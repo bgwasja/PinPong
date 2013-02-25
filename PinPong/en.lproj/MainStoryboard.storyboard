@@ -346,41 +346,41 @@
                                     <segue destination="2" kind="modal" id="4QS-o4-1cc"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XqV-KJ-FZL">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pNx-fX-1LZ">
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="53" id="4ij-PG-HQ8"/>
-                                    <constraint firstAttribute="width" constant="240" id="jZF-St-uhQ"/>
+                                    <constraint firstAttribute="height" constant="50" id="126-AJ-b0f"/>
+                                    <constraint firstAttribute="width" constant="240" id="MLk-4b-OIa"/>
                                 </constraints>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="WRY-rK-bhH" firstAttribute="top" secondItem="IHy-r2-nRQ" secondAttribute="top" constant="179" id="18Q-Ge-2wC"/>
-                            <constraint firstItem="giz-xG-RQe" firstAttribute="top" secondItem="IHy-r2-nRQ" secondAttribute="top" constant="9" id="BDV-Op-qPF"/>
+                            <constraint firstItem="giz-xG-RQe" firstAttribute="top" secondItem="IHy-r2-nRQ" secondAttribute="top" constant="9" id="1za-OT-0vz"/>
+                            <constraint firstItem="pNx-fX-1LZ" firstAttribute="centerX" secondItem="WRY-rK-bhH" secondAttribute="centerX" type="default" id="6QP-bK-ZQQ"/>
+                            <constraint firstItem="pNx-fX-1LZ" firstAttribute="top" secondItem="IHy-r2-nRQ" secondAttribute="top" constant="135" id="Bgd-e2-aVf"/>
                             <constraint firstItem="Fcy-GW-F5U" firstAttribute="trailing" secondItem="N68-cr-PsI" secondAttribute="trailing" type="default" id="Dkw-yW-vuE"/>
+                            <constraint firstAttribute="trailing" secondItem="VmJ-PX-lhC" secondAttribute="trailing" constant="29" id="Dts-PR-ln8"/>
                             <constraint firstItem="hqY-gC-iuK" firstAttribute="leading" secondItem="WRY-rK-bhH" secondAttribute="leading" type="default" id="HqG-aS-6BH"/>
                             <constraint firstItem="Fcy-GW-F5U" firstAttribute="leading" secondItem="N68-cr-PsI" secondAttribute="leading" type="default" id="IH9-ti-q6d"/>
-                            <constraint firstItem="VmJ-PX-lhC" firstAttribute="centerX" secondItem="Fcy-GW-F5U" secondAttribute="centerX" type="default" id="Ie1-ms-aRX"/>
-                            <constraint firstAttribute="trailing" secondItem="VmJ-PX-lhC" secondAttribute="trailing" constant="34" id="M1c-cl-ce6"/>
+                            <constraint firstAttribute="bottom" secondItem="WRY-rK-bhH" secondAttribute="bottom" constant="202" id="IZy-2a-JEY"/>
+                            <constraint firstItem="pNx-fX-1LZ" firstAttribute="centerX" secondItem="IHy-r2-nRQ" secondAttribute="centerX" type="default" id="Lvf-gz-Vq3"/>
+                            <constraint firstItem="pNx-fX-1LZ" firstAttribute="centerX" secondItem="dx0-E4-M17" secondAttribute="centerX" type="default" id="NVF-4T-k0l"/>
                             <constraint firstItem="N68-cr-PsI" firstAttribute="baseline" secondItem="WRY-rK-bhH" secondAttribute="baseline" type="default" id="RFd-kI-6XL"/>
-                            <constraint firstItem="XqV-KJ-FZL" firstAttribute="top" secondItem="IHy-r2-nRQ" secondAttribute="top" constant="96" id="Saz-9S-kaM"/>
+                            <constraint firstItem="N68-cr-PsI" firstAttribute="trailing" secondItem="dx0-E4-M17" secondAttribute="trailing" type="default" id="RId-Fz-0Wo"/>
                             <constraint firstItem="dx0-E4-M17" firstAttribute="top" secondItem="giz-xG-RQe" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="SyW-Ud-0Rt"/>
-                            <constraint firstItem="dx0-E4-M17" firstAttribute="leading" secondItem="RkO-HM-DRs" secondAttribute="leading" type="default" id="TkM-mD-Foa"/>
+                            <constraint firstAttribute="bottom" secondItem="hqY-gC-iuK" secondAttribute="bottom" constant="165" id="Vyi-O1-mfS"/>
                             <constraint firstAttribute="trailing" secondItem="giz-xG-RQe" secondAttribute="trailing" constant="5" id="XRC-c2-HUZ"/>
-                            <constraint firstAttribute="bottom" secondItem="RkO-HM-DRs" secondAttribute="bottom" constant="99" id="e4f-YD-DyE"/>
+                            <constraint firstItem="RkO-HM-DRs" firstAttribute="leading" secondItem="dx0-E4-M17" secondAttribute="leading" type="default" id="fQp-bS-xVa"/>
                             <constraint firstItem="hqY-gC-iuK" firstAttribute="trailing" secondItem="WRY-rK-bhH" secondAttribute="trailing" type="default" id="hHN-9V-eFB"/>
-                            <constraint firstItem="XqV-KJ-FZL" firstAttribute="centerX" secondItem="dx0-E4-M17" secondAttribute="centerX" type="default" id="lKf-nb-He3"/>
-                            <constraint firstItem="WRY-rK-bhH" firstAttribute="leading" secondItem="IHy-r2-nRQ" secondAttribute="leading" constant="82" id="mpg-Oe-0xp"/>
                             <constraint firstItem="hqY-gC-iuK" firstAttribute="baseline" secondItem="Fcy-GW-F5U" secondAttribute="baseline" type="default" id="nv0-aB-OoU"/>
-                            <constraint firstItem="XqV-KJ-FZL" firstAttribute="centerX" secondItem="IHy-r2-nRQ" secondAttribute="centerX" type="default" id="sHx-Cb-Zas"/>
                             <constraint firstItem="RkO-HM-DRs" firstAttribute="baseline" secondItem="VmJ-PX-lhC" secondAttribute="baseline" type="default" id="u3y-mm-7Z3"/>
-                            <constraint firstItem="hqY-gC-iuK" firstAttribute="top" secondItem="IHy-r2-nRQ" secondAttribute="top" constant="216" id="yPp-qS-ki6"/>
+                            <constraint firstAttribute="bottom" secondItem="RkO-HM-DRs" secondAttribute="bottom" constant="56" id="xpO-YY-na6"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="cyl-tw-goc"/>
                     <connections>
                         <outlet property="robotScoreLabel" destination="Fcy-GW-F5U" id="ZYO-4h-FQj"/>
-                        <outlet property="starImageView" destination="XqV-KJ-FZL" id="SsY-Cm-D3S"/>
+                        <outlet property="starImageView" destination="pNx-fX-1LZ" id="6Tx-So-HXx"/>
                         <outlet property="statusGameLabel" destination="dx0-E4-M17" id="9hr-Ni-pyf"/>
                         <outlet property="yourScoreLabel" destination="N68-cr-PsI" id="YNA-Kj-BPV"/>
                     </connections>
@@ -443,13 +443,57 @@
         <image name="play-field.png" width="275" height="400"/>
         <image name="twitterIcon.jpeg" width="225" height="225"/>
     </resources>
+    <classes>
+        <class className="GameOverViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/GameOverViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="menuButtonTapped:"/>
+            </relationships>
+        </class>
+        <class className="InfoViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/InfoViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="twitterButtonTapped:"/>
+            </relationships>
+        </class>
+        <class className="LevelEndViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/LevelEndViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="menuButtonTapped:"/>
+                <relationship kind="action" name="nextLevelButtonTapped:"/>
+                <relationship kind="outlet" name="robotScoreLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="starImageView" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="statusGameLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="yourScoreLabel" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+        <class className="StartPageViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/StartPageViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="emailButtonTapped:"/>
+                <relationship kind="action" name="playButtonTapped:"/>
+            </relationships>
+        </class>
+        <class className="ViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="addBallButtonTapped:"/>
+                <relationship kind="outlet" name="animationImage" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="scoreLabel1" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="scoreLabel2" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="nJb-5Z-jt7"/>
-        <segue reference="cSb-eA-mUP"/>
+        <segue reference="N4M-2e-frz"/>
+        <segue reference="Xbv-a5-FA4"/>
     </inferredMetricsTieBreakers>
 </document>

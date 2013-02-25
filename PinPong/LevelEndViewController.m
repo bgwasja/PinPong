@@ -18,7 +18,6 @@
 @synthesize yourScoreLabel;
 @synthesize robotScoreLabel;
 @synthesize statusGameLabel;
-@synthesize starImagesArray;
 @synthesize starImageView;
 
 
@@ -35,10 +34,8 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
-    
-    starImagesArray = [NSArray arrayWithObjects:[UIImage imageNamed:@"star0.png"] ,[UIImage imageNamed:@"star1.png"] ,  [UIImage imageNamed:@"star2.png"],[UIImage imageNamed:@"star3.png"],nil];
-    
 }
+
 
 - (void)didReceiveMemoryWarning
 {
@@ -91,22 +88,19 @@
 
 
 -(void)setStar:(int)score1 :(int)score2{
-    
-    percentage = score1/score2;
-    
     if (score1 == 0) {
-        starImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed: [starImagesArray objectAtIndex:0]]];
+        starImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"star0.png"]];
     }
-    if (percentage > 0.1  && percentage <= 0.3) {
-        starImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed: [starImagesArray objectAtIndex:1]]];
+    if (score2 == 0) {
+        starImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"star3.png"]];
     }
-    if (percentage > 0.3 && percentage <= 0.6) {
-        starImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed: [starImagesArray objectAtIndex:2]]];
+    if ((score2 > score1) && (score1 != 0 && score2 != 0)) {
+        starImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"star1.png"]];
     }
-    if (percentage > 0.6) {
-        starImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed: [starImagesArray objectAtIndex:3]]];
+    if ((score1 > score2) && (score1 != 0 && score2 != 0)) {
+        starImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"star2.png"]];
     }
+    [self.view addSubview:starImageView];
 }
-
 
 @end

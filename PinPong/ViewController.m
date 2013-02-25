@@ -294,6 +294,7 @@
         [c setScore1:[scoreLabel1.text intValue]];
         [c setScore2:[scoreLabel2.text intValue]];
         [c setStatusGame:statusGameString];
+        [c setStar:scores1 :scores2];
     }
 }
 
