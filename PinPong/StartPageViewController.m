@@ -29,8 +29,8 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    
     levelId = 1;
-    speedBulletAnimation = 2.0;
 }
 
 - (void)didReceiveMemoryWarning
