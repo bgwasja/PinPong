@@ -6,9 +6,10 @@
 //  Copyright (c) 2013 wasja. All rights reserved.
 //
 
-#import "Bullet.h"
+#import "BulletPlayer.h"
 
-@implementation Bullet
+
+@implementation BulletPlayer 
 
 - (id)initWithFrame:(CGRect)frame
 {
@@ -16,6 +17,7 @@
     if (self) {
         self.image = [UIImage imageNamed:@"bullet.png"];
         objectSpeed = CGPointMake (0, 5);
+        numberCollideBulletPlayer = 0;
     }
     return self;
 }
@@ -25,33 +27,41 @@
     self.needDelete = YES;
     
     if (collideObject == (MovableObject*)self.cntrl.topWall) {
-        [self.cntrl fireAnimation];
+        [self.cntrl bulletPlayerFireAnimation];
     }
     
     if (collideObject == (MovableObject*)self.cntrl.leftWall || collideObject == (MovableObject*)self.cntrl.rightWall) {
-        [self.cntrl fireAnimation];
+        [self.cntrl bulletPlayerFireAnimation];
     }
     
-    if (collideObject == (MovableObject*)self.cntrl.board2) {
-        [self.cntrl onPlayer1HaveScore];
-        [self.cntrl fireAnimation];
+    if (collideObject == (MovableObject*)self.cntrl.boardRobot) {
+        [self.cntrl onPlayerHaveScore];
+        [self.cntrl bulletPlayerFireAnimation];
     }
     
     if (collideObject == (MovableObject*)self.cntrl.ball) {
         //// need delete ball
-        [self.cntrl fireAnimation];
-        [self.cntrl onPlayer1HaveScore];
+        [self.cntrl bulletPlayerFireAnimation];
+        [self.cntrl onPlayerHaveScore];
     }
     
     if (collideObject == (MovableObject*)self.cntrl.bulletRobot) {
-        [self.cntrl fireAnimation];
+        [self.cntrl bulletPlayerFireAnimation];
         /// need delete bulletRobot
     }
     
     if (collideObject == (MovableObject*)self.cntrl.block) {
-        [self.cntrl fireAnimation];
+        [self.cntrl bulletPlayerFireAnimation];
     }
-
+    
+    if (collideObject == (MovableObject*)self.cntrl.blockDetonating) {
+        [self.cntrl bulletPlayerFireAnimation];
+        [self.cntrl onPlayerHaveScore];
+        numberCollideBulletPlayer ++;
+        if (numberCollideBulletPlayer == numberCollideBulletMax) {
+            // need delete blockDetonation
+        }
+    }
 }
 
 

@@ -24,14 +24,14 @@
 -(void) collideOccuredWithObject:(MovableObject*) collideObject {
    
     if (collideObject == (MovableObject*)self.cntrl.topWall) {
-        [self.cntrl onPlayer1HaveScore];
+        [self.cntrl onPlayerHaveScore];
     }
     
     if (collideObject == (MovableObject*)self.cntrl.bottomWall) {
-        [self.cntrl onPlayer2HaveScore];
+        [self.cntrl onRobotHaveScore];
     }
     
-    if (collideObject == (MovableObject*)self.cntrl.bullet) {
+    if (collideObject == (MovableObject*)self.cntrl.bulletPlayer) {
 
     }
 }

@@ -8,7 +8,11 @@
 
 #import "MovableObject.h"
 
-@interface BulletRobot : MovableObject
+#define numberCollideBulletMax 2
+
+@interface BulletRobot : MovableObject{
+    int numberCollideBulletRobot;
+}
 
 -(void) collideOccuredWithObject:(MovableObject*) collideObject;
 

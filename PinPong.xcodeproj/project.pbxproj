@@ -23,9 +23,11 @@
 		AA75CDA416DBEE2900B6A0C2 /* star2.png in Resources */ = {isa = PBXBuildFile; fileRef = AA75CDA016DBEE2900B6A0C2 /* star2.png */; };
 		AA75CDA516DBEE2900B6A0C2 /* star3.png in Resources */ = {isa = PBXBuildFile; fileRef = AA75CDA116DBEE2900B6A0C2 /* star3.png */; };
 		AA95212716C7EB8200CCA06B /* bullet.png in Resources */ = {isa = PBXBuildFile; fileRef = AA95212616C7EB8200CCA06B /* bullet.png */; };
-		AA95212B16C80C8700CCA06B /* Bullet.m in Sources */ = {isa = PBXBuildFile; fileRef = AA95212A16C80C8700CCA06B /* Bullet.m */; };
+		AA95212B16C80C8700CCA06B /* BulletPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = AA95212A16C80C8700CCA06B /* BulletPlayer.m */; };
 		AAC62CF116C4023E009AE1E6 /* StartPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AAC62CF016C4023E009AE1E6 /* StartPageViewController.m */; };
 		AAC62CF516C402BB009AE1E6 /* LevelEndViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AAC62CF416C402BB009AE1E6 /* LevelEndViewController.m */; };
+		AAC7E23E16DCFA8E005180F5 /* BlockDetonating.m in Sources */ = {isa = PBXBuildFile; fileRef = AAC7E23D16DCFA8E005180F5 /* BlockDetonating.m */; };
+		AAC7E24116DCFB07005180F5 /* blockDetonating.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = AAC7E24016DCFB07005180F5 /* blockDetonating.jpeg */; };
 		AACC861416C9262900F4CA86 /* MovableObject.m in Sources */ = {isa = PBXBuildFile; fileRef = AACC861316C9262900F4CA86 /* MovableObject.m */; };
 		AAD4274416BA8ED6007E2777 /* ball.png in Resources */ = {isa = PBXBuildFile; fileRef = AAD4274316BA8ED6007E2777 /* ball.png */; };
 		AAD4274D16BAC49A007E2777 /* Ball.m in Sources */ = {isa = PBXBuildFile; fileRef = AAD4274C16BAC49A007E2777 /* Ball.m */; };
@@ -68,12 +70,15 @@
 		AA75CDA016DBEE2900B6A0C2 /* star2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = star2.png; sourceTree = "<group>"; };
 		AA75CDA116DBEE2900B6A0C2 /* star3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = star3.png; sourceTree = "<group>"; };
 		AA95212616C7EB8200CCA06B /* bullet.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bullet.png; sourceTree = "<group>"; };
-		AA95212916C80C8700CCA06B /* Bullet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Bullet.h; sourceTree = "<group>"; };
-		AA95212A16C80C8700CCA06B /* Bullet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Bullet.m; sourceTree = "<group>"; };
+		AA95212916C80C8700CCA06B /* BulletPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BulletPlayer.h; sourceTree = "<group>"; };
+		AA95212A16C80C8700CCA06B /* BulletPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BulletPlayer.m; sourceTree = "<group>"; };
 		AAC62CEF16C4023E009AE1E6 /* StartPageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StartPageViewController.h; sourceTree = "<group>"; };
 		AAC62CF016C4023E009AE1E6 /* StartPageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StartPageViewController.m; sourceTree = "<group>"; };
 		AAC62CF316C402BB009AE1E6 /* LevelEndViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LevelEndViewController.h; sourceTree = "<group>"; };
 		AAC62CF416C402BB009AE1E6 /* LevelEndViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LevelEndViewController.m; sourceTree = "<group>"; };
+		AAC7E23C16DCFA8E005180F5 /* BlockDetonating.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlockDetonating.h; sourceTree = "<group>"; };
+		AAC7E23D16DCFA8E005180F5 /* BlockDetonating.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BlockDetonating.m; sourceTree = "<group>"; };
+		AAC7E24016DCFB07005180F5 /* blockDetonating.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = blockDetonating.jpeg; sourceTree = "<group>"; };
 		AACC861216C9262900F4CA86 /* MovableObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MovableObject.h; sourceTree = "<group>"; };
 		AACC861316C9262900F4CA86 /* MovableObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MovableObject.m; sourceTree = "<group>"; };
 		AAD4274316BA8ED6007E2777 /* ball.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ball.png; sourceTree = "<group>"; };
@@ -127,8 +132,8 @@
 			children = (
 				AAD4274B16BAC49A007E2777 /* Ball.h */,
 				AAD4274C16BAC49A007E2777 /* Ball.m */,
-				AA95212916C80C8700CCA06B /* Bullet.h */,
-				AA95212A16C80C8700CCA06B /* Bullet.m */,
+				AA95212916C80C8700CCA06B /* BulletPlayer.h */,
+				AA95212A16C80C8700CCA06B /* BulletPlayer.m */,
 				AA52E9F816D64E3300A8A1DE /* BulletRobot.h */,
 				AA52E9F916D64E3300A8A1DE /* BulletRobot.m */,
 				AAD5F5FC16CA6BA300686334 /* Wall.h */,
@@ -137,6 +142,8 @@
 				AAD8B48116CD1B56000871D5 /* PlayerBoard.m */,
 				AA0FEA6016D65B5400BE8A04 /* Block.h */,
 				AA0FEA6116D65B5400BE8A04 /* Block.m */,
+				AAC7E23C16DCFA8E005180F5 /* BlockDetonating.h */,
+				AAC7E23D16DCFA8E005180F5 /* BlockDetonating.m */,
 			);
 			name = Object;
 			sourceTree = "<group>";
@@ -197,6 +204,7 @@
 		AAEA20D316B5A9000019C0A4 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				AAC7E24016DCFB07005180F5 /* blockDetonating.jpeg */,
 				AA75CD9E16DBEE2900B6A0C2 /* star0.png */,
 				AA75CD9F16DBEE2900B6A0C2 /* star1.png */,
 				AA75CDA016DBEE2900B6A0C2 /* star2.png */,
@@ -294,6 +302,7 @@
 				AA75CDA316DBEE2900B6A0C2 /* star1.png in Resources */,
 				AA75CDA416DBEE2900B6A0C2 /* star2.png in Resources */,
 				AA75CDA516DBEE2900B6A0C2 /* star3.png in Resources */,
+				AAC7E24116DCFB07005180F5 /* blockDetonating.jpeg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -310,7 +319,7 @@
 				AAD4274D16BAC49A007E2777 /* Ball.m in Sources */,
 				AAC62CF116C4023E009AE1E6 /* StartPageViewController.m in Sources */,
 				AAC62CF516C402BB009AE1E6 /* LevelEndViewController.m in Sources */,
-				AA95212B16C80C8700CCA06B /* Bullet.m in Sources */,
+				AA95212B16C80C8700CCA06B /* BulletPlayer.m in Sources */,
 				AACC861416C9262900F4CA86 /* MovableObject.m in Sources */,
 				AAD5F5FE16CA6BA300686334 /* Wall.m in Sources */,
 				AAD8B48216CD1B56000871D5 /* PlayerBoard.m in Sources */,
@@ -318,6 +327,7 @@
 				AAEEA44716D4EF5D00F6C31F /* InfoViewController.m in Sources */,
 				AA52E9FA16D64E3300A8A1DE /* BulletRobot.m in Sources */,
 				AA0FEA6216D65B5400BE8A04 /* Block.m in Sources */,
+				AAC7E23E16DCFA8E005180F5 /* BlockDetonating.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

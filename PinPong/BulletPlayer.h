@@ -9,7 +9,10 @@
 #import <UIKit/UIKit.h>
 #import "MovableObject.h"
 
-@interface Bullet : MovableObject {
+#define numberCollideBulletMax 2
+
+@interface BulletPlayer : MovableObject{
+    int numberCollideBulletPlayer;
 }
 
 -(void) collideOccuredWithObject:(MovableObject*) collideObject;

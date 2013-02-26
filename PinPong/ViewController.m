@@ -9,11 +9,12 @@
 #import "ViewController.h"
 #import "LevelEndViewController.h"
 #import "Ball.h"
-#import "Bullet.h"
+#import "BulletPlayer.h"
 #import "BulletRobot.h"
 #import "Wall.h"
 #import "PlayerBoard.h"
 #import "Block.h"
+#import "BlockDetonating.h"
 
 @interface ViewController () 
 
@@ -29,19 +30,20 @@
 @synthesize bottomWall;
 @synthesize leftWall;
 @synthesize rightWall;
-@synthesize board;
-@synthesize board2;
-@synthesize bullet;
+@synthesize boardPlayer;
+@synthesize boardRobot;
+@synthesize bulletPlayer;
+@synthesize bulletRobot;
 @synthesize ball;
 @synthesize animationImage;
-@synthesize bulletRobot;
 @synthesize block;
+@synthesize blockDetonating;
 
 -(void)viewDidLoad
 {
     [super viewDidLoad];
-    scores1 = 0;
-    scores2 = 0;
+    scoresPlayer = 0;
+    scoresRobot = 0;
     
     objects = [[NSMutableArray alloc] init];
 
@@ -64,35 +66,36 @@
     
     bulletRobotTimer = [NSTimer scheduledTimerWithTimeInterval:speedBulletAnimation
                                                         target:self
-                                                      selector:@selector(addBulletPlayer2)
+                                                      selector:@selector(addBulletRobot)
                                                       userInfo:nil
                                                        repeats:YES];
 }
 
 -(void)levelGame
 {
-    if (levelId >= 2) {[self addBlock];}
+    if (levelId == 2) {[self addBlock];}
+    if (levelId == 3) {[self addBlockDetonating];}
 }
 
 
--(void) addBoard
+-(void)addBoard
 {
-    board = [[PlayerBoard alloc]initWithFrame:CGRectMake(160, 420, 85, 15)];
-    board.backgroundColor = [UIColor redColor];
-    board.cntrl = self;
-    [self.view addSubview:board];
-    [self.objects addObject:board];
+    boardPlayer = [[PlayerBoard alloc]initWithFrame:CGRectMake(160, 420, 85, 15)];
+    boardPlayer.backgroundColor = [UIColor redColor];
+    boardPlayer.cntrl = self;
+    [self.view addSubview:boardPlayer];
+    [self.objects addObject:boardPlayer];
     
-    board2 = [[PlayerBoard alloc]initWithFrame:CGRectMake(160, 30, 85, 15)];
-    board2.backgroundColor = [UIColor blackColor];
-    board2.cntrl = self;
-    board2.objectSpeed = CGPointMake(6, 0);
-    [self.view addSubview:board2];
-    [self.objects addObject:board2];
+    boardRobot = [[PlayerBoard alloc]initWithFrame:CGRectMake(160, 30, 85, 15)];
+    boardRobot.backgroundColor = [UIColor blackColor];
+    boardRobot.cntrl = self;
+    boardRobot.objectSpeed = CGPointMake(6, 0);
+    [self.view addSubview:boardRobot];
+    [self.objects addObject:boardRobot];
 }
 
 
--(void) addWall
+-(void)addWall
 {
     topWall = [[Wall alloc] initWithFrame:CGRectMake(0, 0, 320, 10)];
     bottomWall = [[Wall alloc] initWithFrame:CGRectMake(0, 450, 310, 10)];
@@ -121,7 +124,7 @@
 }
 
 
-- (void) addBall
+-(void)addBall
 {
     ball = [[Ball alloc] initWithFrame:CGRectMake(100, 100, 26, 26)];
     ball.cntrl = self;
@@ -131,19 +134,19 @@
 }
 
 
-- (void)addBulletPlayer1
+-(void)addBulletPlayer
 {
-    bullet = [[Bullet alloc] initWithFrame:CGRectMake(board.center.x, board.center.y-100, 20, 40)];
-    bullet.cntrl = self;
-    bullet.objectSpeed = CGPointMake(0, -1);
-    [self.view addSubview:bullet];
-    [objects addObject:bullet];
+    bulletPlayer = [[BulletPlayer alloc] initWithFrame:CGRectMake(boardPlayer.center.x, boardPlayer.center.y-100, 20, 40)];
+    bulletPlayer.cntrl = self;
+    bulletPlayer.objectSpeed = CGPointMake(0, -1);
+    [self.view addSubview:bulletPlayer];
+    [objects addObject:bulletPlayer];
 }
 
 
-- (void)addBulletPlayer2
+-(void)addBulletRobot
 {
-    bulletRobot = [[BulletRobot alloc] initWithFrame:CGRectMake(board.center.x, board2.center.y, 20, 40)];
+    bulletRobot = [[BulletRobot alloc] initWithFrame:CGRectMake(boardPlayer.center.x, boardRobot.center.y, 20, 40)];
     bulletRobot.cntrl = self;
     bulletRobot.objectSpeed = CGPointMake(0, 1);
     [self.view addSubview:bulletRobot];
@@ -153,11 +156,20 @@
 
 -(void)addBlock
 {
-    block = [[Block alloc] initWithFrame:CGRectMake(140, 140, 50, 50)];
+    block = [[Block alloc] initWithFrame:CGRectMake(150, 200, 50, 50)];
     block.cntrl = self;
     block.objectSpeed = CGPointMake(0, 0);
     [self.view addSubview:block];
     [self.objects addObject:block];
+}
+
+-(void)addBlockDetonating
+{
+    blockDetonating = [[BlockDetonating alloc] initWithFrame:CGRectMake(180, 140, 40, 40)];
+    blockDetonating.cntrl = self;
+    blockDetonating.objectSpeed = CGPointMake(0, 0);
+    [self.view addSubview:blockDetonating];
+    [self.objects addObject:blockDetonating];
 }
 
 
@@ -207,13 +219,13 @@
     }
     
     if (ball.center.y <= self.view.center.y) {
-        if (ball.center.x < board2.center.x) {
-            CGPoint p = CGPointMake(board2.center.x-speed, board2.center.y);
-            board2.center = p;
+        if (ball.center.x < boardRobot.center.x) {
+            CGPoint p = CGPointMake(boardRobot.center.x-speed, boardRobot.center.y);
+            boardRobot.center = p;
         }
-        if (ball.center.x > board2.center.x) {
-            CGPoint p = CGPointMake(board2.center.x+speed, board2.center.y);
-            board2.center = p;
+        if (ball.center.x > boardRobot.center.x) {
+            CGPoint p = CGPointMake(boardRobot.center.x+speed, boardRobot.center.y);
+            boardRobot.center = p;
         }
     }
 }
@@ -225,7 +237,7 @@
     float minDistance = MAXFLOAT;
     
     for (ball in self.objects) {
-        float distance = ball.center.y - board2.center.y;
+        float distance = ball.center.y - boardRobot.center.y;
         if (distance < minDistance) {
             minDistance = distance;
             nearestBall = ball;
@@ -235,33 +247,31 @@
 }
 
 
-- (void) onPlayer1HaveScore {
-    scores1++;
+-(void)onPlayerHaveScore {
+    scoresPlayer++;
 }
 
 
-- (void) onPlayer2HaveScore {
-    scores2++;
+-(void)onRobotHaveScore {
+    scoresRobot++;
 }
 
 
 -(void)updateScore
 {
-    scoreLabel1.text = [NSString stringWithFormat:@"%d",scores1];
-    scoreLabel2.text = [NSString stringWithFormat:@"%d",scores2];
+    scoreLabel1.text = [NSString stringWithFormat:@"%d",scoresPlayer];
+    scoreLabel2.text = [NSString stringWithFormat:@"%d",scoresRobot];
 }
 
 
 -(void)levelOver
 {
-    if (scores1 >= intMaxScore || scores2 >= intMaxScore) {
-        if (scores1 >= intMaxScore) {
+    if (scoresPlayer >= intMaxScore || scoresRobot >= intMaxScore) {
+        if (scoresPlayer >= intMaxScore) {
             statusGameString = [NSString stringWithFormat:@"You win !!!"];
-            /// додати картинки
         }
-        if (scores2 >= intMaxScore) {
+        if (scoresRobot >= intMaxScore) {
             statusGameString = [NSString stringWithFormat:@"You loser !!!"];
-            /// додати картинки
         }
         [self performSegueWithIdentifier:@"level" sender:self];
     }
@@ -271,7 +281,7 @@
 -(void)gameOver
 {
     if (levelId == intMaxLevel) {
-        if (scores1 == intMaxScore || scores2 == intMaxScore) {
+        if (scoresPlayer == intMaxScore || scoresRobot == intMaxScore) {
             [self performSegueWithIdentifier:@"gameOver" sender:self];
         }
     }
@@ -282,8 +292,8 @@
 {
     UITouch *touch = [[event allTouches] anyObject];
     CGPoint touchLocation = [touch locationInView:touch.view];
-    CGPoint xLocation = CGPointMake(touchLocation.x, board.center.y);
-    board.center = xLocation;
+    CGPoint xLocation = CGPointMake(touchLocation.x, boardPlayer.center.y);
+    boardPlayer.center = xLocation;
 }
 
 
@@ -294,22 +304,22 @@
         [c setScore1:[scoreLabel1.text intValue]];
         [c setScore2:[scoreLabel2.text intValue]];
         [c setStatusGame:statusGameString];
-        [c setStar:scores1 :scores2];
+        [c setStar:scoresPlayer :scoresRobot];
     }
 }
 
 
--(void) movementFire
+-(void)movementFire
 {
-    UISwipeGestureRecognizer *swipeUp = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(addBulletPlayer1)];
+    UISwipeGestureRecognizer *swipeUp = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(addBulletPlayer)];
     swipeUp.direction = UISwipeGestureRecognizerDirectionUp;
     [self.view addGestureRecognizer:swipeUp];
 }
 
 
--(void)fireAnimation
+-(void)bulletPlayerFireAnimation
 {
-    animationImage = [[UIImageView alloc] initWithFrame:CGRectMake (bullet.center.x, bullet.center.y, 15, 15)];
+    animationImage = [[UIImageView alloc] initWithFrame:CGRectMake (bulletPlayer.center.x, bulletPlayer.center.y, 15, 15)];
     [self.view addSubview:animationImage];
     animationImage.animationImages = [self creatAnimation:@"fireAnimation.jpg"];
     animationImage.animationDuration = 0.9;
@@ -329,7 +339,7 @@
 }
 
 
-- (NSArray*)creatAnimation:(NSString*)fireAnimation{
+-(NSArray*)creatAnimation:(NSString*)fireAnimation{
     UIImage *image = [UIImage imageNamed:fireAnimation];
     NSMutableArray *animationImages = [NSMutableArray array];
     

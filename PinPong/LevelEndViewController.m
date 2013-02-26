@@ -52,9 +52,9 @@
                            forView:self.view
                              cache:NO];
     [UIView commitAnimations];
+    
     levelId++;
-    speedBulletAnimation = speedBulletAnimation - 0.5;
-    NSLog(@"Level = %d , speedBulletAnimation = %f",levelId, speedBulletAnimation);
+    NSLog(@"Level = %d",levelId);
 }
 
 
@@ -66,9 +66,9 @@
                            forView:self.view
                              cache:NO];
     [UIView commitAnimations];
+    
     levelId = 1;
-    speedBulletAnimation = 1.5 ;
-    NSLog(@"Level = %d , speedBulletAnimation = %f",levelId, speedBulletAnimation);
+    NSLog(@"Level = %d",levelId);
 }
 
 

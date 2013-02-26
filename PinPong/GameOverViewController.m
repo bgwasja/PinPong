@@ -39,7 +39,6 @@
 
 - (IBAction)menuButtonTapped:(id)sender {
     levelId = 1;
-    speedBulletAnimation = 1.5;
-    NSLog(@"Level = %d , speedBulletAnimation = %f",levelId, speedBulletAnimation);
+    NSLog(@"Level = %d",levelId);
 }
 @end

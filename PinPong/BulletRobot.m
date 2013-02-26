@@ -16,6 +16,7 @@
     if (self) {
         self.image = [UIImage imageNamed:@"bulletRobot.png"];
         objectSpeed = CGPointMake (0, 5);
+        numberCollideBulletRobot = 0;
     }
     return self;
 }
@@ -32,19 +33,28 @@
         [self.cntrl bulletRobotFireAnimation];
     }
     
-    if (collideObject == (MovableObject*)self.cntrl.board) {
-        [self.cntrl onPlayer2HaveScore];
+    if (collideObject == (MovableObject*)self.cntrl.boardPlayer) {
+        [self.cntrl onRobotHaveScore];
         [self.cntrl bulletRobotFireAnimation];
     }
     
     if (collideObject == (MovableObject*)self.cntrl.ball ) {
         //// need delete ball
         [self.cntrl bulletRobotFireAnimation];
-        [self.cntrl onPlayer2HaveScore];
+        [self.cntrl onRobotHaveScore];
     }
     
     if (collideObject == (MovableObject*)self.cntrl.block) {
         [self.cntrl bulletRobotFireAnimation];
+    }
+    
+    if (collideObject == (MovableObject*)self.cntrl.blockDetonating) {
+        [self.cntrl bulletRobotFireAnimation];
+        [self.cntrl onRobotHaveScore];
+        numberCollideBulletRobot++;
+        if (numberCollideBulletRobot == numberCollideBulletMax) {
+            // need delete blockDetonation
+        }
     }
 }
 

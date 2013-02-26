@@ -13,16 +13,17 @@
 #define intMaxLevel 8
 
 @class Wall;
-@class PlayerBoard;
-@class Bullet;
 @class Ball;
-@class BulletRobot;
 @class Block;
+@class BlockDetonating;
+@class PlayerBoard;
+@class BulletPlayer;
+@class BulletRobot;
 
 @interface ViewController : UIViewController <UIGestureRecognizerDelegate>
 {
-    int scores1;
-    int scores2;
+    int scoresPlayer;
+    int scoresRobot;
     NSTimer* gameTimer;
     NSTimer* bulletRobotTimer;
     int addBall;
@@ -36,32 +37,34 @@
 @property (strong, nonatomic) Wall *bottomWall;
 @property (strong, nonatomic) Wall *leftWall;
 @property (strong, nonatomic) Wall *rightWall;
-@property (strong, nonatomic) PlayerBoard *board;
-@property (strong, nonatomic) PlayerBoard *board2;
-@property (strong, nonatomic) Bullet *bullet;
+@property (strong, nonatomic) PlayerBoard *boardPlayer;
+@property (strong, nonatomic) PlayerBoard *boardRobot;
+@property (strong, nonatomic) BulletPlayer *bulletPlayer;
 @property (strong, nonatomic) BulletRobot *bulletRobot;
 @property (strong, nonatomic) Ball *ball;
 @property (retain, nonatomic) IBOutlet UIImageView *animationImage;
 @property (strong, nonatomic) Block *block;
+@property (strong, nonatomic) BlockDetonating *blockDetonating;
 
 - (IBAction)addBallButtonTapped:(id)sender;
 
--(void)onPlayer1HaveScore;
--(void)onPlayer2HaveScore;
+-(void)onPlayerHaveScore;
+-(void)onRobotHaveScore;
 -(void)playRobot;
 -(void)updateScore;
 -(void)levelOver;
 -(void)gameOver;
 -(void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event;
 -(void)movementFire;
--(void)fireAnimation;
+-(void)bulletPlayerFireAnimation;
+-(void)bulletRobotFireAnimation;
 -(void)addBoard;
 -(NSArray*)creatAnimation:(NSString*)fireAnimation;
 -(void)addBall;
--(void)addBulletPlayer1;
--(void)addBulletPlayer2;
--(void)bulletRobotFireAnimation;
+-(void)addBulletPlayer;
+-(void)addBulletRobot;
 -(void)addBlock;
 -(void)levelGame;
+-(void)addBlockDetonating;
 
 @end
