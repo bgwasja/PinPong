@@ -10,6 +10,8 @@
 
 int levelId;
 float speedBulletAnimation;
+int numberCollideBulletPlayer;
+int numberCollideBulletRobot;
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 

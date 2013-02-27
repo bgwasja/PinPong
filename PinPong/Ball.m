@@ -7,6 +7,8 @@
 //
 
 #import "Ball.h"
+#import "BulletPlayer.h"
+#import "BulletRobot.h"
 
 @implementation Ball
 
@@ -15,7 +17,7 @@
     self = [super initWithFrame:frame];
     if (self) {
         self.image = [UIImage imageNamed:@"ball.png"];
-        objectSpeed = CGPointMake (3, 3);
+        objectSpeed = CGPointMake (1, 1);
     }
     return self;
 }
@@ -32,8 +34,19 @@
     }
     
     if (collideObject == (MovableObject*)self.cntrl.bulletPlayer) {
-
+        self.needDelete = YES;
+        if ([collideObject isKindOfClass:[BulletPlayer class]]) {
+            collideObject.needDelete = YES;
+        }
     }
+    
+    if (collideObject == (MovableObject*)self.cntrl.bulletRobot) {
+        self.needDelete = YES;
+        if ([collideObject isKindOfClass:[BulletRobot class]]) {
+            collideObject.needDelete = YES;
+        }
+    }
+    
 }
 
 @end

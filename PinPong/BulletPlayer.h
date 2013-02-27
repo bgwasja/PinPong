@@ -11,9 +11,7 @@
 
 #define numberCollideBulletMax 2
 
-@interface BulletPlayer : MovableObject{
-    int numberCollideBulletPlayer;
-}
+@interface BulletPlayer : MovableObject
 
 -(void) collideOccuredWithObject:(MovableObject*) collideObject;
 

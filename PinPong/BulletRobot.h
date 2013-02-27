@@ -10,9 +10,7 @@
 
 #define numberCollideBulletMax 2
 
-@interface BulletRobot : MovableObject{
-    int numberCollideBulletRobot;
-}
+@interface BulletRobot : MovableObject
 
 -(void) collideOccuredWithObject:(MovableObject*) collideObject;
 

@@ -38,6 +38,7 @@
 @synthesize animationImage;
 @synthesize block;
 @synthesize blockDetonating;
+@synthesize objectsToDelete;
 
 -(void)viewDidLoad
 {
@@ -48,8 +49,7 @@
     
     objects = [[NSMutableArray alloc] init];
 
-    NSLog(@"%d",levelId);
-    
+    NSLog(@"Level %d", levelId);
     for (int i = 0; i < levelId; i++) {
         [self addBall];
     }
@@ -71,6 +71,7 @@
                                                       userInfo:nil
                                                        repeats:YES];
 }
+
 
 -(void)levelGame
 {
@@ -127,7 +128,7 @@
 
 -(void)addBall
 {
-    ball = [[Ball alloc] initWithFrame:CGRectMake(100, 100, 26, 26)];
+    ball = [[Ball alloc] initWithFrame:CGRectMake((40 +rand() % 140), (40+rand() % 140), 26, 26)];
     ball.cntrl = self;
     ball.objectSpeed = CGPointMake(1, 1);
     [self.view addSubview:ball];
@@ -187,7 +188,7 @@
         [mv updateObject];
     }
     
-    NSMutableArray* objectsToDelete = [NSMutableArray array];
+    objectsToDelete = [NSMutableArray array];
     for (MovableObject* mv in self.objects ) {
         if (mv.needDelete) {
             [objectsToDelete addObject:mv];
@@ -275,6 +276,11 @@
             statusGameString = [NSString stringWithFormat:@"You loser !!!"];
         }
         [self performSegueWithIdentifier:@"level" sender:self];
+        
+        if ([gameTimer isValid]  || [bulletRobotTimer isValid]) {
+            [gameTimer invalidate];
+            [bulletRobotTimer invalidate];
+        }
     }
 }
 

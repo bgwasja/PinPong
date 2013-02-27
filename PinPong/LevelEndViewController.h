@@ -18,6 +18,8 @@
 @property (strong, nonatomic) IBOutlet UILabel *robotScoreLabel;
 @property (strong, nonatomic) IBOutlet UILabel *statusGameLabel;
 @property (retain, nonatomic) IBOutlet UIImageView *starImageView;
+@property (retain, nonatomic) NSMutableArray* objects;
+
 
 - (IBAction)nextLevelButtonTapped:(id)sender;
 - (IBAction)menuButtonTapped:(id)sender;

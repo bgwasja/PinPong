@@ -45,6 +45,7 @@
 @property (retain, nonatomic) IBOutlet UIImageView *animationImage;
 @property (strong, nonatomic) Block *block;
 @property (strong, nonatomic) BlockDetonating *blockDetonating;
+@property (retain, nonatomic) NSMutableArray* objectsToDelete ;
 
 - (IBAction)addBallButtonTapped:(id)sender;
 

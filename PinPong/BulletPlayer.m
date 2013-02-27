@@ -7,6 +7,9 @@
 //
 
 #import "BulletPlayer.h"
+#import "Ball.h"
+#import "BulletRobot.h"
+#import "BlockDetonating.h"
 
 
 @implementation BulletPlayer 
@@ -17,7 +20,6 @@
     if (self) {
         self.image = [UIImage imageNamed:@"bullet.png"];
         objectSpeed = CGPointMake (0, 5);
-        numberCollideBulletPlayer = 0;
     }
     return self;
 }
@@ -40,14 +42,18 @@
     }
     
     if (collideObject == (MovableObject*)self.cntrl.ball) {
-        //// need delete ball
+        if ([collideObject isKindOfClass:[Ball class]]) {
+            collideObject.needDelete = YES;
+        }
         [self.cntrl bulletPlayerFireAnimation];
         [self.cntrl onPlayerHaveScore];
     }
     
     if (collideObject == (MovableObject*)self.cntrl.bulletRobot) {
         [self.cntrl bulletPlayerFireAnimation];
-        /// need delete bulletRobot
+        if ([collideObject isKindOfClass:[BulletRobot class]]) {
+            collideObject.needDelete = YES;
+        }
     }
     
     if (collideObject == (MovableObject*)self.cntrl.block) {
@@ -55,13 +61,14 @@
     }
     
     if (collideObject == (MovableObject*)self.cntrl.blockDetonating) {
-        [self.cntrl bulletPlayerFireAnimation];
-        [self.cntrl onPlayerHaveScore];
-        numberCollideBulletPlayer ++;
+        numberCollideBulletPlayer++;
         if (numberCollideBulletPlayer == numberCollideBulletMax) {
-            // need delete blockDetonation
+            if ([collideObject isKindOfClass:[BlockDetonating class]]) {
+                collideObject.needDelete = YES;
+            }
         }
     }
+    
 }
 
 

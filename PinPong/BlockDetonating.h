@@ -7,6 +7,7 @@
 //
 
 #import "MovableObject.h"
+#define numberCollideBulletMax 2
 
 
 @interface BlockDetonating : MovableObject

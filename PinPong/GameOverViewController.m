@@ -39,6 +39,6 @@
 
 - (IBAction)menuButtonTapped:(id)sender {
     levelId = 1;
-    NSLog(@"Level = %d",levelId);
+    NSLog(@"Level game over %d",levelId);
 }
 @end

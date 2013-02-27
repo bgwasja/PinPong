@@ -7,6 +7,8 @@
 //
 
 #import "BlockDetonating.h"
+#import "BulletPlayer.h"
+#import "BulletRobot.h"
 
 @implementation BlockDetonating
 
@@ -18,6 +20,34 @@
         objectSpeed = CGPointMake (0, 0);
     }
     return self;
+    numberCollideBulletPlayer = 0;
+    numberCollideBulletRobot = 0;
+}
+
+-(void) collideOccuredWithObject:(MovableObject*) collideObject {
+    
+    if (collideObject == (MovableObject*)self.cntrl.blockDetonating) {
+        numberCollideBulletPlayer++;
+        [self.cntrl bulletPlayerFireAnimation];
+        if (numberCollideBulletPlayer == numberCollideBulletMax) {
+            if ([collideObject isKindOfClass:[BlockDetonating class]]) {
+                collideObject.needDelete = YES;
+                [self.cntrl onPlayerHaveScore];
+            }
+        }
+    }
+    
+    if (collideObject == (MovableObject*)self.cntrl.blockDetonating) {
+        numberCollideBulletRobot++;
+        [self.cntrl bulletRobotFireAnimation];
+        if (numberCollideBulletRobot == numberCollideBulletMax) {
+            if ([collideObject isKindOfClass:[BlockDetonating class]]) {
+                collideObject.needDelete = YES;
+                [self.cntrl onRobotHaveScore];
+            }
+        }
+    }
+
 }
 
 @end

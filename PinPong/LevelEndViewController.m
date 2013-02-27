@@ -19,6 +19,7 @@
 @synthesize robotScoreLabel;
 @synthesize statusGameLabel;
 @synthesize starImageView;
+@synthesize objects;
 
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -33,7 +34,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view.
+    NSLog(@"Level over %d",levelId);
 }
 
 
@@ -52,9 +53,7 @@
                            forView:self.view
                              cache:NO];
     [UIView commitAnimations];
-    
     levelId++;
-    NSLog(@"Level = %d",levelId);
 }
 
 
@@ -66,9 +65,7 @@
                            forView:self.view
                              cache:NO];
     [UIView commitAnimations];
-    
     levelId = 1;
-    NSLog(@"Level = %d",levelId);
 }
 
 
