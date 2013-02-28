@@ -11,7 +11,6 @@
 		AA0FEA6616D65C6F00BE8A04 /* block.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AA0FEA6516D65C6F00BE8A04 /* block.jpg */; };
 		AA24BBE416D666A400644F5E /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA24BBE316D666A400644F5E /* MessageUI.framework */; };
 		AA52E9FA16D64E3300A8A1DE /* BulletRobot.m in Sources */ = {isa = PBXBuildFile; fileRef = AA52E9F916D64E3300A8A1DE /* BulletRobot.m */; };
-		AA52E9FD16D651E200A8A1DE /* bulletRobot.png in Resources */ = {isa = PBXBuildFile; fileRef = AA52E9FC16D651E200A8A1DE /* bulletRobot.png */; };
 		AA59715A16D3B3D60050C0F4 /* GameOverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AA59715916D3B3D60050C0F4 /* GameOverViewController.m */; };
 		AA6F372816D7A18A006B495B /* Twitter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA6F372716D7A18A006B495B /* Twitter.framework */; };
 		AA75CD9416DBE34600B6A0C2 /* GameOverView.png in Resources */ = {isa = PBXBuildFile; fileRef = AA75CD9116DBE34600B6A0C2 /* GameOverView.png */; };
@@ -22,7 +21,6 @@
 		AA75CDA316DBEE2900B6A0C2 /* star1.png in Resources */ = {isa = PBXBuildFile; fileRef = AA75CD9F16DBEE2900B6A0C2 /* star1.png */; };
 		AA75CDA416DBEE2900B6A0C2 /* star2.png in Resources */ = {isa = PBXBuildFile; fileRef = AA75CDA016DBEE2900B6A0C2 /* star2.png */; };
 		AA75CDA516DBEE2900B6A0C2 /* star3.png in Resources */ = {isa = PBXBuildFile; fileRef = AA75CDA116DBEE2900B6A0C2 /* star3.png */; };
-		AA95212716C7EB8200CCA06B /* bullet.png in Resources */ = {isa = PBXBuildFile; fileRef = AA95212616C7EB8200CCA06B /* bullet.png */; };
 		AA95212B16C80C8700CCA06B /* BulletPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = AA95212A16C80C8700CCA06B /* BulletPlayer.m */; };
 		AAC62CF116C4023E009AE1E6 /* StartPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AAC62CF016C4023E009AE1E6 /* StartPageViewController.m */; };
 		AAC62CF516C402BB009AE1E6 /* LevelEndViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AAC62CF416C402BB009AE1E6 /* LevelEndViewController.m */; };
@@ -36,6 +34,8 @@
 		AAD8B48216CD1B56000871D5 /* PlayerBoard.m in Sources */ = {isa = PBXBuildFile; fileRef = AAD8B48116CD1B56000871D5 /* PlayerBoard.m */; };
 		AADEA65316DF894E001C55AF /* playerFireAnimation.png in Resources */ = {isa = PBXBuildFile; fileRef = AADEA65216DF894E001C55AF /* playerFireAnimation.png */; };
 		AADEA65516DF8AF9001C55AF /* robotFireAnimation.png in Resources */ = {isa = PBXBuildFile; fileRef = AADEA65416DF8AF9001C55AF /* robotFireAnimation.png */; };
+		AADEA65716DF90C2001C55AF /* bullet.png in Resources */ = {isa = PBXBuildFile; fileRef = AADEA65616DF90C2001C55AF /* bullet.png */; };
+		AADEA65916DF90D3001C55AF /* bulletRobot.png in Resources */ = {isa = PBXBuildFile; fileRef = AADEA65816DF90D2001C55AF /* bulletRobot.png */; };
 		AAEA20CD16B5A9000019C0A4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAEA20CC16B5A9000019C0A4 /* UIKit.framework */; };
 		AAEA20CF16B5A9000019C0A4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAEA20CE16B5A9000019C0A4 /* Foundation.framework */; };
 		AAEA20D116B5A9000019C0A4 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAEA20D016B5A9000019C0A4 /* CoreGraphics.framework */; };
@@ -58,7 +58,6 @@
 		AA24BBE316D666A400644F5E /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		AA52E9F816D64E3300A8A1DE /* BulletRobot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BulletRobot.h; sourceTree = "<group>"; };
 		AA52E9F916D64E3300A8A1DE /* BulletRobot.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BulletRobot.m; sourceTree = "<group>"; };
-		AA52E9FC16D651E200A8A1DE /* bulletRobot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bulletRobot.png; sourceTree = "<group>"; };
 		AA59715816D3B3D60050C0F4 /* GameOverViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameOverViewController.h; sourceTree = "<group>"; };
 		AA59715916D3B3D60050C0F4 /* GameOverViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameOverViewController.m; sourceTree = "<group>"; };
 		AA6F372716D7A18A006B495B /* Twitter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Twitter.framework; path = System/Library/Frameworks/Twitter.framework; sourceTree = SDKROOT; };
@@ -70,7 +69,6 @@
 		AA75CD9F16DBEE2900B6A0C2 /* star1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = star1.png; sourceTree = "<group>"; };
 		AA75CDA016DBEE2900B6A0C2 /* star2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = star2.png; sourceTree = "<group>"; };
 		AA75CDA116DBEE2900B6A0C2 /* star3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = star3.png; sourceTree = "<group>"; };
-		AA95212616C7EB8200CCA06B /* bullet.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bullet.png; sourceTree = "<group>"; };
 		AA95212916C80C8700CCA06B /* BulletPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BulletPlayer.h; sourceTree = "<group>"; };
 		AA95212A16C80C8700CCA06B /* BulletPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BulletPlayer.m; sourceTree = "<group>"; };
 		AAC62CEF16C4023E009AE1E6 /* StartPageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StartPageViewController.h; sourceTree = "<group>"; };
@@ -92,6 +90,8 @@
 		AAD8B48116CD1B56000871D5 /* PlayerBoard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerBoard.m; sourceTree = "<group>"; };
 		AADEA65216DF894E001C55AF /* playerFireAnimation.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = playerFireAnimation.png; sourceTree = "<group>"; };
 		AADEA65416DF8AF9001C55AF /* robotFireAnimation.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = robotFireAnimation.png; sourceTree = "<group>"; };
+		AADEA65616DF90C2001C55AF /* bullet.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bullet.png; sourceTree = "<group>"; };
+		AADEA65816DF90D2001C55AF /* bulletRobot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bulletRobot.png; sourceTree = "<group>"; };
 		AAEA20C816B5A9000019C0A4 /* PinPong.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PinPong.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AAEA20CC16B5A9000019C0A4 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		AAEA20CE16B5A9000019C0A4 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -206,6 +206,8 @@
 		AAEA20D316B5A9000019C0A4 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				AADEA65816DF90D2001C55AF /* bulletRobot.png */,
+				AADEA65616DF90C2001C55AF /* bullet.png */,
 				AADEA65416DF8AF9001C55AF /* robotFireAnimation.png */,
 				AADEA65216DF894E001C55AF /* playerFireAnimation.png */,
 				AAC7E24016DCFB07005180F5 /* blockDetonating.jpeg */,
@@ -219,9 +221,7 @@
 				AA75CD9116DBE34600B6A0C2 /* GameOverView.png */,
 				AAEC516D16DBBF57001089B3 /* StartPage.png */,
 				AA0FEA6516D65C6F00BE8A04 /* block.jpg */,
-				AA52E9FC16D651E200A8A1DE /* bulletRobot.png */,
 				AAD5F60216CA70F500686334 /* wall.png */,
-				AA95212616C7EB8200CCA06B /* bullet.png */,
 				AAD4274316BA8ED6007E2777 /* ball.png */,
 				AAEA20D416B5A9000019C0A4 /* PinPong-Info.plist */,
 				AAEA20D516B5A9000019C0A4 /* InfoPlist.strings */,
@@ -291,9 +291,7 @@
 				AAEA20E316B5A9000019C0A4 /* Default-568h@2x.png in Resources */,
 				AAEA20E616B5A9000019C0A4 /* MainStoryboard.storyboard in Resources */,
 				AAD4274416BA8ED6007E2777 /* ball.png in Resources */,
-				AA95212716C7EB8200CCA06B /* bullet.png in Resources */,
 				AAD5F60316CA70F500686334 /* wall.png in Resources */,
-				AA52E9FD16D651E200A8A1DE /* bulletRobot.png in Resources */,
 				AA0FEA6616D65C6F00BE8A04 /* block.jpg in Resources */,
 				AAEC516E16DBBF57001089B3 /* StartPage.png in Resources */,
 				AA75CD9416DBE34600B6A0C2 /* GameOverView.png in Resources */,
@@ -307,6 +305,8 @@
 				AAC7E24116DCFB07005180F5 /* blockDetonating.jpeg in Resources */,
 				AADEA65316DF894E001C55AF /* playerFireAnimation.png in Resources */,
 				AADEA65516DF8AF9001C55AF /* robotFireAnimation.png in Resources */,
+				AADEA65716DF90C2001C55AF /* bullet.png in Resources */,
+				AADEA65916DF90D3001C55AF /* bulletRobot.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

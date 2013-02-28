@@ -138,7 +138,7 @@
 
 -(void)addBulletPlayer
 {
-    bulletPlayer = [[BulletPlayer alloc] initWithFrame:CGRectMake(boardPlayer.center.x, boardPlayer.center.y-100, 20, 40)];
+    bulletPlayer = [[BulletPlayer alloc] initWithFrame:CGRectMake(boardPlayer.center.x, boardPlayer.center.y-100, 22, 35)];
     bulletPlayer.cntrl = self;
     bulletPlayer.objectSpeed = CGPointMake(0, -1);
     [self.view addSubview:bulletPlayer];
@@ -148,7 +148,7 @@
 
 -(void)addBulletRobot
 {
-    bulletRobot = [[BulletRobot alloc] initWithFrame:CGRectMake(boardPlayer.center.x, boardRobot.center.y, 20, 40)];
+    bulletRobot = [[BulletRobot alloc] initWithFrame:CGRectMake(boardPlayer.center.x, boardRobot.center.y, 22, 35)];
     bulletRobot.cntrl = self;
     bulletRobot.objectSpeed = CGPointMake(0, 1);
     [self.view addSubview:bulletRobot];
