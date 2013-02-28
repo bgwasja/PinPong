@@ -37,6 +37,7 @@
         self.needDelete = YES;
         if ([collideObject isKindOfClass:[BulletPlayer class]]) {
             collideObject.needDelete = YES;
+            [self.cntrl bulletPlayerFireAnimation];
         }
     }
     
@@ -44,6 +45,7 @@
         self.needDelete = YES;
         if ([collideObject isKindOfClass:[BulletRobot class]]) {
             collideObject.needDelete = YES;
+            [self.cntrl bulletRobotFireAnimation];
         }
     }
     

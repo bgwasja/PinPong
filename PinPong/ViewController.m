@@ -328,7 +328,7 @@
 {
     animationImage = [[UIImageView alloc] initWithFrame:CGRectMake (bulletPlayer.center.x, bulletPlayer.center.y, 15, 15)];
     [self.view addSubview:animationImage];
-    animationImage.animationImages = [self creatAnimation:@"fireAnimation.jpg"];
+    animationImage.animationImages = [self creatAnimation:@"playerFireAnimation.png"];
     animationImage.animationDuration = 0.9;
     animationImage.animationRepeatCount = 1;
     [animationImage startAnimating];
@@ -339,7 +339,7 @@
 {
     animationImage = [[UIImageView alloc] initWithFrame:CGRectMake (bulletRobot.center.x, bulletRobot.center.y, 15, 15)];
     [self.view addSubview:animationImage];
-    animationImage.animationImages = [self creatAnimation:@"fireAnimation.jpg"];
+    animationImage.animationImages = [self creatAnimation:@"robotFireAnimation.png"];
     animationImage.animationDuration = 0.9;
     animationImage.animationRepeatCount = 1;
     [animationImage startAnimating];
@@ -350,7 +350,7 @@
     UIImage *image = [UIImage imageNamed:fireAnimation];
     NSMutableArray *animationImages = [NSMutableArray array];
     
-    for (int i = 0; i < 8; i++) {
+    for (int i = 0; i < 6; i++) {
         CGImageRef imageRef = CGImageCreateWithImageInRect(image.CGImage,
                                                            CGRectMake(i*100, 0, 100, 100));
         UIImage *animationImage = [UIImage imageWithCGImage:imageRef];
