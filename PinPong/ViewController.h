@@ -31,6 +31,7 @@
 
 @property (strong, nonatomic) IBOutlet UILabel *scoreLabel1;
 @property (strong, nonatomic) IBOutlet UILabel *scoreLabel2;
+@property (strong, nonatomic) IBOutlet UILabel *levelLabel;
 @property (retain, nonatomic) NSMutableArray* objects;
 @property (retain, nonatomic) NSString *statusGameString;
 @property (strong, nonatomic) Wall *topWall;

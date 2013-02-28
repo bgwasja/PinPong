@@ -20,7 +20,6 @@
 @property (retain, nonatomic) IBOutlet UIImageView *starImageView;
 @property (retain, nonatomic) NSMutableArray* objects;
 
-
 - (IBAction)nextLevelButtonTapped:(id)sender;
 - (IBAction)menuButtonTapped:(id)sender;
 

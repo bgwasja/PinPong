@@ -39,6 +39,8 @@
 @synthesize block;
 @synthesize blockDetonating;
 @synthesize objectsToDelete;
+@synthesize levelLabel;
+
 
 -(void)viewDidLoad
 {
@@ -49,6 +51,7 @@
     
     objects = [[NSMutableArray alloc] init];
 
+    levelLabel.text = [NSString stringWithFormat:@"%d",levelId];
     NSLog(@"Level %d", levelId);
     for (int i = 0; i < levelId; i++) {
         [self addBall];
@@ -77,12 +80,13 @@
 {
     if (levelId == 2) {[self addBlock];}
     if (levelId == 3) {[self addBlockDetonating];}
+    if (levelId == 4) {[self addBlockDetonating]; [self addBlock];}
 }
 
 
 -(void)addBoard
 {
-    boardPlayer = [[PlayerBoard alloc]initWithFrame:CGRectMake(160, 420, 85, 15)];
+    boardPlayer = [[PlayerBoard alloc]initWithFrame:CGRectMake(160, 415, 85, 15)];
     boardPlayer.backgroundColor = [UIColor redColor];
     boardPlayer.cntrl = self;
     [self.view addSubview:boardPlayer];
@@ -345,6 +349,7 @@
     [animationImage startAnimating];
 }
 
+
 -(void)blockDetonationFireAnimation
 {
     animationImage = [[UIImageView alloc] initWithFrame:CGRectMake (blockDetonating.center.x, blockDetonating.center.y, 50, 50)];
@@ -354,6 +359,7 @@
     animationImage.animationRepeatCount = 1;
     [animationImage startAnimating];
 }
+
 
 -(NSArray*)creatAnimation:(NSString*)fireAnimation{
     UIImage *image = [UIImage imageNamed:fireAnimation];
