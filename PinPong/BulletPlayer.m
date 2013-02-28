@@ -65,6 +65,7 @@
         if (numberCollideBulletPlayer == numberCollideBulletMax) {
             if ([collideObject isKindOfClass:[BlockDetonating class]]) {
                 collideObject.needDelete = YES;
+                [self.cntrl onPlayerHaveScore];
             }
         }
     }

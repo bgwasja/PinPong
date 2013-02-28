@@ -9,6 +9,7 @@
 #import "BulletRobot.h"
 #import "Ball.h"
 #import "BlockDetonating.h"
+#import "BulletPlayer.h"
 
 @implementation BulletRobot
 
@@ -56,10 +57,17 @@
         if (numberCollideBulletRobot == numberCollideBulletMax) {
             if ([collideObject isKindOfClass:[BlockDetonating class]]) {
                 collideObject.needDelete = YES;
+                [self.cntrl onRobotHaveScore];
             }
         } 
     }
     
+    if (collideObject == (MovableObject*)self.cntrl.bulletPlayer) {
+        if ([collideObject isKindOfClass:[BulletPlayer class]]) {
+            collideObject.needDelete = YES;
+            [self.cntrl bulletPlayerFireAnimation];
+        }
+    }
     
 }
 

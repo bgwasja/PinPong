@@ -128,7 +128,7 @@
 
 -(void)addBall
 {
-    ball = [[Ball alloc] initWithFrame:CGRectMake((40 +rand() % 140), (40+rand() % 140), 26, 26)];
+    ball = [[Ball alloc] initWithFrame:CGRectMake((30 +rand() % 150), (30+rand() % 150), 26, 26)];
     ball.cntrl = self;
     ball.objectSpeed = CGPointMake(1, 1);
     [self.view addSubview:ball];
@@ -158,7 +158,7 @@
 
 -(void)addBlock
 {
-    block = [[Block alloc] initWithFrame:CGRectMake(150, 200, 50, 50)];
+    block = [[Block alloc] initWithFrame:CGRectMake(160, 240, 50, 50)];
     block.cntrl = self;
     block.objectSpeed = CGPointMake(0, 0);
     [self.view addSubview:block];
