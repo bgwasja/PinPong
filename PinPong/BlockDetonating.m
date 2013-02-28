@@ -28,7 +28,7 @@
     
     if (collideObject == (MovableObject*)self.cntrl.blockDetonating) {
         numberCollideBulletPlayer++;
-        [self.cntrl bulletPlayerFireAnimation];
+        [self.cntrl blockDetonationFireAnimation];
         if (numberCollideBulletPlayer == numberCollideBulletMax) {
             if ([collideObject isKindOfClass:[BlockDetonating class]]) {
                 collideObject.needDelete = YES;
@@ -39,7 +39,7 @@
     
     if (collideObject == (MovableObject*)self.cntrl.blockDetonating) {
         numberCollideBulletRobot++;
-        [self.cntrl bulletRobotFireAnimation];
+        [self.cntrl blockDetonationFireAnimation];
         if (numberCollideBulletRobot == numberCollideBulletMax) {
             if ([collideObject isKindOfClass:[BlockDetonating class]]) {
                 collideObject.needDelete = YES;

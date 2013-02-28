@@ -67,5 +67,6 @@
 -(void)addBlock;
 -(void)levelGame;
 -(void)addBlockDetonating;
+-(void)blockDetonationFireAnimation;
 
 @end

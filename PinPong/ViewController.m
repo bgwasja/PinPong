@@ -345,6 +345,15 @@
     [animationImage startAnimating];
 }
 
+-(void)blockDetonationFireAnimation
+{
+    animationImage = [[UIImageView alloc] initWithFrame:CGRectMake (blockDetonating.center.x, blockDetonating.center.y, 50, 50)];
+    [self.view addSubview:animationImage];
+    animationImage.animationImages = [self creatAnimation:@"playerFireAnimation.png"];
+    animationImage.animationDuration = 1;
+    animationImage.animationRepeatCount = 1;
+    [animationImage startAnimating];
+}
 
 -(NSArray*)creatAnimation:(NSString*)fireAnimation{
     UIImage *image = [UIImage imageNamed:fireAnimation];
