@@ -40,6 +40,7 @@
 @synthesize blockDetonating;
 @synthesize objectsToDelete;
 @synthesize levelLabel;
+@synthesize wallBlock;
 
 
 -(void)viewDidLoad
@@ -81,6 +82,10 @@
     if (levelId == 2) {[self addBlock];}
     if (levelId == 3) {[self addBlockDetonating];}
     if (levelId == 4) {[self addBlockDetonating]; [self addBlock];}
+    if (levelId == 5) {[self addWallBlock];}
+    if (levelId == 6) {[self addWallBlock]; [self addBlock];}
+    if (levelId == 7) {[self addBlock]; [self addBlockDetonating];}
+    if (levelId == 8) {[self addWallBlock]; [self addBlock]; [self addBlockDetonating];}
 }
 
 
@@ -168,6 +173,17 @@
     [self.view addSubview:block];
     [self.objects addObject:block];
 }
+
+
+-(void)addWallBlock
+{
+    wallBlock = [[Block alloc] initWithFrame:CGRectMake(10,200, 200, 50)];
+    wallBlock.cntrl = self;
+    wallBlock.objectSpeed = CGPointMake(0, 0);
+    [self.view addSubview:wallBlock];
+    [self.objects addObject:wallBlock];
+}
+
 
 -(void)addBlockDetonating
 {

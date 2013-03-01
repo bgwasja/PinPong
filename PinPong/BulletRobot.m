@@ -58,6 +58,7 @@
             if ([collideObject isKindOfClass:[BlockDetonating class]]) {
                 collideObject.needDelete = YES;
                 [self.cntrl onRobotHaveScore];
+                [self.cntrl onRobotHaveScore];
                 [self.cntrl blockDetonationFireAnimation];
             }
         } 

@@ -33,6 +33,7 @@
             if ([collideObject isKindOfClass:[BlockDetonating class]]) {
                 collideObject.needDelete = YES;
                 [self.cntrl onPlayerHaveScore];
+                [self.cntrl onPlayerHaveScore];
             }
         }
     }
@@ -43,6 +44,7 @@
         if (numberCollideBulletRobot == numberCollideBulletMax) {
             if ([collideObject isKindOfClass:[BlockDetonating class]]) {
                 collideObject.needDelete = YES;
+                [self.cntrl onRobotHaveScore];
                 [self.cntrl onRobotHaveScore];
             }
         }

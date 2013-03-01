@@ -46,7 +46,8 @@
 @property (retain, nonatomic) IBOutlet UIImageView *animationImage;
 @property (strong, nonatomic) Block *block;
 @property (strong, nonatomic) BlockDetonating *blockDetonating;
-@property (retain, nonatomic) NSMutableArray* objectsToDelete ;
+@property (retain, nonatomic) NSMutableArray* objectsToDelete;
+@property (strong, nonatomic) Block *wallBlock;
 
 - (IBAction)addBallButtonTapped:(id)sender;
 
@@ -69,5 +70,6 @@
 -(void)levelGame;
 -(void)addBlockDetonating;
 -(void)blockDetonationFireAnimation;
+-(void)addWallBlock;
 
 @end

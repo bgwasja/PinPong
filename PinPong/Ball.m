@@ -38,6 +38,7 @@
         if ([collideObject isKindOfClass:[BulletPlayer class]]) {
             collideObject.needDelete = YES;
             [self.cntrl bulletPlayerFireAnimation];
+            [self.cntrl onPlayerHaveScore];
         }
     }
     
@@ -46,6 +47,7 @@
         if ([collideObject isKindOfClass:[BulletRobot class]]) {
             collideObject.needDelete = YES;
             [self.cntrl bulletRobotFireAnimation];
+            [self.cntrl onRobotHaveScore];
         }
     }
     

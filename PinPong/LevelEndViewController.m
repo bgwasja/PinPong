@@ -53,7 +53,10 @@
                            forView:self.view
                              cache:NO];
     [UIView commitAnimations];
-    levelId++;
+    if (levelId <=8) {
+        levelId++;
+    }
+
 }
 
 
@@ -97,7 +100,7 @@
     if ((score1 > score2) && (score1 != 0 && score2 != 0)) {
         starImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"star2.png"]];
     }
-    UIImageView *someImageView = [[UIImageView alloc] initWithFrame:CGRectMake(60, 192, 213, 50)];
+    UIImageView *someImageView = [[UIImageView alloc] initWithFrame:CGRectMake(60, 172, 213, 50)];
     [someImageView addSubview:starImageView];
     [self.view addSubview:someImageView];
 }
