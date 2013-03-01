@@ -14,7 +14,7 @@
 {
     self = [super initWithFrame:frame];
     if (self) {
-        self.image = [UIImage imageNamed:@"block.jpg"];
+        self.image = [UIImage imageNamed:@"block.png"];
         objectSpeed = CGPointMake (0, 0);
     }
     return self;

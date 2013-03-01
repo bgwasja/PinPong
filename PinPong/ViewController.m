@@ -167,7 +167,7 @@
 
 -(void)addBlock
 {
-    block = [[Block alloc] initWithFrame:CGRectMake(160, 240, 50, 50)];
+    block = [[Block alloc] initWithFrame:CGRectMake(160, 150, 50, 50)];
     block.cntrl = self;
     block.objectSpeed = CGPointMake(0, 0);
     [self.view addSubview:block];
@@ -187,7 +187,7 @@
 
 -(void)addBlockDetonating
 {
-    blockDetonating = [[BlockDetonating alloc] initWithFrame:CGRectMake(180, 140, 40, 40)];
+    blockDetonating = [[BlockDetonating alloc] initWithFrame:CGRectMake(210, 140, 50, 50)];
     blockDetonating.cntrl = self;
     blockDetonating.objectSpeed = CGPointMake(0, 0);
     [self.view addSubview:blockDetonating];
