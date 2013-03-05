@@ -15,6 +15,7 @@
 #import "PlayerBoard.h"
 #import "Block.h"
 #import "BlockDetonating.h"
+#import "BlockDeleteScores.h"
 
 @interface ViewController () 
 
@@ -41,7 +42,7 @@
 @synthesize objectsToDelete;
 @synthesize levelLabel;
 @synthesize wallBlock;
-
+@synthesize blockDeleteScores;
 
 -(void)viewDidLoad
 {
@@ -84,8 +85,8 @@
     if (levelId == 4) {[self addBlockDetonating]; [self addBlock];}
     if (levelId == 5) {[self addWallBlock];}
     if (levelId == 6) {[self addWallBlock]; [self addBlock];}
-    if (levelId == 7) {[self addBlock]; [self addBlockDetonating];}
-    if (levelId == 8) {[self addWallBlock]; [self addBlock]; [self addBlockDetonating];}
+    if (levelId == 7) {[self addBlock]; [self addBlockDeleteScores];}
+    if (levelId == 8) {[self addBlockDeleteScores]; [self addBlock]; [self addBlockDetonating];}
 }
 
 
@@ -195,6 +196,16 @@
 }
 
 
+-(void)addBlockDeleteScores
+{
+    blockDeleteScores = [[BlockDeleteScores alloc] initWithFrame:CGRectMake(200, 100, 30, 30)];
+    blockDeleteScores.cntrl = self;
+    blockDeleteScores.objectSpeed = CGPointMake(0, 0);
+    [self.view addSubview:blockDeleteScores];
+    [self.objects addObject:blockDeleteScores];
+}
+
+
 -(void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
@@ -276,6 +287,17 @@
 
 -(void)onRobotHaveScore {
     scoresRobot++;
+}
+
+
+-(void)deletePlayerScore{
+    scoresPlayer = 0;
+    
+}
+
+
+-(void)deleteRobotScore{
+    scoresRobot = 0;
 }
 
 

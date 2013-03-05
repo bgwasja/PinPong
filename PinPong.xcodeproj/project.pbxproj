@@ -22,6 +22,8 @@
 		AA75CDA516DBEE2900B6A0C2 /* star3.png in Resources */ = {isa = PBXBuildFile; fileRef = AA75CDA116DBEE2900B6A0C2 /* star3.png */; };
 		AA8409D116E63560007A3843 /* levelView.png in Resources */ = {isa = PBXBuildFile; fileRef = AA8409D016E63560007A3843 /* levelView.png */; };
 		AA8409D416E63591007A3843 /* StartPage.png in Resources */ = {isa = PBXBuildFile; fileRef = AA8409D316E63591007A3843 /* StartPage.png */; };
+		AA8409D616E63935007A3843 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = AA8409D516E63935007A3843 /* icon.png */; };
+		AA8409D916E63996007A3843 /* BlockDeleteScores.m in Sources */ = {isa = PBXBuildFile; fileRef = AA8409D816E63996007A3843 /* BlockDeleteScores.m */; };
 		AA95212B16C80C8700CCA06B /* BulletPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = AA95212A16C80C8700CCA06B /* BulletPlayer.m */; };
 		AAC62CF116C4023E009AE1E6 /* StartPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AAC62CF016C4023E009AE1E6 /* StartPageViewController.m */; };
 		AAC62CF516C402BB009AE1E6 /* LevelEndViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AAC62CF416C402BB009AE1E6 /* LevelEndViewController.m */; };
@@ -72,6 +74,9 @@
 		AA75CDA116DBEE2900B6A0C2 /* star3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = star3.png; sourceTree = "<group>"; };
 		AA8409D016E63560007A3843 /* levelView.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = levelView.png; path = ../../../game/levelView.png; sourceTree = "<group>"; };
 		AA8409D316E63591007A3843 /* StartPage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = StartPage.png; path = ../../../game/StartPage.png; sourceTree = "<group>"; };
+		AA8409D516E63935007A3843 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
+		AA8409D716E63996007A3843 /* BlockDeleteScores.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlockDeleteScores.h; sourceTree = "<group>"; };
+		AA8409D816E63996007A3843 /* BlockDeleteScores.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BlockDeleteScores.m; sourceTree = "<group>"; };
 		AA95212916C80C8700CCA06B /* BulletPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BulletPlayer.h; sourceTree = "<group>"; };
 		AA95212A16C80C8700CCA06B /* BulletPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BulletPlayer.m; sourceTree = "<group>"; };
 		AAC62CEF16C4023E009AE1E6 /* StartPageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StartPageViewController.h; sourceTree = "<group>"; };
@@ -151,6 +156,8 @@
 				AA0FEA6116D65B5400BE8A04 /* Block.m */,
 				AAC7E23C16DCFA8E005180F5 /* BlockDetonating.h */,
 				AAC7E23D16DCFA8E005180F5 /* BlockDetonating.m */,
+				AA8409D716E63996007A3843 /* BlockDeleteScores.h */,
+				AA8409D816E63996007A3843 /* BlockDeleteScores.m */,
 			);
 			name = Object;
 			sourceTree = "<group>";
@@ -158,6 +165,7 @@
 		AAEA20BD16B5A9000019C0A4 = {
 			isa = PBXGroup;
 			children = (
+				AA8409D516E63935007A3843 /* icon.png */,
 				AA6F372716D7A18A006B495B /* Twitter.framework */,
 				AA24BBE316D666A400644F5E /* MessageUI.framework */,
 				AAEA20D216B5A9000019C0A4 /* PinPong */,
@@ -316,6 +324,7 @@
 				AACFF2AC16E0DE5800C1FB82 /* block.png in Resources */,
 				AA8409D116E63560007A3843 /* levelView.png in Resources */,
 				AA8409D416E63591007A3843 /* StartPage.png in Resources */,
+				AA8409D616E63935007A3843 /* icon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -342,6 +351,7 @@
 				AA0FEA6216D65B5400BE8A04 /* Block.m in Sources */,
 				AAC7E23E16DCFA8E005180F5 /* BlockDetonating.m in Sources */,
 				AACFF2AF16E0E03A00C1FB82 /* LevelViewController.m in Sources */,
+				AA8409D916E63996007A3843 /* BlockDeleteScores.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

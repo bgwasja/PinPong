@@ -19,6 +19,7 @@
 @class PlayerBoard;
 @class BulletPlayer;
 @class BulletRobot;
+@class BlockDeleteScores;
 
 @interface ViewController : UIViewController <UIGestureRecognizerDelegate>
 {
@@ -48,6 +49,7 @@
 @property (strong, nonatomic) BlockDetonating *blockDetonating;
 @property (retain, nonatomic) NSMutableArray* objectsToDelete;
 @property (strong, nonatomic) Block *wallBlock;
+@property (strong, nonatomic) BlockDeleteScores *blockDeleteScores;
 
 - (IBAction)addBallButtonTapped:(id)sender;
 
@@ -71,5 +73,8 @@
 -(void)addBlockDetonating;
 -(void)blockDetonationFireAnimation;
 -(void)addWallBlock;
+-(void)deletePlayerScore;
+-(void)deleteRobotScore;
+-(void)addBlockDeleteScores;
 
 @end
