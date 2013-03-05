@@ -30,7 +30,7 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     
-    levelId = 1;
+   // levelId = 1;
 }
 
 - (void)didReceiveMemoryWarning
@@ -40,6 +40,7 @@
 }
 
 - (IBAction)playButtonTapped:(id)sender {
+    levelId = 1;
 }
 
 - (IBAction)emailButtonTapped:(id)sender {

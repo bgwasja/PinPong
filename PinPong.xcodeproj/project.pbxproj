@@ -20,6 +20,8 @@
 		AA75CDA316DBEE2900B6A0C2 /* star1.png in Resources */ = {isa = PBXBuildFile; fileRef = AA75CD9F16DBEE2900B6A0C2 /* star1.png */; };
 		AA75CDA416DBEE2900B6A0C2 /* star2.png in Resources */ = {isa = PBXBuildFile; fileRef = AA75CDA016DBEE2900B6A0C2 /* star2.png */; };
 		AA75CDA516DBEE2900B6A0C2 /* star3.png in Resources */ = {isa = PBXBuildFile; fileRef = AA75CDA116DBEE2900B6A0C2 /* star3.png */; };
+		AA8409D116E63560007A3843 /* levelView.png in Resources */ = {isa = PBXBuildFile; fileRef = AA8409D016E63560007A3843 /* levelView.png */; };
+		AA8409D416E63591007A3843 /* StartPage.png in Resources */ = {isa = PBXBuildFile; fileRef = AA8409D316E63591007A3843 /* StartPage.png */; };
 		AA95212B16C80C8700CCA06B /* BulletPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = AA95212A16C80C8700CCA06B /* BulletPlayer.m */; };
 		AAC62CF116C4023E009AE1E6 /* StartPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AAC62CF016C4023E009AE1E6 /* StartPageViewController.m */; };
 		AAC62CF516C402BB009AE1E6 /* LevelEndViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AAC62CF416C402BB009AE1E6 /* LevelEndViewController.m */; };
@@ -48,7 +50,6 @@
 		AAEA20E316B5A9000019C0A4 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AAEA20E216B5A9000019C0A4 /* Default-568h@2x.png */; };
 		AAEA20E616B5A9000019C0A4 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AAEA20E416B5A9000019C0A4 /* MainStoryboard.storyboard */; };
 		AAEA20E916B5A9000019C0A4 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AAEA20E816B5A9000019C0A4 /* ViewController.m */; };
-		AAEC516E16DBBF57001089B3 /* StartPage.png in Resources */ = {isa = PBXBuildFile; fileRef = AAEC516D16DBBF57001089B3 /* StartPage.png */; };
 		AAEEA44716D4EF5D00F6C31F /* InfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AAEEA44616D4EF5D00F6C31F /* InfoViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -69,6 +70,8 @@
 		AA75CD9F16DBEE2900B6A0C2 /* star1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = star1.png; sourceTree = "<group>"; };
 		AA75CDA016DBEE2900B6A0C2 /* star2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = star2.png; sourceTree = "<group>"; };
 		AA75CDA116DBEE2900B6A0C2 /* star3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = star3.png; sourceTree = "<group>"; };
+		AA8409D016E63560007A3843 /* levelView.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = levelView.png; path = ../../../game/levelView.png; sourceTree = "<group>"; };
+		AA8409D316E63591007A3843 /* StartPage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = StartPage.png; path = ../../../game/StartPage.png; sourceTree = "<group>"; };
 		AA95212916C80C8700CCA06B /* BulletPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BulletPlayer.h; sourceTree = "<group>"; };
 		AA95212A16C80C8700CCA06B /* BulletPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BulletPlayer.m; sourceTree = "<group>"; };
 		AAC62CEF16C4023E009AE1E6 /* StartPageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StartPageViewController.h; sourceTree = "<group>"; };
@@ -111,7 +114,6 @@
 		AAEA20E516B5A9000019C0A4 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		AAEA20E716B5A9000019C0A4 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		AAEA20E816B5A9000019C0A4 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		AAEC516D16DBBF57001089B3 /* StartPage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = StartPage.png; sourceTree = "<group>"; };
 		AAEEA44516D4EF5D00F6C31F /* InfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InfoViewController.h; sourceTree = "<group>"; };
 		AAEEA44616D4EF5D00F6C31F /* InfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InfoViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -211,6 +213,8 @@
 		AAEA20D316B5A9000019C0A4 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				AA8409D316E63591007A3843 /* StartPage.png */,
+				AA8409D016E63560007A3843 /* levelView.png */,
 				AACFF2AB16E0DE5800C1FB82 /* block.png */,
 				AADEA65816DF90D2001C55AF /* bulletRobot.png */,
 				AADEA65616DF90C2001C55AF /* bullet.png */,
@@ -225,7 +229,6 @@
 				AA75CD9A16DBEA8100B6A0C2 /* field.png */,
 				AA75CD9816DBE44F00B6A0C2 /* LevelEndView.png */,
 				AA75CD9116DBE34600B6A0C2 /* GameOverView.png */,
-				AAEC516D16DBBF57001089B3 /* StartPage.png */,
 				AAD5F60216CA70F500686334 /* wall.png */,
 				AAD4274316BA8ED6007E2777 /* ball.png */,
 				AAEA20D416B5A9000019C0A4 /* PinPong-Info.plist */,
@@ -297,7 +300,6 @@
 				AAEA20E616B5A9000019C0A4 /* MainStoryboard.storyboard in Resources */,
 				AAD4274416BA8ED6007E2777 /* ball.png in Resources */,
 				AAD5F60316CA70F500686334 /* wall.png in Resources */,
-				AAEC516E16DBBF57001089B3 /* StartPage.png in Resources */,
 				AA75CD9416DBE34600B6A0C2 /* GameOverView.png in Resources */,
 				AA75CD9916DBE44F00B6A0C2 /* LevelEndView.png in Resources */,
 				AA75CD9B16DBEA8100B6A0C2 /* field.png in Resources */,
@@ -312,6 +314,8 @@
 				AADEA65716DF90C2001C55AF /* bullet.png in Resources */,
 				AADEA65916DF90D3001C55AF /* bulletRobot.png in Resources */,
 				AACFF2AC16E0DE5800C1FB82 /* block.png in Resources */,
+				AA8409D116E63560007A3843 /* levelView.png in Resources */,
+				AA8409D416E63591007A3843 /* StartPage.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

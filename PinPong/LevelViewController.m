@@ -8,6 +8,7 @@
 
 #import "LevelViewController.h"
 #import "ViewController.h"
+#import <QuartzCore/QuartzCore.h> 
 
 @interface LevelViewController ()
 
@@ -32,7 +33,7 @@
     [super viewDidLoad];
 	
     self.levels = [NSArray arrayWithObjects:@"Level 1", @"Level 2", @"Level 3", @"Level 4", @"Level 5", @"Level 6", @"Level 7", @"Level 8", nil];
-    levelTable.rowHeight = 40;
+    levelTable.rowHeight = 41;
     levelTable.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"field.png"]];
 
 }
@@ -42,7 +43,6 @@
     if ([segue.identifier isEqualToString:@"levels"]) {
         ViewController* c = (ViewController*)segue.destinationViewController;
         c.view;
-        //add  method 
     }
 }
 
@@ -67,13 +67,14 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault
                                        reuseIdentifier:CellIdentifier];
     }
+    tableView.layer.cornerRadius = 10;
     cell.textLabel.text = [levels objectAtIndex:indexPath.row];
     return cell;
 }
 
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
-    return 40;
+    return 0;
 }
 
 
@@ -82,35 +83,42 @@
         case 0:
             NSLog(@"cell1");
             [self performSegueWithIdentifier:@"levels" sender:self];
-            levelId = 5;
+            levelId = 1;
             break;
         case 1:
             NSLog(@"cell2");
             [self performSegueWithIdentifier:@"levels" sender:self];
+            levelId = 2;
             break;
         case 2:
             NSLog(@"cell3");
             [self performSegueWithIdentifier:@"levels" sender:self];
+            levelId = 3;
             break;
         case 3:
             NSLog(@"cell4");
             [self performSegueWithIdentifier:@"levels" sender:self];
+            levelId = 4;
             break;
         case 4:
             NSLog(@"cell5");
             [self performSegueWithIdentifier:@"levels" sender:self];
+            levelId = 5;
             break;
         case 5:
             NSLog(@"cell6");
             [self performSegueWithIdentifier:@"levels" sender:self];
+            levelId = 6;
             break;
         case 6:
             NSLog(@"cell7");
             [self performSegueWithIdentifier:@"levels" sender:self];
+            levelId = 7;
             break;
         case 7:
             NSLog(@"cell8");
             [self performSegueWithIdentifier:@"levels" sender:self];
+            levelId = 8;
             break;
         default:
             break;
