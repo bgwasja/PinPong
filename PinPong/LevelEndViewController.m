@@ -53,10 +53,9 @@
                            forView:self.view
                              cache:NO];
     [UIView commitAnimations];
-    if (levelId <=8) {
+    if (levelId <= 8) {
         levelId++;
     }
-
 }
 
 

@@ -11,10 +11,10 @@
 @interface LevelViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
 {
     UITableView *levelTable;
-    NSArray *levels;
+    NSArray *levelsArray;
 }
 
 @property (retain, nonatomic) IBOutlet UITableView *levelTable;
-@property (retain, nonatomic) NSArray *levels;
+@property (retain, nonatomic) NSArray *levelsArray;
 
 @end

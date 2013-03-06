@@ -54,7 +54,7 @@
     objects = [[NSMutableArray alloc] init];
 
     levelLabel.text = [NSString stringWithFormat:@"%d",levelId];
-    NSLog(@"Level %d", levelId);
+    NSLog(@"Play field, level =  %d", levelId);
     for (int i = 0; i < levelId; i++) {
         [self addBall];
     }
@@ -63,13 +63,12 @@
     [self movementFire];
     [self addBoard];
     [self levelGame];
-    
+
     gameTimer = [NSTimer scheduledTimerWithTimeInterval:0.006
                                      target:self
                                    selector:@selector(timer)
                                    userInfo:nil
                                     repeats:YES];
-    
     bulletRobotTimer = [NSTimer scheduledTimerWithTimeInterval:speedBulletAnimation
                                                         target:self
                                                       selector:@selector(addBulletRobot)
@@ -292,7 +291,6 @@
 
 -(void)deletePlayerScore{
     scoresPlayer = 0;
-    
 }
 
 
@@ -329,7 +327,7 @@
 
 -(void)gameOver
 {
-    if (levelId == intMaxLevel) {
+    if (levelId >= intMaxLevel) {
         if (scoresPlayer == intMaxScore || scoresRobot == intMaxScore) {
             [self performSegueWithIdentifier:@"gameOver" sender:self];
         }

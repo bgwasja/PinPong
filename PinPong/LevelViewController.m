@@ -16,7 +16,7 @@
 
 @implementation LevelViewController
 @synthesize levelTable;
-@synthesize levels;
+@synthesize levelsArray;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -32,18 +32,9 @@
 {
     [super viewDidLoad];
 	
-    self.levels = [NSArray arrayWithObjects:@"Level 1", @"Level 2", @"Level 3", @"Level 4", @"Level 5", @"Level 6", @"Level 7", @"Level 8", nil];
+    self.levelsArray = [NSArray arrayWithObjects:@"Level 1", @"Level 2", @"Level 3", @"Level 4", @"Level 5", @"Level 6", @"Level 7", @"Level 8", nil];
     levelTable.rowHeight = 41;
     levelTable.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"field.png"]];
-
-}
-
-
-- (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    if ([segue.identifier isEqualToString:@"levels"]) {
-        ViewController* c = (ViewController*)segue.destinationViewController;
-        c.view;
-    }
 }
 
 
@@ -55,7 +46,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return levels.count;
+    return levelsArray.count;
 }
 
 
@@ -68,7 +59,8 @@
                                        reuseIdentifier:CellIdentifier];
     }
     tableView.layer.cornerRadius = 10;
-    cell.textLabel.text = [levels objectAtIndex:indexPath.row];
+    cell.textLabel.text = [levelsArray objectAtIndex:indexPath.row];
+    cell.textLabel.textColor = [UIColor whiteColor];
     return cell;
 }
 
@@ -81,44 +73,36 @@
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     switch (indexPath.row) {
         case 0:
-            NSLog(@"cell1");
-            [self performSegueWithIdentifier:@"levels" sender:self];
             levelId = 1;
+            [self performSegueWithIdentifier:@"levels" sender:self];
             break;
         case 1:
-            NSLog(@"cell2");
-            [self performSegueWithIdentifier:@"levels" sender:self];
             levelId = 2;
+            [self performSegueWithIdentifier:@"levels" sender:self];
             break;
         case 2:
-            NSLog(@"cell3");
-            [self performSegueWithIdentifier:@"levels" sender:self];
             levelId = 3;
+            [self performSegueWithIdentifier:@"levels" sender:self];
             break;
         case 3:
-            NSLog(@"cell4");
-            [self performSegueWithIdentifier:@"levels" sender:self];
             levelId = 4;
+            [self performSegueWithIdentifier:@"levels" sender:self];
             break;
         case 4:
-            NSLog(@"cell5");
-            [self performSegueWithIdentifier:@"levels" sender:self];
             levelId = 5;
+            [self performSegueWithIdentifier:@"levels" sender:self];
             break;
         case 5:
-            NSLog(@"cell6");
-            [self performSegueWithIdentifier:@"levels" sender:self];
             levelId = 6;
+            [self performSegueWithIdentifier:@"levels" sender:self];
             break;
         case 6:
-            NSLog(@"cell7");
-            [self performSegueWithIdentifier:@"levels" sender:self];
             levelId = 7;
+            [self performSegueWithIdentifier:@"levels" sender:self];
             break;
         case 7:
-            NSLog(@"cell8");
-            [self performSegueWithIdentifier:@"levels" sender:self];
             levelId = 8;
+            [self performSegueWithIdentifier:@"levels" sender:self];
             break;
         default:
             break;

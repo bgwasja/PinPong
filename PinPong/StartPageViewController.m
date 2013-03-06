@@ -25,13 +25,14 @@
     return self;
 }
 
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
-    
     levelId = 1;
 }
+
 
 - (void)didReceiveMemoryWarning
 {
@@ -39,9 +40,10 @@
     // Dispose of any resources that can be recreated.
 }
 
+
 - (IBAction)playButtonTapped:(id)sender {
-    //levelId = 1;
 }
+
 
 - (IBAction)emailButtonTapped:(id)sender {
     MFMailComposeViewController *mailComposer = [[MFMailComposeViewController alloc] init];

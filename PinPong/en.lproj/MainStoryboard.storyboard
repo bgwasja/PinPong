@@ -130,12 +130,12 @@
                                 </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="ZxZ-PL-73D">
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="0.67843137254901964" green="0.66274509803921566" blue="0.6470588235294118" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="240" id="gRc-0K-Om9"/>
                                     <constraint firstAttribute="height" constant="325" id="lEz-Qk-0Be"/>
                                 </constraints>
-                                <color key="separatorColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="separatorColor" red="0.67843137254901964" green="0.66274509803921566" blue="0.6470588235294118" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
                                     <outlet property="dataSource" destination="PiX-EO-Fif" id="jPn-aO-Hff"/>
                                     <outlet property="delegate" destination="PiX-EO-Fif" id="dKU-0q-5aN"/>
@@ -586,64 +586,13 @@
         <image name="field.png" width="320" height="480"/>
         <image name="levelView.png" width="320" height="480"/>
     </resources>
-    <classes>
-        <class className="GameOverViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/GameOverViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="menuButtonTapped:"/>
-            </relationships>
-        </class>
-        <class className="InfoViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/InfoViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="twitterButtonTapped:"/>
-            </relationships>
-        </class>
-        <class className="LevelEndViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/LevelEndViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="menuButtonTapped:"/>
-                <relationship kind="action" name="nextLevelButtonTapped:"/>
-                <relationship kind="outlet" name="robotScoreLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="starImageView" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="statusGameLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="yourScoreLabel" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="LevelViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/LevelViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="levelTable" candidateClass="UITableView"/>
-            </relationships>
-        </class>
-        <class className="NSLayoutConstraint" superclassName="NSObject">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
-        </class>
-        <class className="StartPageViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/StartPageViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="emailButtonTapped:"/>
-                <relationship kind="action" name="playButtonTapped:"/>
-            </relationships>
-        </class>
-        <class className="ViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/ViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="addBallButtonTapped:"/>
-                <relationship kind="outlet" name="animationImage" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="levelLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="scoreLabel1" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="scoreLabel2" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="cSb-eA-mUP"/>
         <segue reference="hAR-gz-2Tc"/>
+        <segue reference="0BG-IC-dKx"/>
     </inferredMetricsTieBreakers>
 </document>
