@@ -137,7 +137,7 @@
 
 -(void)addBall
 {
-    ball = [[Ball alloc] initWithFrame:CGRectMake((30 +rand() % 150), (30+rand() % 150), 26, 26)];
+    ball = [[Ball alloc] initWithFrame:CGRectMake((30+rand() % 150), (30+rand() % 150), 26, 26)];
     ball.cntrl = self;
     ball.objectSpeed = CGPointMake(1, 1);
     [self.view addSubview:ball];
@@ -167,7 +167,7 @@
 
 -(void)addBlock
 {
-    block = [[Block alloc] initWithFrame:CGRectMake(160, 150, 50, 50)];
+    block = [[Block alloc] initWithFrame:CGRectMake(150, 150, 50, 50)];
     block.cntrl = self;
     block.objectSpeed = CGPointMake(0, 0);
     [self.view addSubview:block];
@@ -187,7 +187,7 @@
 
 -(void)addBlockDetonating
 {
-    blockDetonating = [[BlockDetonating alloc] initWithFrame:CGRectMake(210, 140, 50, 50)];
+    blockDetonating = [[BlockDetonating alloc] initWithFrame:CGRectMake(200, 150, 50, 50)];
     blockDetonating.cntrl = self;
     blockDetonating.objectSpeed = CGPointMake(0, 0);
     [self.view addSubview:blockDetonating];
@@ -197,7 +197,7 @@
 
 -(void)addBlockDeleteScores
 {
-    blockDeleteScores = [[BlockDeleteScores alloc] initWithFrame:CGRectMake(200, 100, 30, 30)];
+    blockDeleteScores = [[BlockDeleteScores alloc] initWithFrame:CGRectMake(200, 100, 50, 50)];
     blockDeleteScores.cntrl = self;
     blockDeleteScores.objectSpeed = CGPointMake(0, 0);
     [self.view addSubview:blockDeleteScores];
@@ -330,8 +330,8 @@
     if (levelId >= intMaxLevel) {
         if (scoresPlayer == intMaxScore || scoresRobot == intMaxScore) {
             [self performSegueWithIdentifier:@"gameOver" sender:self];
-            [bulletRobotTimer invalidate];
             [gameTimer invalidate];
+            [bulletRobotTimer invalidate];
         }
     }
 }
