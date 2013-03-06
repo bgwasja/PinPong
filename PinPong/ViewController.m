@@ -330,6 +330,8 @@
     if (levelId >= intMaxLevel) {
         if (scoresPlayer == intMaxScore || scoresRobot == intMaxScore) {
             [self performSegueWithIdentifier:@"gameOver" sender:self];
+            [bulletRobotTimer invalidate];
+            [gameTimer invalidate];
         }
     }
 }
