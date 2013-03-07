@@ -9,6 +9,7 @@
 #import "BlockDeleteScores.h"
 #import "BulletPlayer.h"
 #import "BulletRobot.h"
+#import "SoundGame.h"
 
 @implementation BlockDeleteScores
 
@@ -33,6 +34,7 @@
             if ([collideObject isKindOfClass:[BlockDeleteScores class]]) {
                 collideObject.needDelete = YES;
                 [self.cntrl deleteRobotScore];
+//                [SoundGame playSound:@"blockDeleteScores.caf"];
             }
         }
     }
@@ -44,6 +46,7 @@
             if ([collideObject isKindOfClass:[BlockDeleteScores class]]) {
                 collideObject.needDelete = YES;
                 [self.cntrl deletePlayerScore];
+//                [SoundGame playSound:@"blockDeleteScores.caf"];
             }
         }
     }

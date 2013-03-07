@@ -24,11 +24,13 @@
     return self;
 }
 
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
 }
+
 
 - (void)didReceiveMemoryWarning
 {
@@ -41,4 +43,6 @@
     levelId = 1;
     NSLog(@"Level game over %d",levelId);
 }
+
+
 @end

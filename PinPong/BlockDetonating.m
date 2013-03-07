@@ -9,6 +9,7 @@
 #import "BlockDetonating.h"
 #import "BulletPlayer.h"
 #import "BulletRobot.h"
+#import "SoundGame.h"
 
 @implementation BlockDetonating
 
@@ -24,6 +25,7 @@
     numberCollideBulletRobot = 0;
 }
 
+
 -(void) collideOccuredWithObject:(MovableObject*) collideObject {
     
     if (collideObject == (MovableObject*)self.cntrl.blockDetonating) {
@@ -34,6 +36,7 @@
                 collideObject.needDelete = YES;
                 [self.cntrl onPlayerHaveScore];
                 [self.cntrl onPlayerHaveScore];
+//                [SoundGame playSound:@"blockDetonating.caf"];
             }
         }
     }
@@ -46,6 +49,7 @@
                 collideObject.needDelete = YES;
                 [self.cntrl onRobotHaveScore];
                 [self.cntrl onRobotHaveScore];
+//                [SoundGame playSound:@"blockDetonating.caf"];
             }
         }
     }

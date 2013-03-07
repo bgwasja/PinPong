@@ -205,6 +205,8 @@
 				AAEA20DC16B5A9000019C0A4 /* AppDelegate.m */,
 				AAB5E8EE16E8CAF1005127D6 /* SoundGame.h */,
 				AAB5E8EF16E8CAF1005127D6 /* SoundGame.m */,
+				AACC861216C9262900F4CA86 /* MovableObject.h */,
+				AACC861316C9262900F4CA86 /* MovableObject.m */,
 				AA0FEA6416D65B6700BE8A04 /* Object */,
 				AAEA20E716B5A9000019C0A4 /* ViewController.h */,
 				AAEA20E816B5A9000019C0A4 /* ViewController.m */,
@@ -220,8 +222,6 @@
 				AAB5E8E716E8C1DF005127D6 /* InformationViewController.m */,
 				AAEA20E416B5A9000019C0A4 /* MainStoryboard.storyboard */,
 				AAEA20D316B5A9000019C0A4 /* Supporting Files */,
-				AACC861216C9262900F4CA86 /* MovableObject.h */,
-				AACC861316C9262900F4CA86 /* MovableObject.m */,
 			);
 			path = PinPong;
 			sourceTree = "<group>";

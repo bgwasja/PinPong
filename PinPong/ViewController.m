@@ -164,7 +164,7 @@
     bulletRobot.objectSpeed = CGPointMake(0, 1);
     [self.view addSubview:bulletRobot];
     [objects addObject:bulletRobot];
-//    [SoundGame playSound:@"bulletRobot"];
+//    [SoundGame playSound:@"bulletRobot.caf"];
 }
 
 
