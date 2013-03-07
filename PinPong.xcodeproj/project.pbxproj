@@ -25,6 +25,7 @@
 		AA8409D616E63935007A3843 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = AA8409D516E63935007A3843 /* icon.png */; };
 		AA8409D916E63996007A3843 /* BlockDeleteScores.m in Sources */ = {isa = PBXBuildFile; fileRef = AA8409D816E63996007A3843 /* BlockDeleteScores.m */; };
 		AA95212B16C80C8700CCA06B /* BulletPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = AA95212A16C80C8700CCA06B /* BulletPlayer.m */; };
+		AAB5E8E816E8C1DF005127D6 /* InformationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AAB5E8E716E8C1DF005127D6 /* InformationViewController.m */; };
 		AAC62CF116C4023E009AE1E6 /* StartPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AAC62CF016C4023E009AE1E6 /* StartPageViewController.m */; };
 		AAC62CF516C402BB009AE1E6 /* LevelEndViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AAC62CF416C402BB009AE1E6 /* LevelEndViewController.m */; };
 		AAC7E23E16DCFA8E005180F5 /* BlockDetonating.m in Sources */ = {isa = PBXBuildFile; fileRef = AAC7E23D16DCFA8E005180F5 /* BlockDetonating.m */; };
@@ -52,7 +53,6 @@
 		AAEA20E316B5A9000019C0A4 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AAEA20E216B5A9000019C0A4 /* Default-568h@2x.png */; };
 		AAEA20E616B5A9000019C0A4 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AAEA20E416B5A9000019C0A4 /* MainStoryboard.storyboard */; };
 		AAEA20E916B5A9000019C0A4 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AAEA20E816B5A9000019C0A4 /* ViewController.m */; };
-		AAEEA44716D4EF5D00F6C31F /* InfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AAEEA44616D4EF5D00F6C31F /* InfoViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -79,6 +79,8 @@
 		AA8409D816E63996007A3843 /* BlockDeleteScores.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BlockDeleteScores.m; sourceTree = "<group>"; };
 		AA95212916C80C8700CCA06B /* BulletPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BulletPlayer.h; sourceTree = "<group>"; };
 		AA95212A16C80C8700CCA06B /* BulletPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BulletPlayer.m; sourceTree = "<group>"; };
+		AAB5E8E616E8C1DF005127D6 /* InformationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InformationViewController.h; sourceTree = "<group>"; };
+		AAB5E8E716E8C1DF005127D6 /* InformationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InformationViewController.m; sourceTree = "<group>"; };
 		AAC62CEF16C4023E009AE1E6 /* StartPageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StartPageViewController.h; sourceTree = "<group>"; };
 		AAC62CF016C4023E009AE1E6 /* StartPageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StartPageViewController.m; sourceTree = "<group>"; };
 		AAC62CF316C402BB009AE1E6 /* LevelEndViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LevelEndViewController.h; sourceTree = "<group>"; };
@@ -119,8 +121,6 @@
 		AAEA20E516B5A9000019C0A4 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		AAEA20E716B5A9000019C0A4 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		AAEA20E816B5A9000019C0A4 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		AAEEA44516D4EF5D00F6C31F /* InfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InfoViewController.h; sourceTree = "<group>"; };
-		AAEEA44616D4EF5D00F6C31F /* InfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InfoViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -206,10 +206,10 @@
 				AAC62CF416C402BB009AE1E6 /* LevelEndViewController.m */,
 				AA59715816D3B3D60050C0F4 /* GameOverViewController.h */,
 				AA59715916D3B3D60050C0F4 /* GameOverViewController.m */,
-				AAEEA44516D4EF5D00F6C31F /* InfoViewController.h */,
-				AAEEA44616D4EF5D00F6C31F /* InfoViewController.m */,
 				AACFF2AD16E0E03900C1FB82 /* LevelViewController.h */,
 				AACFF2AE16E0E03900C1FB82 /* LevelViewController.m */,
+				AAB5E8E616E8C1DF005127D6 /* InformationViewController.h */,
+				AAB5E8E716E8C1DF005127D6 /* InformationViewController.m */,
 				AAEA20E416B5A9000019C0A4 /* MainStoryboard.storyboard */,
 				AAEA20D316B5A9000019C0A4 /* Supporting Files */,
 				AACC861216C9262900F4CA86 /* MovableObject.h */,
@@ -346,12 +346,12 @@
 				AAD5F5FE16CA6BA300686334 /* Wall.m in Sources */,
 				AAD8B48216CD1B56000871D5 /* PlayerBoard.m in Sources */,
 				AA59715A16D3B3D60050C0F4 /* GameOverViewController.m in Sources */,
-				AAEEA44716D4EF5D00F6C31F /* InfoViewController.m in Sources */,
 				AA52E9FA16D64E3300A8A1DE /* BulletRobot.m in Sources */,
 				AA0FEA6216D65B5400BE8A04 /* Block.m in Sources */,
 				AAC7E23E16DCFA8E005180F5 /* BlockDetonating.m in Sources */,
 				AACFF2AF16E0E03A00C1FB82 /* LevelViewController.m in Sources */,
 				AA8409D916E63996007A3843 /* BlockDeleteScores.m in Sources */,
+				AAB5E8E816E8C1DF005127D6 /* InformationViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

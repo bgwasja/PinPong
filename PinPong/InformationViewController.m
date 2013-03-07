@@ -1,19 +1,21 @@
 //
-//  InfoViewController.m
+//  InformationViewController.m
 //  PinPong
 //
-//  Created by wasja on 2/20/13.
+//  Created by wasja on 3/7/13.
 //  Copyright (c) 2013 wasja. All rights reserved.
 //
 
-#import "InfoViewController.h"
+#import "InformationViewController.h"
 #import "Twitter/Twitter.h"
 
-@interface InfoViewController ()
+
+@interface InformationViewController ()
 
 @end
 
-@implementation InfoViewController
+@implementation InformationViewController
+@synthesize txtView;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -28,6 +30,7 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    txtView.delegate = self;
 }
 
 - (void)didReceiveMemoryWarning
@@ -36,7 +39,6 @@
     // Dispose of any resources that can be recreated.
 }
 
-
 - (IBAction)twitterButtonTapped:(id)sender {
     TWTweetComposeViewController *tweet = [[TWTweetComposeViewController alloc] init];
     [tweet setInitialText:@"Test this game"];
@@ -44,5 +46,15 @@
     [tweet addImage:[UIImage imageNamed:@"logo.png"]];
     [self presentModalViewController:tweet animated:YES];
 }
+
+- (BOOL)textView:(UITextView *)textView shouldChangeTextInRange:(NSRange)range replacementText:(NSString *)text {
+    
+    if([text isEqualToString:@"\n"]) {
+        [txtView resignFirstResponder];
+        return NO;
+    }
+    return YES;
+}
+
 
 @end
