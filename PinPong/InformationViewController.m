@@ -26,18 +26,20 @@
     return self;
 }
 
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view.
     txtView.delegate = self;
 }
+
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
 
 - (IBAction)twitterButtonTapped:(id)sender {
     TWTweetComposeViewController *tweet = [[TWTweetComposeViewController alloc] init];
@@ -47,8 +49,8 @@
     [self presentModalViewController:tweet animated:YES];
 }
 
+
 - (BOOL)textView:(UITextView *)textView shouldChangeTextInRange:(NSRange)range replacementText:(NSString *)text {
-    
     if([text isEqualToString:@"\n"]) {
         [txtView resignFirstResponder];
         return NO;

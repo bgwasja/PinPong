@@ -26,6 +26,8 @@
 		AA8409D916E63996007A3843 /* BlockDeleteScores.m in Sources */ = {isa = PBXBuildFile; fileRef = AA8409D816E63996007A3843 /* BlockDeleteScores.m */; };
 		AA95212B16C80C8700CCA06B /* BulletPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = AA95212A16C80C8700CCA06B /* BulletPlayer.m */; };
 		AAB5E8E816E8C1DF005127D6 /* InformationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AAB5E8E716E8C1DF005127D6 /* InformationViewController.m */; };
+		AAB5E8F016E8CAF1005127D6 /* SoundGame.m in Sources */ = {isa = PBXBuildFile; fileRef = AAB5E8EF16E8CAF1005127D6 /* SoundGame.m */; };
+		AAB5E8F216E8CB46005127D6 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAB5E8F116E8CB46005127D6 /* AudioToolbox.framework */; };
 		AAC62CF116C4023E009AE1E6 /* StartPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AAC62CF016C4023E009AE1E6 /* StartPageViewController.m */; };
 		AAC62CF516C402BB009AE1E6 /* LevelEndViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AAC62CF416C402BB009AE1E6 /* LevelEndViewController.m */; };
 		AAC7E23E16DCFA8E005180F5 /* BlockDetonating.m in Sources */ = {isa = PBXBuildFile; fileRef = AAC7E23D16DCFA8E005180F5 /* BlockDetonating.m */; };
@@ -74,13 +76,16 @@
 		AA75CDA116DBEE2900B6A0C2 /* star3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = star3.png; sourceTree = "<group>"; };
 		AA8409D016E63560007A3843 /* levelView.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = levelView.png; path = ../../../game/levelView.png; sourceTree = "<group>"; };
 		AA8409D316E63591007A3843 /* StartPage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = StartPage.png; path = ../../../game/StartPage.png; sourceTree = "<group>"; };
-		AA8409D516E63935007A3843 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
+		AA8409D516E63935007A3843 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon.png; path = ../icon.png; sourceTree = "<group>"; };
 		AA8409D716E63996007A3843 /* BlockDeleteScores.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlockDeleteScores.h; sourceTree = "<group>"; };
 		AA8409D816E63996007A3843 /* BlockDeleteScores.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BlockDeleteScores.m; sourceTree = "<group>"; };
 		AA95212916C80C8700CCA06B /* BulletPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BulletPlayer.h; sourceTree = "<group>"; };
 		AA95212A16C80C8700CCA06B /* BulletPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BulletPlayer.m; sourceTree = "<group>"; };
 		AAB5E8E616E8C1DF005127D6 /* InformationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InformationViewController.h; sourceTree = "<group>"; };
 		AAB5E8E716E8C1DF005127D6 /* InformationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InformationViewController.m; sourceTree = "<group>"; };
+		AAB5E8EE16E8CAF1005127D6 /* SoundGame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SoundGame.h; sourceTree = "<group>"; };
+		AAB5E8EF16E8CAF1005127D6 /* SoundGame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SoundGame.m; sourceTree = "<group>"; };
+		AAB5E8F116E8CB46005127D6 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		AAC62CEF16C4023E009AE1E6 /* StartPageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StartPageViewController.h; sourceTree = "<group>"; };
 		AAC62CF016C4023E009AE1E6 /* StartPageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StartPageViewController.m; sourceTree = "<group>"; };
 		AAC62CF316C402BB009AE1E6 /* LevelEndViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LevelEndViewController.h; sourceTree = "<group>"; };
@@ -128,6 +133,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AAB5E8F216E8CB46005127D6 /* AudioToolbox.framework in Frameworks */,
 				AA6F372816D7A18A006B495B /* Twitter.framework in Frameworks */,
 				AA24BBE416D666A400644F5E /* MessageUI.framework in Frameworks */,
 				AAEA20CD16B5A9000019C0A4 /* UIKit.framework in Frameworks */,
@@ -165,9 +171,6 @@
 		AAEA20BD16B5A9000019C0A4 = {
 			isa = PBXGroup;
 			children = (
-				AA8409D516E63935007A3843 /* icon.png */,
-				AA6F372716D7A18A006B495B /* Twitter.framework */,
-				AA24BBE316D666A400644F5E /* MessageUI.framework */,
 				AAEA20D216B5A9000019C0A4 /* PinPong */,
 				AAEA20CB16B5A9000019C0A4 /* Frameworks */,
 				AAEA20C916B5A9000019C0A4 /* Products */,
@@ -185,6 +188,9 @@
 		AAEA20CB16B5A9000019C0A4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				AA24BBE316D666A400644F5E /* MessageUI.framework */,
+				AA6F372716D7A18A006B495B /* Twitter.framework */,
+				AAB5E8F116E8CB46005127D6 /* AudioToolbox.framework */,
 				AAEA20CC16B5A9000019C0A4 /* UIKit.framework */,
 				AAEA20CE16B5A9000019C0A4 /* Foundation.framework */,
 				AAEA20D016B5A9000019C0A4 /* CoreGraphics.framework */,
@@ -197,6 +203,8 @@
 			children = (
 				AAEA20DB16B5A9000019C0A4 /* AppDelegate.h */,
 				AAEA20DC16B5A9000019C0A4 /* AppDelegate.m */,
+				AAB5E8EE16E8CAF1005127D6 /* SoundGame.h */,
+				AAB5E8EF16E8CAF1005127D6 /* SoundGame.m */,
 				AA0FEA6416D65B6700BE8A04 /* Object */,
 				AAEA20E716B5A9000019C0A4 /* ViewController.h */,
 				AAEA20E816B5A9000019C0A4 /* ViewController.m */,
@@ -221,6 +229,7 @@
 		AAEA20D316B5A9000019C0A4 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				AA8409D516E63935007A3843 /* icon.png */,
 				AA8409D316E63591007A3843 /* StartPage.png */,
 				AA8409D016E63560007A3843 /* levelView.png */,
 				AACFF2AB16E0DE5800C1FB82 /* block.png */,
@@ -352,6 +361,7 @@
 				AACFF2AF16E0E03A00C1FB82 /* LevelViewController.m in Sources */,
 				AA8409D916E63996007A3843 /* BlockDeleteScores.m in Sources */,
 				AAB5E8E816E8C1DF005127D6 /* InformationViewController.m in Sources */,
+				AAB5E8F016E8CAF1005127D6 /* SoundGame.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
