@@ -10,13 +10,23 @@
 
 @implementation SoundGame
 
-+ (void)playSound:(NSString*)soundName {
-    SystemSoundID volleyFile;
-    NSString *volleyPath = [[NSBundle mainBundle] pathForResource:soundName ofType:nil];
-    CFURLRef volleyURL = (__bridge CFURLRef ) [NSURL fileURLWithPath:volleyPath];
-    AudioServicesCreateSystemSoundID (volleyURL, &volleyFile);
-    AudioServicesPlaySystemSound(volleyFile);
+@synthesize effect;
+
++(SoundGame *)sharedSoundGame {
+    static SoundGame *sharedSoundGame = nil;
+    if (sharedSoundGame == nil){
+        sharedSoundGame = [[self alloc] init];
+    }
+    return sharedSoundGame;
 }
 
+
+-(void)playSound:(NSString*)soundName{
+    NSURL *url = [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource: soundName ofType:@"mp3"]];
+    effect = [[AVAudioPlayer alloc] initWithContentsOfURL:url error:nil];
+    [effect setNumberOfLoops:0];
+    [effect prepareToPlay];
+    [effect play];
+}
 
 @end

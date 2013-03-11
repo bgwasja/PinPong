@@ -20,6 +20,7 @@
 @class BulletPlayer;
 @class BulletRobot;
 @class BlockDeleteScores;
+@class SoundGame;
 
 @interface ViewController : UIViewController <UIGestureRecognizerDelegate>
 {

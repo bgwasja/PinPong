@@ -14,6 +14,7 @@
 #import "SoundGame.h"
 
 
+
 @implementation BulletPlayer 
 
 - (id)initWithFrame:(CGRect)frame
@@ -32,18 +33,18 @@
     
     if (collideObject == (MovableObject*)self.cntrl.topWall) {
         [self.cntrl bulletPlayerFireAnimation];
-//        [SoundGame playSound:@"bulletDetonating.caf"];
+         [[SoundGame sharedSoundGame] playSound:@"click"];
     }
     
     if (collideObject == (MovableObject*)self.cntrl.leftWall || collideObject == (MovableObject*)self.cntrl.rightWall) {
         [self.cntrl bulletPlayerFireAnimation];
-//        [SoundGame playSound:@"bulletDetonating.caf"];
+         [[SoundGame sharedSoundGame] playSound:@"click"];
     }
     
     if (collideObject == (MovableObject*)self.cntrl.boardRobot) {
         [self.cntrl onPlayerHaveScore];
         [self.cntrl bulletPlayerFireAnimation];
-//        [SoundGame playSound:@"bulletDetonating.caf"];
+        [[SoundGame sharedSoundGame] playSound:@"click"];
     }
     
     if (collideObject == (MovableObject*)self.cntrl.ball) {
@@ -52,7 +53,7 @@
         }
         [self.cntrl bulletPlayerFireAnimation];
         [self.cntrl onPlayerHaveScore];
-//        [SoundGame playSound:@"bulletDetonating.caf"];
+        [[SoundGame sharedSoundGame] playSound:@"click"];
     }
     
     if (collideObject == (MovableObject*)self.cntrl.bulletRobot) {
@@ -61,12 +62,12 @@
             collideObject.needDelete = YES;
             [self.cntrl bulletPlayerFireAnimation];
         }
-//        [SoundGame playSound:@"bulletDetonating.caf"];
+        [[SoundGame sharedSoundGame] playSound:@"click"];
     }
     
     if (collideObject == (MovableObject*)self.cntrl.block) {
         [self.cntrl bulletPlayerFireAnimation];
-//        [SoundGame playSound:@"bulletDetonating.caf"];
+        [[SoundGame sharedSoundGame] playSound:@"click"];
     }
     
     if (collideObject == (MovableObject*)self.cntrl.blockDetonating) {
@@ -77,7 +78,7 @@
                 [self.cntrl onPlayerHaveScore];
                 [self.cntrl onPlayerHaveScore];
                 [self.cntrl blockDetonationFireAnimation];
-//                [SoundGame playSound:@"blockDetonating.caf"];
+                [[SoundGame sharedSoundGame] playSound:@"click"];
             }
         }
     }
@@ -89,7 +90,7 @@
                 collideObject.needDelete = YES;
                 [self.cntrl deleteRobotScore];
                 [self.cntrl blockDetonationFireAnimation];
-//                [SoundGame playSound:@"blockDeleteScores.caf"];
+                [[SoundGame sharedSoundGame] playSound:@"click"];
             }
         }
     }

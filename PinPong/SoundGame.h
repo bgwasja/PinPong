@@ -7,10 +7,15 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <AudioToolbox/AudioServices.h>
+#import <AVFoundation/AVFoundation.h>
 
-@interface SoundGame : NSObject
+@interface SoundGame : NSObject{
+    AVAudioPlayer *effect;
+}
 
-+ (void)playSound:(NSString*)soundName;
+@property (nonatomic, retain) AVAudioPlayer *effect;
+
++(SoundGame*)sharedSoundGame;
+-(void)playSound:(NSString*)soundName;
 
 @end

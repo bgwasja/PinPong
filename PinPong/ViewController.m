@@ -17,6 +17,7 @@
 #import "BlockDetonating.h"
 #import "BlockDeleteScores.h"
 #import "SoundGame.h"
+#import <AVFoundation/AVFoundation.h>
 
 @interface ViewController () 
 
@@ -153,7 +154,7 @@
     bulletPlayer.objectSpeed = CGPointMake(0, -1);
     [self.view addSubview:bulletPlayer];
     [objects addObject:bulletPlayer];
-//    [SoundGame playSound:@"bulletPlayer.caf"];
+    [[SoundGame sharedSoundGame] playSound:@"click"];
 }
 
 
@@ -164,7 +165,7 @@
     bulletRobot.objectSpeed = CGPointMake(0, 1);
     [self.view addSubview:bulletRobot];
     [objects addObject:bulletRobot];
-//    [SoundGame playSound:@"bulletRobot.caf"];
+    [[SoundGame sharedSoundGame] playSound:@"click"];
 }
 
 
