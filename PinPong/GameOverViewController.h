@@ -10,6 +10,8 @@
 
 @interface GameOverViewController : UIViewController
 
+@property (retain, nonatomic) IBOutlet UIImageView *animationFireworkImage;
+
 - (IBAction)menuButtonTapped:(id)sender;
 
 @end

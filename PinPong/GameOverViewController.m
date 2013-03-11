@@ -14,6 +14,7 @@
 @end
 
 @implementation GameOverViewController
+@synthesize animationFireworkImage;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -42,6 +43,32 @@
 - (IBAction)menuButtonTapped:(id)sender {
     levelId = 1;
     NSLog(@"Level game over %d",levelId);
+}
+
+
+-(void)blockDetonationFireAnimation
+{
+    animationFireworkImage = [[UIImageView alloc] initWithFrame:CGRectMake (self.view.bounds.origin.x, self.view.bounds.origin.y, 240, 320)];
+    [self.view addSubview:animationFireworkImage];
+    animationFireworkImage.animationImages = [self creatAnimation:@"playerFireAnimation.png"];
+    animationFireworkImage.animationDuration = 1;
+    animationFireworkImage.animationRepeatCount = 0;
+    [animationFireworkImage startAnimating];
+}
+
+
+-(NSArray*)creatAnimation:(NSString*)fireworkAnimation{
+    UIImage *image = [UIImage imageNamed:fireworkAnimation];
+    NSMutableArray *animationImages = [NSMutableArray array];
+    
+    for (int i = 0; i < 6; i++) {
+        CGImageRef imageRef = CGImageCreateWithImageInRect(image.CGImage,
+                                                           CGRectMake(i*240, 0, 240, 320));
+        UIImage *animationImage = [UIImage imageWithCGImage:imageRef];
+        [animationImages addObject:animationImage];
+        CGImageRelease(imageRef);
+    }
+    return animationImages;
 }
 
 
