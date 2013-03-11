@@ -403,6 +403,17 @@
 }
 
 
+-(void)blockDeleteScoresAnimation
+{
+    animationImage = [[UIImageView alloc] initWithFrame:CGRectMake (self.view.bounds.origin.x, self.view.bounds.origin.y, 240, 320)];
+    [self.view addSubview:animationImage];
+    animationImage.animationImages = [self creatAnimation:@"deleteScoresAnimation.png"];
+    animationImage.animationDuration = 1;
+    animationImage.animationRepeatCount = 1;
+    [animationImage startAnimating];
+}
+
+
 -(NSArray*)creatAnimation:(NSString*)fireAnimation{
     UIImage *image = [UIImage imageNamed:fireAnimation];
     NSMutableArray *animationImages = [NSMutableArray array];

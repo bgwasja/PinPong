@@ -77,5 +77,6 @@
 -(void)deletePlayerScore;
 -(void)deleteRobotScore;
 -(void)addBlockDeleteScores;
+-(void)blockDeleteScoresAnimation;
 
 @end

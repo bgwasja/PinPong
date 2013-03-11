@@ -29,7 +29,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view.
+	[self fireworkAnimation];
 }
 
 
@@ -46,18 +46,18 @@
 }
 
 
--(void)blockDetonationFireAnimation
+-(void)fireworkAnimation
 {
     animationFireworkImage = [[UIImageView alloc] initWithFrame:CGRectMake (self.view.bounds.origin.x, self.view.bounds.origin.y, 240, 320)];
     [self.view addSubview:animationFireworkImage];
-    animationFireworkImage.animationImages = [self creatAnimation:@"playerFireAnimation.png"];
+    animationFireworkImage.animationImages = [self createAnimation:@"playerFireAnimation.png"];
     animationFireworkImage.animationDuration = 1;
     animationFireworkImage.animationRepeatCount = 0;
     [animationFireworkImage startAnimating];
 }
 
 
--(NSArray*)creatAnimation:(NSString*)fireworkAnimation{
+-(NSArray*)createAnimation:(NSString*)fireworkAnimation{
     UIImage *image = [UIImage imageNamed:fireworkAnimation];
     NSMutableArray *animationImages = [NSMutableArray array];
     
