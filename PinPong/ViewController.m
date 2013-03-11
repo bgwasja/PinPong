@@ -71,6 +71,7 @@
                                    selector:@selector(timer)
                                    userInfo:nil
                                     repeats:YES];
+    
     bulletRobotTimer = [NSTimer scheduledTimerWithTimeInterval:speedBulletAnimation
                                                         target:self
                                                       selector:@selector(addBulletRobot)
@@ -374,7 +375,7 @@
 {
     animationImage = [[UIImageView alloc] initWithFrame:CGRectMake (bulletPlayer.center.x, bulletPlayer.center.y, 15, 15)];
     [self.view addSubview:animationImage];
-    animationImage.animationImages = [self creatAnimation:@"playerFireAnimation.png"];
+    animationImage.animationImages = [self createAnimation:@"playerFireAnimation.png"];
     animationImage.animationDuration = 0.9;
     animationImage.animationRepeatCount = 1;
     [animationImage startAnimating];
@@ -385,7 +386,7 @@
 {
     animationImage = [[UIImageView alloc] initWithFrame:CGRectMake (bulletRobot.center.x, bulletRobot.center.y, 15, 15)];
     [self.view addSubview:animationImage];
-    animationImage.animationImages = [self creatAnimation:@"robotFireAnimation.png"];
+    animationImage.animationImages = [self createAnimation:@"robotFireAnimation.png"];
     animationImage.animationDuration = 0.9;
     animationImage.animationRepeatCount = 1;
     [animationImage startAnimating];
@@ -396,7 +397,7 @@
 {
     animationImage = [[UIImageView alloc] initWithFrame:CGRectMake (blockDetonating.center.x, blockDetonating.center.y, 50, 50)];
     [self.view addSubview:animationImage];
-    animationImage.animationImages = [self creatAnimation:@"playerFireAnimation.png"];
+    animationImage.animationImages = [self createAnimation:@"playerFireAnimation.png"];
     animationImage.animationDuration = 1;
     animationImage.animationRepeatCount = 1;
     [animationImage startAnimating];
@@ -405,19 +406,18 @@
 
 -(void)blockDeleteScoresAnimation
 {
-    animationImage = [[UIImageView alloc] initWithFrame:CGRectMake (self.view.bounds.origin.x, self.view.bounds.origin.y, 240, 320)];
+    animationImage = [[UIImageView alloc] initWithFrame:CGRectMake (self.view.bounds.origin.x, self.view.bounds.origin.y, 320, 480)];
     [self.view addSubview:animationImage];
-    animationImage.animationImages = [self creatAnimation:@"deleteScoresAnimation.png"];
+    animationImage.animationImages = [self createAnimation:@"deleteScoresAnimation.png"];
     animationImage.animationDuration = 1;
     animationImage.animationRepeatCount = 1;
     [animationImage startAnimating];
 }
 
 
--(NSArray*)creatAnimation:(NSString*)fireAnimation{
+-(NSArray*)createAnimation:(NSString*)fireAnimation{
     UIImage *image = [UIImage imageNamed:fireAnimation];
     NSMutableArray *animationImages = [NSMutableArray array];
-    
     for (int i = 0; i < 6; i++) {
         CGImageRef imageRef = CGImageCreateWithImageInRect(image.CGImage,
                                                            CGRectMake(i*100, 0, 100, 100));

@@ -43,9 +43,8 @@
 
 - (IBAction)twitterButtonTapped:(id)sender {
     TWTweetComposeViewController *tweet = [[TWTweetComposeViewController alloc] init];
-    [tweet setInitialText:@"Test this game"];
+    [tweet setInitialText:@"Look this game"];
     [tweet addURL:[NSURL URLWithString:@"http://google.com"]];
-    [tweet addImage:[UIImage imageNamed:@"logo.png"]];
     [self presentModalViewController:tweet animated:YES];
 }
 

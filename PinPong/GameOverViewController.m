@@ -48,9 +48,9 @@
 
 -(void)fireworkAnimation
 {
-    animationFireworkImage = [[UIImageView alloc] initWithFrame:CGRectMake (self.view.bounds.origin.x, self.view.bounds.origin.y, 240, 320)];
+    animationFireworkImage = [[UIImageView alloc] initWithFrame:CGRectMake (self.view.bounds.origin.x, self.view.bounds.origin.y, 320, 480)];
     [self.view addSubview:animationFireworkImage];
-    animationFireworkImage.animationImages = [self createAnimation:@"playerFireAnimation.png"];
+    animationFireworkImage.animationImages = [self createAnimation:@"fireworkAnimation.png"];
     animationFireworkImage.animationDuration = 1;
     animationFireworkImage.animationRepeatCount = 0;
     [animationFireworkImage startAnimating];
@@ -60,10 +60,9 @@
 -(NSArray*)createAnimation:(NSString*)fireworkAnimation{
     UIImage *image = [UIImage imageNamed:fireworkAnimation];
     NSMutableArray *animationImages = [NSMutableArray array];
-    
     for (int i = 0; i < 6; i++) {
         CGImageRef imageRef = CGImageCreateWithImageInRect(image.CGImage,
-                                                           CGRectMake(i*240, 0, 240, 320));
+                                                           CGRectMake(i*240, 0, 320, 480));
         UIImage *animationImage = [UIImage imageWithCGImage:imageRef];
         [animationImages addObject:animationImage];
         CGImageRelease(imageRef);
