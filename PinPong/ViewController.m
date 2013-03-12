@@ -312,6 +312,15 @@
 }
 
 
+-(void)killTimers
+{
+    if ([gameTimer isValid] || [bulletRobotTimer isValid]) {
+        [gameTimer invalidate];
+        [bulletRobotTimer invalidate];
+    }
+}
+
+
 -(void)levelOver
 {
     if (scoresPlayer >= intMaxScore || scoresRobot >= intMaxScore) {
@@ -322,11 +331,7 @@
             statusGameString = [NSString stringWithFormat:@"You loser !!!"];
         }
         [self performSegueWithIdentifier:@"level" sender:self];
-        
-        if ([gameTimer isValid] || [bulletRobotTimer isValid]) {
-            [gameTimer invalidate];
-            [bulletRobotTimer invalidate];
-        }
+        [self killTimers];
     }
 }
 
@@ -336,8 +341,7 @@
     if (levelId >= intMaxLevel) {
         if (scoresPlayer == intMaxScore || scoresRobot == intMaxScore) {
             [self performSegueWithIdentifier:@"gameOver" sender:self];
-            [gameTimer invalidate];
-            [bulletRobotTimer invalidate];
+            [self killTimers];
         }
     }
 }

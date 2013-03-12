@@ -78,5 +78,6 @@
 -(void)deleteRobotScore;
 -(void)addBlockDeleteScores;
 -(void)blockDeleteScoresAnimation;
+-(void)killTimers;
 
 @end
