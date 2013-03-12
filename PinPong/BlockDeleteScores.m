@@ -18,7 +18,7 @@
 {
     self = [super initWithFrame:frame];
     if (self) {
-        self.image = [UIImage imageNamed:@"blockDetonating.jpeg"];
+        self.image = [UIImage imageNamed:@"blockDeleteScores.jpeg"];
         objectSpeed = CGPointMake (0, 0);
     }
     return self;
@@ -35,7 +35,7 @@
             if ([collideObject isKindOfClass:[BlockDeleteScores class]]) {
                 collideObject.needDelete = YES;
                 [self.cntrl deleteRobotScore];
-                [[SoundGame sharedSoundGame] playSound:@"click"];
+                [[SoundGame sharedSoundGame] playSound:@"blockDeleteScores"];
             }
         }
     }
@@ -47,7 +47,7 @@
             if ([collideObject isKindOfClass:[BlockDeleteScores class]]) {
                 collideObject.needDelete = YES;
                 [self.cntrl deletePlayerScore];
-                [[SoundGame sharedSoundGame] playSound:@"click"];
+                [[SoundGame sharedSoundGame] playSound:@"blockDeleteScores"];
             }
         }
     }

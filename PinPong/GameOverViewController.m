@@ -8,13 +8,17 @@
 
 #import "GameOverViewController.h"
 #import "ViewController.h"
+#import "SoundGame.h"
 
 @interface GameOverViewController ()
 
 @end
 
 @implementation GameOverViewController
+
 @synthesize animationFireworkImage;
+@synthesize yourScoreLabel;
+@synthesize robotScoreLabel;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -30,6 +34,7 @@
 {
     [super viewDidLoad];
 	[self fireworkAnimation];
+    [[SoundGame sharedSoundGame] playSound:@"firework"];
 }
 
 
@@ -62,12 +67,22 @@
     NSMutableArray *animationImages = [NSMutableArray array];
     for (int i = 0; i < 6; i++) {
         CGImageRef imageRef = CGImageCreateWithImageInRect(image.CGImage,
-                                                           CGRectMake(i*240, 0, 320, 480));
+                                                           CGRectMake(i*320, 0, 320, 480));
         UIImage *animationImage = [UIImage imageWithCGImage:imageRef];
         [animationImages addObject:animationImage];
         CGImageRelease(imageRef);
     }
     return animationImages;
+}
+
+
+-(void)setScore1:(int)score1{
+    [yourScoreLabel setText:[NSString stringWithFormat:@"%d",score1]];
+}
+
+
+-(void)setScore2:(int)score2{
+    [robotScoreLabel setText:[NSString stringWithFormat:@"%d",score2]];
 }
 
 

@@ -36,7 +36,7 @@
                 collideObject.needDelete = YES;
                 [self.cntrl onPlayerHaveScore];
                 [self.cntrl onPlayerHaveScore];
-                [[SoundGame sharedSoundGame] playSound:@"click"];
+                [[SoundGame sharedSoundGame] playSound:@"blockDetonating"];
             }
         }
     }
@@ -49,7 +49,7 @@
                 collideObject.needDelete = YES;
                 [self.cntrl onRobotHaveScore];
                 [self.cntrl onRobotHaveScore];
-                [[SoundGame sharedSoundGame] playSound:@"click"];
+                [[SoundGame sharedSoundGame] playSound:@"blockDetonating"];
             }
         }
     }

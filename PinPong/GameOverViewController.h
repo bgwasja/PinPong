@@ -11,7 +11,12 @@
 @interface GameOverViewController : UIViewController
 
 @property (retain, nonatomic) IBOutlet UIImageView *animationFireworkImage;
+@property (weak, nonatomic) IBOutlet UILabel *yourScoreLabel;
+@property (weak, nonatomic) IBOutlet UILabel *robotScoreLabel;
 
-- (IBAction)menuButtonTapped:(id)sender;
+-(IBAction)menuButtonTapped:(id)sender;
+
+-(void)setScore1:(int)score1;
+-(void)setScore2:(int)score2;
 
 @end

@@ -9,6 +9,7 @@
 #import "Ball.h"
 #import "BulletPlayer.h"
 #import "BulletRobot.h"
+#import "SoundGame.h"
 
 @implementation Ball
 
@@ -39,6 +40,7 @@
             collideObject.needDelete = YES;
             [self.cntrl bulletPlayerFireAnimation];
             [self.cntrl onPlayerHaveScore];
+            [[SoundGame sharedSoundGame] playSound:@"bulletDetonating"];
         }
     }
     
@@ -48,6 +50,7 @@
             collideObject.needDelete = YES;
             [self.cntrl bulletRobotFireAnimation];
             [self.cntrl onRobotHaveScore];
+            [[SoundGame sharedSoundGame] playSound:@"bulletDetonating"];
         }
     }
     

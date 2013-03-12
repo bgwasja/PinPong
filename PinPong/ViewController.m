@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "LevelEndViewController.h"
+#import "GameOverViewController.h"
 #import "Ball.h"
 #import "BulletPlayer.h"
 #import "BulletRobot.h"
@@ -155,7 +156,7 @@
     bulletPlayer.objectSpeed = CGPointMake(0, -1);
     [self.view addSubview:bulletPlayer];
     [objects addObject:bulletPlayer];
-    [[SoundGame sharedSoundGame] playSound:@"click"];
+    [[SoundGame sharedSoundGame] playSound:@"bullet"];
 }
 
 
@@ -166,7 +167,7 @@
     bulletRobot.objectSpeed = CGPointMake(0, 1);
     [self.view addSubview:bulletRobot];
     [objects addObject:bulletRobot];
-    [[SoundGame sharedSoundGame] playSound:@"click"];
+    [[SoundGame sharedSoundGame] playSound:@"bullet"];
 }
 
 
@@ -322,7 +323,7 @@
         }
         [self performSegueWithIdentifier:@"level" sender:self];
         
-        if ([gameTimer isValid]  || [bulletRobotTimer isValid]) {
+        if ([gameTimer isValid] || [bulletRobotTimer isValid]) {
             [gameTimer invalidate];
             [bulletRobotTimer invalidate];
         }
@@ -351,7 +352,7 @@
 }
 
 
-- (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if ([segue.identifier isEqualToString:@"level"]) {
         LevelEndViewController* c = (LevelEndViewController*)segue.destinationViewController;
         c.view;
@@ -359,6 +360,12 @@
         [c setScore2:[scoreLabel2.text intValue]];
         [c setStatusGame:statusGameString];
         [c setStar:scoresPlayer :scoresRobot];
+    }
+    if ([segue.identifier isEqualToString:@"gameOver"]) {
+        GameOverViewController* c = (GameOverViewController*)segue.destinationViewController;
+        c.view;
+        [c setScore1:[scoreLabel1.text intValue]];
+        [c setScore2:[scoreLabel2.text intValue]];
     }
 }
 

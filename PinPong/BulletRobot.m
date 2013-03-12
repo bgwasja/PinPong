@@ -28,21 +28,19 @@
 
 -(void) collideOccuredWithObject:(MovableObject*) collideObject {
     self.needDelete = YES;
+    [[SoundGame sharedSoundGame] playSound:@"bulletDetonating"];
     
     if (collideObject == (MovableObject*)self.cntrl.bottomWall) {
         [self.cntrl bulletRobotFireAnimation];
-        [[SoundGame sharedSoundGame] playSound:@"click"];
     }
     
     if (collideObject == (MovableObject*)self.cntrl.leftWall || collideObject == (MovableObject*)self.cntrl.rightWall) {
         [self.cntrl bulletRobotFireAnimation];
-        [[SoundGame sharedSoundGame] playSound:@"click"];
     }
     
     if (collideObject == (MovableObject*)self.cntrl.boardPlayer) {
         [self.cntrl onRobotHaveScore];
         [self.cntrl bulletRobotFireAnimation];
-        [[SoundGame sharedSoundGame] playSound:@"click"];
     }
     
     if (collideObject == (MovableObject*)self.cntrl.ball ) {
@@ -51,12 +49,10 @@
         }        
         [self.cntrl bulletRobotFireAnimation];
         [self.cntrl onRobotHaveScore];
-        [[SoundGame sharedSoundGame] playSound:@"click"];
     }
     
     if (collideObject == (MovableObject*)self.cntrl.block) {
         [self.cntrl bulletRobotFireAnimation];
-        [[SoundGame sharedSoundGame] playSound:@"click"];
     }
     
     if (collideObject == (MovableObject*)self.cntrl.blockDetonating) {
@@ -67,7 +63,6 @@
                 [self.cntrl onRobotHaveScore];
                 [self.cntrl onRobotHaveScore];
                 [self.cntrl blockDetonationFireAnimation];
-                [[SoundGame sharedSoundGame] playSound:@"click"];
             }
         } 
     }
@@ -76,7 +71,6 @@
         if ([collideObject isKindOfClass:[BulletPlayer class]]) {
             collideObject.needDelete = YES;
             [self.cntrl bulletPlayerFireAnimation];
-            [[SoundGame sharedSoundGame] playSound:@"click"];
         }
     }
     
@@ -87,7 +81,6 @@
                 collideObject.needDelete = YES;
                 [self.cntrl deletePlayerScore];
                 [self.cntrl blockDetonationFireAnimation];
-                [[SoundGame sharedSoundGame] playSound:@"click"];
             }
         }
     }
