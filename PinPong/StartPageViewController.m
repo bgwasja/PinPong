@@ -30,6 +30,7 @@
 {
     [super viewDidLoad];
     levelId = 1;
+    allScores = 0;
 }
 
 

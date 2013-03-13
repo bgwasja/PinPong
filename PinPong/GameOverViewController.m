@@ -19,6 +19,7 @@
 @synthesize animationFireworkImage;
 @synthesize yourScoreLabel;
 @synthesize robotScoreLabel;
+@synthesize allScoresLabel;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -33,7 +34,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	[self fireworkAnimation];
+//	[self fireworkAnimation];
     [[SoundGame sharedSoundGame] playSound:@"firework"];
 }
 
@@ -47,7 +48,13 @@
 
 - (IBAction)menuButtonTapped:(id)sender {
     levelId = 1;
+    allScores = 0;
     NSLog(@"Level game over %d",levelId);
+}
+
+
+- (IBAction)repeatButtonTapped:(id)sender {
+    allScores = 0;
 }
 
 
@@ -83,6 +90,10 @@
 
 -(void)setScore2:(int)score2{
     [robotScoreLabel setText:[NSString stringWithFormat:@"%d",score2]];
+}
+
+-(void)setAllScores:(int)allScores{
+    [allScoresLabel setText:[NSString stringWithFormat:@"%d", allScores]];
 }
 
 

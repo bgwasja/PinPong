@@ -22,6 +22,7 @@
 
 - (IBAction)nextLevelButtonTapped:(id)sender;
 - (IBAction)menuButtonTapped:(id)sender;
+- (IBAction)repeatButtonTapped:(id)sender;
 
 -(void)setScore1:(int)score1;
 -(void)setScore2:(int)score2;

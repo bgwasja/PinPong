@@ -184,7 +184,6 @@
 		AAEA20BD16B5A9000019C0A4 = {
 			isa = PBXGroup;
 			children = (
-				AAB5E8F716E8E001005127D6 /* AVFoundation.framework */,
 				AAEA20D216B5A9000019C0A4 /* PinPong */,
 				AAEA20CB16B5A9000019C0A4 /* Frameworks */,
 				AAEA20C916B5A9000019C0A4 /* Products */,
@@ -202,6 +201,7 @@
 		AAEA20CB16B5A9000019C0A4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				AAB5E8F716E8E001005127D6 /* AVFoundation.framework */,
 				AA24BBE316D666A400644F5E /* MessageUI.framework */,
 				AA6F372716D7A18A006B495B /* Twitter.framework */,
 				AAB5E8F116E8CB46005127D6 /* AudioToolbox.framework */,

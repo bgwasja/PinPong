@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 
 int levelId;
+int allScores;
 float speedBulletAnimation;
 int numberCollideBulletPlayer;
 int numberCollideBulletRobot;

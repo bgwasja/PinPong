@@ -68,6 +68,11 @@
                              cache:NO];
     [UIView commitAnimations];
     levelId = 1;
+    allScores = 0;
+}
+
+- (IBAction)repeatButtonTapped:(id)sender {
+    allScores = 0;
 }
 
 
@@ -102,6 +107,7 @@
     UIImageView *someImageView = [[UIImageView alloc] initWithFrame:CGRectMake(60, 172, 213, 50)];
     [someImageView addSubview:starImageView];
     [self.view addSubview:someImageView];
+     allScores = allScores + [yourScoreLabel.text intValue];
 }
 
 
