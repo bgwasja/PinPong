@@ -12,9 +12,12 @@
 {
     UITableView *levelTable;
     NSArray *levelsArray;
+    Ball *ball;
 }
 
 @property (retain, nonatomic) IBOutlet UITableView *levelTable;
 @property (retain, nonatomic) NSArray *levelsArray;
+@property (weak, nonatomic) IBOutlet UISegmentedControl *colorBallSegmented;
 
+-(IBAction)didSelectSegment:(id)sender;
 @end

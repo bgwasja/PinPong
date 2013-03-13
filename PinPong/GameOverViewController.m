@@ -92,6 +92,7 @@
     [robotScoreLabel setText:[NSString stringWithFormat:@"%d",score2]];
 }
 
+
 -(void)setAllScores:(int)allScores{
     [allScoresLabel setText:[NSString stringWithFormat:@"%d", allScores]];
 }

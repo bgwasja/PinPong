@@ -52,7 +52,6 @@
     [super viewDidLoad];
     scoresPlayer = 0;
     scoresRobot = 0;
-    
     speedBulletAnimation = 2.0;
     
     objects = [[NSMutableArray alloc] init];
@@ -234,7 +233,6 @@
     }
     
     [self.objects removeObjectsInArray:objectsToDelete];
-    
     [self playRobot];
     [self updateScore];
     [self gameOver];

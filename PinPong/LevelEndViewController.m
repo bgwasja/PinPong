@@ -31,6 +31,7 @@
     return self;
 }
 
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -70,6 +71,7 @@
     levelId = 1;
     allScores = 0;
 }
+
 
 - (IBAction)repeatButtonTapped:(id)sender {
     allScores = 0;

@@ -31,6 +31,7 @@
 {
     [super viewDidLoad];
     txtView.delegate = self;
+    [txtView setText:@"PingPong"];
 }
 
 

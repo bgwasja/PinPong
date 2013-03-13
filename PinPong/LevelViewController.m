@@ -9,6 +9,7 @@
 #import "LevelViewController.h"
 #import "ViewController.h"
 #import <QuartzCore/QuartzCore.h> 
+#import "Ball.h"
 
 @interface LevelViewController ()
 
@@ -17,6 +18,7 @@
 @implementation LevelViewController
 @synthesize levelTable;
 @synthesize levelsArray;
+@synthesize colorBallSegmented;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -32,9 +34,39 @@
 {
     [super viewDidLoad];
 	
-    self.levelsArray = [NSArray arrayWithObjects:@"Level 1", @"Level 2", @"Level 3", @"Level 4", @"Level 5", @"Level 6", @"Level 7", @"Level 8", nil];
+    self.levelsArray = [NSArray arrayWithObjects:
+                        @"Level  -  1", @"Level  -  2",
+                        @"Level  -  3", @"Level  -  4",
+                        @"Level  -  5", @"Level  -  6",
+                        @"Level  -  7", @"Level  -  8", nil];
     levelTable.rowHeight = 41;
     levelTable.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"field.png"]];
+}
+
+
+- (IBAction)didSelectSegment:(id)sender {
+    [self updateColorBall:[sender selectedSegmentIndex]];
+}
+
+
+- (void)updateColorBall:(NSInteger)selIndex {
+    switch (selIndex) {
+        case 0:
+            ball.image = [UIImage imageNamed:@"block.png"];
+            NSLog(@"red ball");
+            break;
+        case 1:
+            ball.image = [UIImage imageNamed:@"ball.png"];
+            NSLog(@"green ball");
+            break;
+        case 2:
+            ball.image = [UIImage imageNamed:@"ball.png"];
+            NSLog(@"blue ball");
+            break;
+        default:
+            ball.image = [UIImage imageNamed:@"ball.png"];
+            break;
+    }
 }
 
 
@@ -61,6 +93,8 @@
     tableView.layer.cornerRadius = 10;
     cell.textLabel.text = [levelsArray objectAtIndex:indexPath.row];
     cell.textLabel.textColor = [UIColor whiteColor];
+    cell.textLabel.textAlignment = UITextAlignmentCenter;
+    cell.textLabel.font = [UIFont fontWithName:@"Palatino Bold" size:0];
     return cell;
 }
 
@@ -115,5 +149,6 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
 
 @end
