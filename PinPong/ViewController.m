@@ -19,6 +19,7 @@
 #import "BlockDeleteScores.h"
 #import "SoundGame.h"
 #import <AVFoundation/AVFoundation.h>
+#import "BulletRobotSpecial.h"
 
 @interface ViewController () 
 
@@ -47,6 +48,8 @@
 @synthesize wallBlock;
 @synthesize blockDeleteScores;
 @synthesize numberBulletPlayerLabel;
+@synthesize bulletRobotSpecial;
+
 
 -(void)viewDidLoad
 {
@@ -78,6 +81,12 @@
                                                       selector:@selector(addBulletRobot)
                                                       userInfo:nil
                                                        repeats:YES];
+    
+    bulletRobotSpecialTimer = [NSTimer scheduledTimerWithTimeInterval:15
+                                                               target:self
+                                                             selector:@selector(addBulletRobotSpecial)
+                                                             userInfo:nil
+                                                              repeats:NO];
 }
 
 
@@ -197,6 +206,17 @@
     bulletRobot.objectSpeed = CGPointMake(0, 1);
     [self.view addSubview:bulletRobot];
     [objects addObject:bulletRobot];
+//    [[SoundGame sharedSoundGame] playSound:@"bullet"];
+}
+
+
+-(void)addBulletRobotSpecial
+{
+    bulletRobotSpecial = [[BulletRobotSpecial alloc] initWithFrame:CGRectMake(boardPlayer.center.x, boardRobot.center.y, 40, 50)];
+    bulletRobotSpecial.cntrl = self;
+    bulletRobotSpecial.objectSpeed = CGPointMake(0, 4);
+    [self.view addSubview:bulletRobotSpecial];
+    [objects addObject:bulletRobotSpecial];
 //    [[SoundGame sharedSoundGame] playSound:@"bullet"];
 }
 

@@ -21,6 +21,7 @@
 @class BulletRobot;
 @class BlockDeleteScores;
 @class SoundGame;
+@class BulletRobotSpecial;
 
 @interface ViewController : UIViewController <UIGestureRecognizerDelegate>
 {
@@ -30,6 +31,7 @@
     int numberBulletPlayer;
     NSTimer* gameTimer;
     NSTimer* bulletRobotTimer;
+    NSTimer* bulletRobotSpecialTimer;
 }
 
 @property (strong, nonatomic) IBOutlet UILabel *scoreLabel1;
@@ -53,6 +55,8 @@
 @property (strong, nonatomic) Block *wallBlock;
 @property (strong, nonatomic) BlockDetonating *blockDetonating;
 @property (strong, nonatomic) BlockDeleteScores *blockDeleteScores;
+@property (strong, nonatomic) BulletRobotSpecial *bulletRobotSpecial;
+
 
 - (IBAction)addBallButtonTapped:(id)sender;
 
@@ -83,5 +87,6 @@
 -(void)killTimers;
 -(void)updateNumberBullet;
 -(void)playerFired;
+-(void)addBulletRobotSpecial;
 
 @end

@@ -26,6 +26,7 @@
 		AA8409D616E63935007A3843 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = AA8409D516E63935007A3843 /* icon.png */; };
 		AA8409D916E63996007A3843 /* BlockDeleteScores.m in Sources */ = {isa = PBXBuildFile; fileRef = AA8409D816E63996007A3843 /* BlockDeleteScores.m */; };
 		AA95212B16C80C8700CCA06B /* BulletPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = AA95212A16C80C8700CCA06B /* BulletPlayer.m */; };
+		AAB1CA4C16F2212F00F3F296 /* BulletRobotSpecial.m in Sources */ = {isa = PBXBuildFile; fileRef = AAB1CA4B16F2212E00F3F296 /* BulletRobotSpecial.m */; };
 		AAB5E8E816E8C1DF005127D6 /* InformationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AAB5E8E716E8C1DF005127D6 /* InformationViewController.m */; };
 		AAB5E8F016E8CAF1005127D6 /* SoundGame.m in Sources */ = {isa = PBXBuildFile; fileRef = AAB5E8EF16E8CAF1005127D6 /* SoundGame.m */; };
 		AAB5E8F816E8E001005127D6 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAB5E8F716E8E001005127D6 /* AVFoundation.framework */; };
@@ -88,6 +89,8 @@
 		AA8409D816E63996007A3843 /* BlockDeleteScores.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BlockDeleteScores.m; sourceTree = "<group>"; };
 		AA95212916C80C8700CCA06B /* BulletPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BulletPlayer.h; sourceTree = "<group>"; };
 		AA95212A16C80C8700CCA06B /* BulletPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BulletPlayer.m; sourceTree = "<group>"; };
+		AAB1CA4A16F2212E00F3F296 /* BulletRobotSpecial.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BulletRobotSpecial.h; sourceTree = "<group>"; };
+		AAB1CA4B16F2212E00F3F296 /* BulletRobotSpecial.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BulletRobotSpecial.m; sourceTree = "<group>"; };
 		AAB5E8E616E8C1DF005127D6 /* InformationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InformationViewController.h; sourceTree = "<group>"; };
 		AAB5E8E716E8C1DF005127D6 /* InformationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InformationViewController.m; sourceTree = "<group>"; };
 		AAB5E8EE16E8CAF1005127D6 /* SoundGame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SoundGame.h; sourceTree = "<group>"; };
@@ -177,6 +180,8 @@
 				AAC7E23D16DCFA8E005180F5 /* BlockDetonating.m */,
 				AA8409D716E63996007A3843 /* BlockDeleteScores.h */,
 				AA8409D816E63996007A3843 /* BlockDeleteScores.m */,
+				AAB1CA4A16F2212E00F3F296 /* BulletRobotSpecial.h */,
+				AAB1CA4B16F2212E00F3F296 /* BulletRobotSpecial.m */,
 			);
 			name = Object;
 			sourceTree = "<group>";
@@ -388,6 +393,7 @@
 				AA8409D916E63996007A3843 /* BlockDeleteScores.m in Sources */,
 				AAB5E8E816E8C1DF005127D6 /* InformationViewController.m in Sources */,
 				AAB5E8F016E8CAF1005127D6 /* SoundGame.m in Sources */,
+				AAB1CA4C16F2212F00F3F296 /* BulletRobotSpecial.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
