@@ -35,7 +35,7 @@
             if ([collideObject isKindOfClass:[BlockDeleteScores class]]) {
                 collideObject.needDelete = YES;
                 [self.cntrl deleteRobotScore];
-                [[SoundGame sharedSoundGame] playSound:@"blockDeleteScores"];
+//                [[SoundGame sharedSoundGame] playSound:@"blockDeleteScores"];
             }
         }
     }
@@ -47,7 +47,7 @@
             if ([collideObject isKindOfClass:[BlockDeleteScores class]]) {
                 collideObject.needDelete = YES;
                 [self.cntrl deletePlayerScore];
-                [[SoundGame sharedSoundGame] playSound:@"blockDeleteScores"];
+//                [[SoundGame sharedSoundGame] playSound:@"blockDeleteScores"];
             }
         }
     }

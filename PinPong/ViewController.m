@@ -46,6 +46,7 @@
 @synthesize levelLabel;
 @synthesize wallBlock;
 @synthesize blockDeleteScores;
+@synthesize numberBulletPlayerLabel;
 
 -(void)viewDidLoad
 {
@@ -63,7 +64,6 @@
     }
     
     [self addWall];
-    [self movementFire];
     [self addBoard];
     [self levelGame];
 
@@ -83,13 +83,42 @@
 
 -(void)levelGame
 {
-    if (levelId == 2) {[self addBlock];}
-    if (levelId == 3) {[self addBlockDetonating];}
-    if (levelId == 4) {[self addBlockDetonating]; [self addBlock];}
-    if (levelId == 5) {[self addWallBlock];}
-    if (levelId == 6) {[self addWallBlock]; [self addBlock];}
-    if (levelId == 7) {[self addBlock]; [self addBlockDeleteScores];}
-    if (levelId == 8) {[self addBlockDeleteScores]; [self addBlock]; [self addBlockDetonating];}
+    if (levelId == 1) {
+        numberBulletPlayer = 10;
+    }
+    if (levelId == 2) {
+        [self addBlock];
+        numberBulletPlayer = 10;
+    }
+    if (levelId == 3) {
+        [self addBlockDetonating];
+        numberBulletPlayer = 12;
+    }
+    if (levelId == 4) {
+        [self addBlockDetonating];
+        [self addBlock];
+        numberBulletPlayer = 14;
+    }
+    if (levelId == 5) {
+        [self addWallBlock];
+        numberBulletPlayer = 16;
+    }
+    if (levelId == 6) {
+        [self addWallBlock];
+        [self addBlock];
+        numberBulletPlayer = 18;
+    }
+    if (levelId == 7) {
+        [self addBlock];
+        [self addBlockDeleteScores];
+        numberBulletPlayer = 20;
+    }
+    if (levelId == 8) {
+        [self addBlockDeleteScores];
+        [self addBlock];
+        [self addBlockDetonating];
+        numberBulletPlayer = 22;
+    }
 }
 
 
@@ -156,7 +185,8 @@
     bulletPlayer.objectSpeed = CGPointMake(0, -1);
     [self.view addSubview:bulletPlayer];
     [objects addObject:bulletPlayer];
-    [[SoundGame sharedSoundGame] playSound:@"bullet"];
+//    [[SoundGame sharedSoundGame] playSound:@"bullet"];
+    [self playerFired];
 }
 
 
@@ -167,7 +197,7 @@
     bulletRobot.objectSpeed = CGPointMake(0, 1);
     [self.view addSubview:bulletRobot];
     [objects addObject:bulletRobot];
-    [[SoundGame sharedSoundGame] playSound:@"bullet"];
+//    [[SoundGame sharedSoundGame] playSound:@"bullet"];
 }
 
 
@@ -232,9 +262,14 @@
         }
     }
     
+    for (int i = 0; i <= numberBulletPlayer; i++) {
+        [self movementFire];
+    }
+
     [self.objects removeObjectsInArray:objectsToDelete];
     [self playRobot];
     [self updateScore];
+    [self updateNumberBullet];
     [self gameOver];
     [self levelOver];
 }
@@ -304,10 +339,22 @@
 }
 
 
+-(void)playerFired
+{
+    numberBulletPlayer--;
+}
+
+
 -(void)updateScore
 {
     scoreLabel1.text = [NSString stringWithFormat:@"%d",scoresPlayer];
     scoreLabel2.text = [NSString stringWithFormat:@"%d",scoresRobot];
+}
+
+
+-(void)updateNumberBullet
+{
+    numberBulletPlayerLabel.text = [NSString stringWithFormat:@"%d", numberBulletPlayer];
 }
 
 

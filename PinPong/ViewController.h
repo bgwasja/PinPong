@@ -27,6 +27,7 @@
     int scoresPlayer;
     int scoresRobot;
     int addBall;
+    int numberBulletPlayer;
     NSTimer* gameTimer;
     NSTimer* bulletRobotTimer;
 }
@@ -34,6 +35,7 @@
 @property (strong, nonatomic) IBOutlet UILabel *scoreLabel1;
 @property (strong, nonatomic) IBOutlet UILabel *scoreLabel2;
 @property (strong, nonatomic) IBOutlet UILabel *levelLabel;
+@property (strong, nonatomic) IBOutlet UILabel *numberBulletPlayerLabel;
 @property (retain, nonatomic) IBOutlet UIImageView *animationImage;
 @property (retain, nonatomic) NSMutableArray* objects;
 @property (retain, nonatomic) NSMutableArray* objectsToDelete;
@@ -79,5 +81,7 @@
 -(void)addBlockDeleteScores;
 -(void)blockDeleteScoresAnimation;
 -(void)killTimers;
+-(void)updateNumberBullet;
+-(void)playerFired;
 
 @end

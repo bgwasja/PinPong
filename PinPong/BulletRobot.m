@@ -28,7 +28,7 @@
 
 -(void) collideOccuredWithObject:(MovableObject*) collideObject {
     self.needDelete = YES;
-    [[SoundGame sharedSoundGame] playSound:@"bulletDetonating"];
+//    [[SoundGame sharedSoundGame] playSound:@"bulletDetonating"];
     
     if (collideObject == (MovableObject*)self.cntrl.bottomWall) {
         [self.cntrl bulletRobotFireAnimation];

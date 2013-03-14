@@ -34,8 +34,6 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-//	[self fireworkAnimation];
-    [[SoundGame sharedSoundGame] playSound:@"firework"];
 }
 
 

@@ -18,7 +18,7 @@
 @implementation LevelViewController
 @synthesize levelTable;
 @synthesize levelsArray;
-@synthesize colorBallSegmented;
+
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -41,32 +41,6 @@
                         @"Level  -  7", @"Level  -  8", nil];
     levelTable.rowHeight = 41;
     levelTable.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"field.png"]];
-}
-
-
-- (IBAction)didSelectSegment:(id)sender {
-    [self updateColorBall:[sender selectedSegmentIndex]];
-}
-
-
-- (void)updateColorBall:(NSInteger)selIndex {
-    switch (selIndex) {
-        case 0:
-            ball.image = [UIImage imageNamed:@"block.png"];
-            NSLog(@"red ball");
-            break;
-        case 1:
-            ball.image = [UIImage imageNamed:@"ball.png"];
-            NSLog(@"green ball");
-            break;
-        case 2:
-            ball.image = [UIImage imageNamed:@"ball.png"];
-            NSLog(@"blue ball");
-            break;
-        default:
-            ball.image = [UIImage imageNamed:@"ball.png"];
-            break;
-    }
 }
 
 

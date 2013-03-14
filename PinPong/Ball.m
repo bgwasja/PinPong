@@ -41,7 +41,7 @@
             collideObject.needDelete = YES;
             [self.cntrl bulletPlayerFireAnimation];
             [self.cntrl onPlayerHaveScore];
-            [[SoundGame sharedSoundGame] playSound:@"bulletDetonating"];
+ //           [[SoundGame sharedSoundGame] playSound:@"bulletDetonating"];
         }
     }
     
@@ -51,7 +51,7 @@
             collideObject.needDelete = YES;
             [self.cntrl bulletRobotFireAnimation];
             [self.cntrl onRobotHaveScore];
-            [[SoundGame sharedSoundGame] playSound:@"bulletDetonating"];
+//            [[SoundGame sharedSoundGame] playSound:@"bulletDetonating"];
         }
     }
     
