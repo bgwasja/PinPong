@@ -62,10 +62,12 @@
 
     levelLabel.text = [NSString stringWithFormat:@"%d",levelId];
     NSLog(@"Play field, level =  %d", levelId);
+   
     for (int i = 0; i < levelId; i++) {
         [self addBall];
     }
-
+  
+    [self movementFire];
     [self addWall];
     [self addBoard];
     [self levelGame];
@@ -198,13 +200,15 @@
 
 -(void)addBulletPlayer
 {
-    bulletPlayer = [[BulletPlayer alloc] initWithFrame:CGRectMake(boardPlayer.center.x, boardPlayer.center.y-100, 22, 35)];
-    bulletPlayer.cntrl = self;
-    bulletPlayer.objectSpeed = CGPointMake(0, -1);
-    [self.view addSubview:bulletPlayer];
-    [objects addObject:bulletPlayer];
-//    [[SoundGame sharedSoundGame] playSound:@"bullet"];
-    [self playerFired];
+    for (int i = 0; i <= numberBulletPlayer; i++) {
+        bulletPlayer = [[BulletPlayer alloc] initWithFrame:CGRectMake(boardPlayer.center.x, boardPlayer.center.y-100, 22, 35)];
+        bulletPlayer.cntrl = self;
+        bulletPlayer.objectSpeed = CGPointMake(0, -1);
+        [self.view addSubview:bulletPlayer];
+        [objects addObject:bulletPlayer];
+//      [[SoundGame sharedSoundGame] playSound:@"bullet"];
+        [self playerFired];
+    }
 }
 
 
@@ -289,10 +293,6 @@
             [objectsToDelete addObject:mv];
             [mv removeFromSuperview];
         }
-    }
-    
-    for (int i = 0; i <= numberBulletPlayer; i++) {
-        [self movementFire];
     }
     
     [self.objects removeObjectsInArray:objectsToDelete];

@@ -68,7 +68,7 @@
     cell.textLabel.text = [levelsArray objectAtIndex:indexPath.row];
     cell.textLabel.textColor = [UIColor whiteColor];
     cell.textLabel.textAlignment = UITextAlignmentCenter;
-    cell.textLabel.font = [UIFont fontWithName:@"Palatino Bold" size:0];
+    cell.textLabel.font = [UIFont fontWithName:@"Palatino Bold" size:17];
     return cell;
 }
 
