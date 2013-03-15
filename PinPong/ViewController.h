@@ -32,6 +32,7 @@
     NSTimer* gameTimer;
     NSTimer* bulletRobotTimer;
     NSTimer* bulletRobotSpecialTimer;
+    UIColor* fieldImage;
 }
 
 @property (strong, nonatomic) IBOutlet UILabel *scoreLabel1;
@@ -88,5 +89,6 @@
 -(void)updateNumberBullet;
 -(void)playerFired;
 -(void)addBulletRobotSpecial;
+-(void)gameOverSpeed;
 
 @end

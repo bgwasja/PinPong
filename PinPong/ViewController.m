@@ -65,7 +65,7 @@
     for (int i = 0; i < levelId; i++) {
         [self addBall];
     }
-    
+
     [self addWall];
     [self addBoard];
     [self levelGame];
@@ -94,40 +94,49 @@
 {
     if (levelId == 1) {
         numberBulletPlayer = 10;
+        fieldImage = [[UIColor alloc] initWithPatternImage:[UIImage imageNamed:@"field.png"]];
     }
     if (levelId == 2) {
         [self addBlock];
         numberBulletPlayer = 10;
+        fieldImage = [[UIColor alloc] initWithPatternImage:[UIImage imageNamed:@"field2.png"]];
     }
     if (levelId == 3) {
         [self addBlockDetonating];
         numberBulletPlayer = 12;
+        fieldImage = [[UIColor alloc] initWithPatternImage:[UIImage imageNamed:@"field3.png"]];
     }
     if (levelId == 4) {
         [self addBlockDetonating];
         [self addBlock];
         numberBulletPlayer = 14;
+        fieldImage = [[UIColor alloc] initWithPatternImage:[UIImage imageNamed:@"field4.png"]];
     }
     if (levelId == 5) {
         [self addWallBlock];
         numberBulletPlayer = 16;
+        fieldImage = [[UIColor alloc] initWithPatternImage:[UIImage imageNamed:@"field5.png"]];
     }
     if (levelId == 6) {
         [self addWallBlock];
         [self addBlock];
         numberBulletPlayer = 18;
+        fieldImage = [[UIColor alloc] initWithPatternImage:[UIImage imageNamed:@"field6.png"]];
     }
     if (levelId == 7) {
         [self addBlock];
         [self addBlockDeleteScores];
         numberBulletPlayer = 20;
+        fieldImage = [[UIColor alloc] initWithPatternImage:[UIImage imageNamed:@"field7.png"]];
     }
     if (levelId == 8) {
         [self addBlockDeleteScores];
         [self addBlock];
         [self addBlockDetonating];
         numberBulletPlayer = 22;
+        fieldImage = [[UIColor alloc] initWithPatternImage:[UIImage imageNamed:@"field8.png"]];
     }
+    self.view.backgroundColor = fieldImage;
 }
 
 
@@ -285,7 +294,7 @@
     for (int i = 0; i <= numberBulletPlayer; i++) {
         [self movementFire];
     }
-
+    
     [self.objects removeObjectsInArray:objectsToDelete];
     [self playRobot];
     [self updateScore];
@@ -380,9 +389,14 @@
 
 -(void)killTimers
 {
-    if ([gameTimer isValid] || [bulletRobotTimer isValid]) {
+    if ([gameTimer isValid]) {
         [gameTimer invalidate];
+    }
+    if ([bulletRobotTimer isValid]) {
         [bulletRobotTimer invalidate];
+    }
+    if ([bulletRobotSpecialTimer isValid]) {
+        [bulletRobotSpecialTimer invalidate];
     }
 }
 
@@ -410,6 +424,16 @@
             [self killTimers];
         }
     }
+}
+
+
+-(void)gameOverSpeed
+{
+    scoresRobot = intMaxScore;
+    scoresPlayer = 0;
+    statusGameString = [NSString stringWithFormat:@"You loser !!!"];
+    [self performSegueWithIdentifier:@"level" sender:self];
+    [self killTimers];
 }
 
 

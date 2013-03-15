@@ -170,6 +170,8 @@
 				AA95212A16C80C8700CCA06B /* BulletPlayer.m */,
 				AA52E9F816D64E3300A8A1DE /* BulletRobot.h */,
 				AA52E9F916D64E3300A8A1DE /* BulletRobot.m */,
+				AAB1CA4A16F2212E00F3F296 /* BulletRobotSpecial.h */,
+				AAB1CA4B16F2212E00F3F296 /* BulletRobotSpecial.m */,
 				AAD5F5FC16CA6BA300686334 /* Wall.h */,
 				AAD5F5FD16CA6BA300686334 /* Wall.m */,
 				AAD8B48016CD1B56000871D5 /* PlayerBoard.h */,
@@ -180,8 +182,6 @@
 				AAC7E23D16DCFA8E005180F5 /* BlockDetonating.m */,
 				AA8409D716E63996007A3843 /* BlockDeleteScores.h */,
 				AA8409D816E63996007A3843 /* BlockDeleteScores.m */,
-				AAB1CA4A16F2212E00F3F296 /* BulletRobotSpecial.h */,
-				AAB1CA4B16F2212E00F3F296 /* BulletRobotSpecial.m */,
 			);
 			name = Object;
 			sourceTree = "<group>";

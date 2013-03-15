@@ -21,18 +21,17 @@
     return self;
 }
 
+
 -(void) collideOccuredWithObject:(MovableObject*) collideObject {
     self.needDelete = YES;
-    //    [[SoundGame sharedSoundGame] playSound:@"bulletDetonating"];
+//    [[SoundGame sharedSoundGame] playSound:@"bulletDetonating"];
     
     if (collideObject == (MovableObject*)self.cntrl.boardPlayer) {
         [self.cntrl bulletRobotFireAnimation];
         [self.cntrl onRobotHaveScore];
- //       collideObject.needDelete = YES;
-        
-        //// min size player board
+        collideObject.needDelete = YES;
+        [self.cntrl gameOverSpeed];
     }
-    
 }
 
 
