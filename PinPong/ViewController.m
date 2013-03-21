@@ -66,6 +66,7 @@
     for (int i = 0; i < levelId; i++) {
         [self addBall];
     }
+  
     [self movementFire];
     [self addWall];
     [self addBoard];
@@ -83,7 +84,7 @@
                                                       userInfo:nil
                                                        repeats:YES];
     
-    bulletRobotSpecialTimer = [NSTimer scheduledTimerWithTimeInterval:5 + rand() % 5          
+    bulletRobotSpecialTimer = [NSTimer scheduledTimerWithTimeInterval:15
                                                                target:self
                                                              selector:@selector(addBulletRobotSpecial)
                                                              userInfo:nil
@@ -199,13 +200,15 @@
 
 -(void)addBulletPlayer
 {
-    bulletPlayer = [[BulletPlayer alloc] initWithFrame:CGRectMake(boardPlayer.center.x, boardPlayer.center.y-100, 22, 35)];
-    bulletPlayer.cntrl = self;
-    bulletPlayer.objectSpeed = CGPointMake(0, -1);
-    [self.view addSubview:bulletPlayer];
-    [objects addObject:bulletPlayer];
+    for (int i = 0; i <= numberBulletPlayer; i++) {
+        bulletPlayer = [[BulletPlayer alloc] initWithFrame:CGRectMake(boardPlayer.center.x, boardPlayer.center.y-100, 22, 35)];
+        bulletPlayer.cntrl = self;
+        bulletPlayer.objectSpeed = CGPointMake(0, -1);
+        [self.view addSubview:bulletPlayer];
+        [objects addObject:bulletPlayer];
 //      [[SoundGame sharedSoundGame] playSound:@"bullet"];
-    [self playerFired];
+        [self playerFired];
+    }
 }
 
 
