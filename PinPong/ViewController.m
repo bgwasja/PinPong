@@ -91,53 +91,47 @@
                                                               repeats:NO];
 }
 
-
+//переробити левели через окремий клас (може)
 -(void)levelGame
 {
     if (levelId == 1) {
         numberBulletPlayer = 10;
-        fieldImage = [[UIColor alloc] initWithPatternImage:[UIImage imageNamed:@"field.png"]];
     }
     if (levelId == 2) {
         [self addBlock];
         numberBulletPlayer = 10;
-        fieldImage = [[UIColor alloc] initWithPatternImage:[UIImage imageNamed:@"field2.png"]];
     }
     if (levelId == 3) {
         [self addBlockDetonating];
         numberBulletPlayer = 12;
-        fieldImage = [[UIColor alloc] initWithPatternImage:[UIImage imageNamed:@"field3.png"]];
     }
     if (levelId == 4) {
         [self addBlockDetonating];
         [self addBlock];
         numberBulletPlayer = 14;
-        fieldImage = [[UIColor alloc] initWithPatternImage:[UIImage imageNamed:@"field4.png"]];
     }
     if (levelId == 5) {
         [self addWallBlock];
         numberBulletPlayer = 16;
-        fieldImage = [[UIColor alloc] initWithPatternImage:[UIImage imageNamed:@"field5.png"]];
     }
     if (levelId == 6) {
         [self addWallBlock];
         [self addBlock];
         numberBulletPlayer = 18;
-        fieldImage = [[UIColor alloc] initWithPatternImage:[UIImage imageNamed:@"field6.png"]];
     }
     if (levelId == 7) {
         [self addBlock];
         [self addBlockDeleteScores];
         numberBulletPlayer = 20;
-        fieldImage = [[UIColor alloc] initWithPatternImage:[UIImage imageNamed:@"field7.png"]];
     }
     if (levelId == 8) {
         [self addBlockDeleteScores];
         [self addBlock];
         [self addBlockDetonating];
         numberBulletPlayer = 22;
-        fieldImage = [[UIColor alloc] initWithPatternImage:[UIImage imageNamed:@"field8.png"]];
     }
+    
+    fieldImage = [[UIColor alloc] initWithPatternImage:[UIImage imageNamed:@"field.png"]];
     self.view.backgroundColor = fieldImage;
 }
 
@@ -200,7 +194,7 @@
 
 -(void)addBulletPlayer
 {
-    for (int i = 0; i <= numberBulletPlayer; i++) {
+    if (numberBulletPlayer > 0) {
         bulletPlayer = [[BulletPlayer alloc] initWithFrame:CGRectMake(boardPlayer.center.x, boardPlayer.center.y-100, 22, 35)];
         bulletPlayer.cntrl = self;
         bulletPlayer.objectSpeed = CGPointMake(0, -1);

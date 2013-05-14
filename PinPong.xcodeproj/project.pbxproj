@@ -21,8 +21,6 @@
 		AA75CDA316DBEE2900B6A0C2 /* star1.png in Resources */ = {isa = PBXBuildFile; fileRef = AA75CD9F16DBEE2900B6A0C2 /* star1.png */; };
 		AA75CDA416DBEE2900B6A0C2 /* star2.png in Resources */ = {isa = PBXBuildFile; fileRef = AA75CDA016DBEE2900B6A0C2 /* star2.png */; };
 		AA75CDA516DBEE2900B6A0C2 /* star3.png in Resources */ = {isa = PBXBuildFile; fileRef = AA75CDA116DBEE2900B6A0C2 /* star3.png */; };
-		AA8409D116E63560007A3843 /* levelView.png in Resources */ = {isa = PBXBuildFile; fileRef = AA8409D016E63560007A3843 /* levelView.png */; };
-		AA8409D416E63591007A3843 /* StartPage.png in Resources */ = {isa = PBXBuildFile; fileRef = AA8409D316E63591007A3843 /* StartPage.png */; };
 		AA8409D616E63935007A3843 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = AA8409D516E63935007A3843 /* icon.png */; };
 		AA8409D916E63996007A3843 /* BlockDeleteScores.m in Sources */ = {isa = PBXBuildFile; fileRef = AA8409D816E63996007A3843 /* BlockDeleteScores.m */; };
 		AA95212B16C80C8700CCA06B /* BulletPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = AA95212A16C80C8700CCA06B /* BulletPlayer.m */; };
@@ -82,8 +80,6 @@
 		AA75CD9F16DBEE2900B6A0C2 /* star1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = star1.png; sourceTree = "<group>"; };
 		AA75CDA016DBEE2900B6A0C2 /* star2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = star2.png; sourceTree = "<group>"; };
 		AA75CDA116DBEE2900B6A0C2 /* star3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = star3.png; sourceTree = "<group>"; };
-		AA8409D016E63560007A3843 /* levelView.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = levelView.png; path = ../../../game/levelView.png; sourceTree = "<group>"; };
-		AA8409D316E63591007A3843 /* StartPage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = StartPage.png; path = ../../../game/StartPage.png; sourceTree = "<group>"; };
 		AA8409D516E63935007A3843 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon.png; path = ../icon.png; sourceTree = "<group>"; };
 		AA8409D716E63996007A3843 /* BlockDeleteScores.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlockDeleteScores.h; sourceTree = "<group>"; };
 		AA8409D816E63996007A3843 /* BlockDeleteScores.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BlockDeleteScores.m; sourceTree = "<group>"; };
@@ -186,6 +182,37 @@
 			name = Object;
 			sourceTree = "<group>";
 		};
+		AA8D403F17425C810063AF18 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				AAEA20E716B5A9000019C0A4 /* ViewController.h */,
+				AAEA20E816B5A9000019C0A4 /* ViewController.m */,
+				AAC62CEF16C4023E009AE1E6 /* StartPageViewController.h */,
+				AAC62CF016C4023E009AE1E6 /* StartPageViewController.m */,
+				AAC62CF316C402BB009AE1E6 /* LevelEndViewController.h */,
+				AAC62CF416C402BB009AE1E6 /* LevelEndViewController.m */,
+				AA59715816D3B3D60050C0F4 /* GameOverViewController.h */,
+				AA59715916D3B3D60050C0F4 /* GameOverViewController.m */,
+				AACFF2AD16E0E03900C1FB82 /* LevelViewController.h */,
+				AACFF2AE16E0E03900C1FB82 /* LevelViewController.m */,
+				AAB5E8E616E8C1DF005127D6 /* InformationViewController.h */,
+				AAB5E8E716E8C1DF005127D6 /* InformationViewController.m */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		AA8D404017425CCF0063AF18 /* Sound */ = {
+			isa = PBXGroup;
+			children = (
+				AAC44B4C16EF62A8006067B3 /* firework.mp3 */,
+				AAC44B4A16EF5E7B006067B3 /* bulletDetonating.mp3 */,
+				AAC44B4816EF5E70006067B3 /* bullet.mp3 */,
+				AAC44B4616EF5E61006067B3 /* blockDetonating.mp3 */,
+				AAC44B4E16EF63AA006067B3 /* blockDeleteScores.mp3 */,
+			);
+			name = Sound;
+			sourceTree = "<group>";
+		};
 		AAEA20BD16B5A9000019C0A4 = {
 			isa = PBXGroup;
 			children = (
@@ -227,18 +254,7 @@
 				AACC861216C9262900F4CA86 /* MovableObject.h */,
 				AACC861316C9262900F4CA86 /* MovableObject.m */,
 				AA0FEA6416D65B6700BE8A04 /* Object */,
-				AAEA20E716B5A9000019C0A4 /* ViewController.h */,
-				AAEA20E816B5A9000019C0A4 /* ViewController.m */,
-				AAC62CEF16C4023E009AE1E6 /* StartPageViewController.h */,
-				AAC62CF016C4023E009AE1E6 /* StartPageViewController.m */,
-				AAC62CF316C402BB009AE1E6 /* LevelEndViewController.h */,
-				AAC62CF416C402BB009AE1E6 /* LevelEndViewController.m */,
-				AA59715816D3B3D60050C0F4 /* GameOverViewController.h */,
-				AA59715916D3B3D60050C0F4 /* GameOverViewController.m */,
-				AACFF2AD16E0E03900C1FB82 /* LevelViewController.h */,
-				AACFF2AE16E0E03900C1FB82 /* LevelViewController.m */,
-				AAB5E8E616E8C1DF005127D6 /* InformationViewController.h */,
-				AAB5E8E716E8C1DF005127D6 /* InformationViewController.m */,
+				AA8D403F17425C810063AF18 /* Controllers */,
 				AAEA20E416B5A9000019C0A4 /* MainStoryboard.storyboard */,
 				AAEA20D316B5A9000019C0A4 /* Supporting Files */,
 			);
@@ -248,15 +264,9 @@
 		AAEA20D316B5A9000019C0A4 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				AA57F22816EF834100F4E8F9 /* blockDeleteScores.jpeg */,
-				AAC44B4E16EF63AA006067B3 /* blockDeleteScores.mp3 */,
-				AAC44B4C16EF62A8006067B3 /* firework.mp3 */,
-				AAC44B4A16EF5E7B006067B3 /* bulletDetonating.mp3 */,
-				AAC44B4816EF5E70006067B3 /* bullet.mp3 */,
-				AAC44B4616EF5E61006067B3 /* blockDetonating.mp3 */,
+				AA8D404017425CCF0063AF18 /* Sound */,
 				AA8409D516E63935007A3843 /* icon.png */,
-				AA8409D316E63591007A3843 /* StartPage.png */,
-				AA8409D016E63560007A3843 /* levelView.png */,
+				AA57F22816EF834100F4E8F9 /* blockDeleteScores.jpeg */,
 				AACFF2AB16E0DE5800C1FB82 /* block.png */,
 				AADEA65816DF90D2001C55AF /* bulletRobot.png */,
 				AADEA65616DF90C2001C55AF /* bullet.png */,
@@ -356,8 +366,6 @@
 				AADEA65716DF90C2001C55AF /* bullet.png in Resources */,
 				AADEA65916DF90D3001C55AF /* bulletRobot.png in Resources */,
 				AACFF2AC16E0DE5800C1FB82 /* block.png in Resources */,
-				AA8409D116E63560007A3843 /* levelView.png in Resources */,
-				AA8409D416E63591007A3843 /* StartPage.png in Resources */,
 				AA8409D616E63935007A3843 /* icon.png in Resources */,
 				AAC44B4716EF5E61006067B3 /* blockDetonating.mp3 in Resources */,
 				AAC44B4916EF5E70006067B3 /* bullet.mp3 in Resources */,
