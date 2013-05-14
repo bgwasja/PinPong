@@ -91,7 +91,7 @@
                                                               repeats:NO];
 }
 
-//переробити левели через окремий клас (може)
+
 -(void)levelGame
 {
     if (levelId == 1) {
@@ -312,7 +312,7 @@
         lastBall = ball;
         speed = 1 + rand() % 6;
     }
-    
+
     if (ball.center.y <= self.view.center.y) {
         if (ball.center.x < boardRobot.center.x) {
             CGPoint p = CGPointMake(boardRobot.center.x-speed, boardRobot.center.y);
