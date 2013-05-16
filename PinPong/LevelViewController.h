@@ -10,7 +10,7 @@
 #import "CustomCollectionView.h"
 
 
-@interface LevelViewController : UICollectionViewController <UICollectionViewDataSource, UICollectionViewDelegate>
+@interface LevelViewController : UICollectionViewController <UICollectionViewDataSource, UICollectionViewDelegate,UICollectionViewDelegateFlowLayout>
 
 @property (retain, nonatomic) NSArray *levelsArray;
 

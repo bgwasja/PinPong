@@ -191,6 +191,7 @@
 		AA8D403F17425C810063AF18 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				AAFA21D3174510C000A6E010 /* LevelView */,
 				AAEA20E716B5A9000019C0A4 /* ViewController.h */,
 				AAEA20E816B5A9000019C0A4 /* ViewController.m */,
 				AAC62CEF16C4023E009AE1E6 /* StartPageViewController.h */,
@@ -201,12 +202,6 @@
 				AA59715916D3B3D60050C0F4 /* GameOverViewController.m */,
 				AAB5E8E616E8C1DF005127D6 /* InformationViewController.h */,
 				AAB5E8E716E8C1DF005127D6 /* InformationViewController.m */,
-				AACFF2AD16E0E03900C1FB82 /* LevelViewController.h */,
-				AACFF2AE16E0E03900C1FB82 /* LevelViewController.m */,
-				AAFA21CD1744EB7100A6E010 /* LevelCell.h */,
-				AAFA21CE1744EB7100A6E010 /* LevelCell.m */,
-				AAFA21D01744EFDD00A6E010 /* CustomCollectionView.h */,
-				AAFA21D11744EFDD00A6E010 /* CustomCollectionView.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -302,6 +297,19 @@
 				AAEA20E216B5A9000019C0A4 /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		AAFA21D3174510C000A6E010 /* LevelView */ = {
+			isa = PBXGroup;
+			children = (
+				AACFF2AD16E0E03900C1FB82 /* LevelViewController.h */,
+				AACFF2AE16E0E03900C1FB82 /* LevelViewController.m */,
+				AAFA21CD1744EB7100A6E010 /* LevelCell.h */,
+				AAFA21CE1744EB7100A6E010 /* LevelCell.m */,
+				AAFA21D01744EFDD00A6E010 /* CustomCollectionView.h */,
+				AAFA21D11744EFDD00A6E010 /* CustomCollectionView.m */,
+			);
+			name = LevelView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
