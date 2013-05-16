@@ -60,6 +60,8 @@
 		AAEA20E316B5A9000019C0A4 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AAEA20E216B5A9000019C0A4 /* Default-568h@2x.png */; };
 		AAEA20E616B5A9000019C0A4 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AAEA20E416B5A9000019C0A4 /* MainStoryboard.storyboard */; };
 		AAEA20E916B5A9000019C0A4 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AAEA20E816B5A9000019C0A4 /* ViewController.m */; };
+		AAFA21CF1744EB7100A6E010 /* LevelCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AAFA21CE1744EB7100A6E010 /* LevelCell.m */; };
+		AAFA21D21744EFDD00A6E010 /* CustomCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = AAFA21D11744EFDD00A6E010 /* CustomCollectionView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -138,6 +140,10 @@
 		AAEA20E516B5A9000019C0A4 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		AAEA20E716B5A9000019C0A4 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		AAEA20E816B5A9000019C0A4 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		AAFA21CD1744EB7100A6E010 /* LevelCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LevelCell.h; sourceTree = "<group>"; };
+		AAFA21CE1744EB7100A6E010 /* LevelCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LevelCell.m; sourceTree = "<group>"; };
+		AAFA21D01744EFDD00A6E010 /* CustomCollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomCollectionView.h; sourceTree = "<group>"; };
+		AAFA21D11744EFDD00A6E010 /* CustomCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomCollectionView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -193,10 +199,14 @@
 				AAC62CF416C402BB009AE1E6 /* LevelEndViewController.m */,
 				AA59715816D3B3D60050C0F4 /* GameOverViewController.h */,
 				AA59715916D3B3D60050C0F4 /* GameOverViewController.m */,
-				AACFF2AD16E0E03900C1FB82 /* LevelViewController.h */,
-				AACFF2AE16E0E03900C1FB82 /* LevelViewController.m */,
 				AAB5E8E616E8C1DF005127D6 /* InformationViewController.h */,
 				AAB5E8E716E8C1DF005127D6 /* InformationViewController.m */,
+				AACFF2AD16E0E03900C1FB82 /* LevelViewController.h */,
+				AACFF2AE16E0E03900C1FB82 /* LevelViewController.m */,
+				AAFA21CD1744EB7100A6E010 /* LevelCell.h */,
+				AAFA21CE1744EB7100A6E010 /* LevelCell.m */,
+				AAFA21D01744EFDD00A6E010 /* CustomCollectionView.h */,
+				AAFA21D11744EFDD00A6E010 /* CustomCollectionView.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -402,6 +412,8 @@
 				AAB5E8E816E8C1DF005127D6 /* InformationViewController.m in Sources */,
 				AAB5E8F016E8CAF1005127D6 /* SoundGame.m in Sources */,
 				AAB1CA4C16F2212F00F3F296 /* BulletRobotSpecial.m in Sources */,
+				AAFA21CF1744EB7100A6E010 /* LevelCell.m in Sources */,
+				AAFA21D21744EFDD00A6E010 /* CustomCollectionView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

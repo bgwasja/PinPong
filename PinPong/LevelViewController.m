@@ -10,13 +10,15 @@
 #import "ViewController.h"
 #import <QuartzCore/QuartzCore.h> 
 #import "Ball.h"
+#import "LevelCell.h"
+
+
 
 @interface LevelViewController ()
 
 @end
 
 @implementation LevelViewController
-@synthesize levelTable;
 @synthesize levelsArray;
 
 
@@ -33,52 +35,61 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	
+    [self.collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:@"LevelCell"];
     self.levelsArray = [NSArray arrayWithObjects:
                         @"Level  -  1", @"Level  -  2",
                         @"Level  -  3", @"Level  -  4",
                         @"Level  -  5", @"Level  -  6",
                         @"Level  -  7", @"Level  -  8", nil];
-    levelTable.rowHeight = 41;
-    levelTable.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"field.png"]];
 }
 
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+#pragma mark -
+#pragma mark UICollectionViewDataSource
+
+-(NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView
 {
     return 1;
 }
 
 
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+-(NSInteger)collectionView:(UICollectionView *)collectionView
+    numberOfItemsInSection:(NSInteger)section
 {
-    return levelsArray.count;
+    return [levelsArray count];
 }
 
 
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+-(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView
+                 cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"Cell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-    if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault
-                                       reuseIdentifier:CellIdentifier];
-    }
-    tableView.layer.cornerRadius = 10;
-    cell.textLabel.text = [levelsArray objectAtIndex:indexPath.row];
-    cell.textLabel.textColor = [UIColor whiteColor];
-    cell.textLabel.textAlignment = UITextAlignmentCenter;
-    cell.textLabel.font = [UIFont fontWithName:@"Palatino Bold" size:17];
+    LevelCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"cell" forIndexPath:indexPath];
+    UIImageView *bg = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"icon.png"]];
+    cell.backgroundView = bg;
+    cell.numberLevel.text = [levelsArray objectAtIndex:indexPath.row];
     return cell;
 }
 
 
-- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
-    return 0;
+-(UICollectionReusableView *)collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath
+{
+    CustomCollectionView *header = nil;
+    if ([kind isEqual:UICollectionElementKindSectionHeader])
+    {
+        header = [collectionView dequeueReusableSupplementaryViewOfKind:kind
+                                                    withReuseIdentifier:@"MyHeader"
+                                                           forIndexPath:indexPath];
+        header.headerLabel.text = @"Select level";
+    }
+    return header;
 }
 
 
--(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+#pragma mark -
+#pragma mark UICollectionViewDelegate
+
+-(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
+{
     switch (indexPath.row) {
         case 0:
             levelId = 1;

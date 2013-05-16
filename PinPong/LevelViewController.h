@@ -7,14 +7,11 @@
 //
 
 #import "ViewController.h"
+#import "CustomCollectionView.h"
 
-@interface LevelViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
-{
-    UITableView *levelTable;
-    NSArray *levelsArray;
-}
 
-@property (retain, nonatomic) IBOutlet UITableView *levelTable;
+@interface LevelViewController : UICollectionViewController <UICollectionViewDataSource, UICollectionViewDelegate>
+
 @property (retain, nonatomic) NSArray *levelsArray;
 
 @end
