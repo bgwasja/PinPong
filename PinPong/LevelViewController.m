@@ -49,7 +49,7 @@
 
 -(NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView
 {
-    return 1;
+    return 2;
 }
 
 
@@ -79,7 +79,11 @@
         header = [collectionView dequeueReusableSupplementaryViewOfKind:kind
                                                     withReuseIdentifier:@"MyHeader"
                                                            forIndexPath:indexPath];
-        header.headerLabel.text = @"Select level";
+        if (indexPath.section == 0) {
+            header.headerLabel.text = @"Open levels";
+        } else {
+            header.headerLabel.text = @"Blocked levels";
+        }
     }
     return header;
 }
