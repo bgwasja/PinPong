@@ -96,8 +96,8 @@
 }
 
 
--(void) setStatusLevelOver:(BOOL*)statusLVL{
-    levelOverStatus = statusLVL;
+-(void) setStatusLevelOver:(BOOL*)statusLevelOver{
+    levelOverStatus = statusLevelOver;
 }
 
 

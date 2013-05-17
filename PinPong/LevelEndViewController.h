@@ -29,6 +29,6 @@
 -(void)setScore2:(int)score2;
 -(void)setStatusGame:(NSString*)status;
 -(void)setStar:(int)score1 :(int)score2;
--(void) setStatusLevelOver:(BOOL*)statusLVL;
+-(void)setStatusLevelOver:(BOOL*)statusLevelOver;
 
 @end

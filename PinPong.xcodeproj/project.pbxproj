@@ -191,7 +191,7 @@
 		AA8D403F17425C810063AF18 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				AAFA21D3174510C000A6E010 /* LevelView */,
+				AAFA21D3174510C000A6E010 /* LevelViewController */,
 				AAEA20E716B5A9000019C0A4 /* ViewController.h */,
 				AAEA20E816B5A9000019C0A4 /* ViewController.m */,
 				AAC62CEF16C4023E009AE1E6 /* StartPageViewController.h */,
@@ -299,7 +299,7 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		AAFA21D3174510C000A6E010 /* LevelView */ = {
+		AAFA21D3174510C000A6E010 /* LevelViewController */ = {
 			isa = PBXGroup;
 			children = (
 				AACFF2AD16E0E03900C1FB82 /* LevelViewController.h */,
@@ -309,7 +309,7 @@
 				AAFA21D01744EFDD00A6E010 /* CustomCollectionView.h */,
 				AAFA21D11744EFDD00A6E010 /* CustomCollectionView.m */,
 			);
-			name = LevelView;
+			name = LevelViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

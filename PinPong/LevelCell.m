@@ -9,7 +9,7 @@
 #import "LevelCell.h"
 
 @implementation LevelCell
-@synthesize numberLevel;
+@synthesize numberLevelLabel;
 
 - (id)initWithFrame:(CGRect)frame
 {

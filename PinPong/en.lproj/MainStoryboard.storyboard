@@ -112,21 +112,21 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="ugN-9a-U2T">
-                            <size key="itemSize" width="137" height="137"/>
+                            <size key="itemSize" width="92" height="92"/>
                             <size key="headerReferenceSize" width="50" height="50"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
                             <collectionViewCell opaque="NO" clipsSubviews="YES" contentMode="center" reuseIdentifier="cell" id="D1f-55-iNi" customClass="LevelCell">
-                                <rect key="frame" x="0.0" y="50" width="137" height="137"/>
+                                <rect key="frame" x="0.0" y="50" width="70" height="70"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                    <rect key="frame" x="0.0" y="0.0" width="137" height="137"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="70" height="70"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qej-p5-iST">
-                                            <fontDescription key="fontDescription" name="Palatino-Bold" family="Palatino" pointSize="20"/>
+                                            <fontDescription key="fontDescription" name="Palatino-Bold" family="Palatino" pointSize="17"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
@@ -135,14 +135,14 @@
                                 </view>
                                 <color key="backgroundColor" red="0.2023499429" green="0.31626661550000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="qej-p5-iST" secondAttribute="bottom" constant="20" type="default" id="APH-fn-GQq"/>
-                                    <constraint firstItem="qej-p5-iST" firstAttribute="top" secondItem="D1f-55-iNi" secondAttribute="top" constant="20" type="default" id="Sme-Ix-6na"/>
-                                    <constraint firstAttribute="trailing" secondItem="qej-p5-iST" secondAttribute="trailing" constant="20" type="default" id="rp8-pG-2UA"/>
-                                    <constraint firstItem="qej-p5-iST" firstAttribute="leading" secondItem="D1f-55-iNi" secondAttribute="leading" constant="20" type="default" id="tDB-9g-9Gt"/>
+                                    <constraint firstItem="qej-p5-iST" firstAttribute="leading" secondItem="D1f-55-iNi" secondAttribute="leading" type="default" id="14e-Q7-nfU"/>
+                                    <constraint firstItem="qej-p5-iST" firstAttribute="bottom" secondItem="D1f-55-iNi" secondAttribute="bottom" type="default" id="2KO-EZ-qG6"/>
+                                    <constraint firstItem="qej-p5-iST" firstAttribute="top" secondItem="D1f-55-iNi" secondAttribute="top" type="default" id="Nxv-nR-6rG"/>
+                                    <constraint firstItem="qej-p5-iST" firstAttribute="trailing" secondItem="D1f-55-iNi" secondAttribute="trailing" type="default" id="V3c-bP-pCE"/>
                                 </constraints>
-                                <size key="customSize" width="137" height="137"/>
+                                <size key="customSize" width="70" height="70"/>
                                 <connections>
-                                    <outlet property="numberLevel" destination="qej-p5-iST" id="tWv-sA-8tF"/>
+                                    <outlet property="numberLevelLabel" destination="qej-p5-iST" id="m2U-Q7-5qP"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>
@@ -756,7 +756,7 @@
         <class className="LevelCell" superclassName="UICollectionViewCell">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/LevelCell.h"/>
             <relationships>
-                <relationship kind="outlet" name="numberLevel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="numberLevelLabel" candidateClass="UILabel"/>
             </relationships>
         </class>
         <class className="LevelEndViewController" superclassName="UIViewController">
@@ -774,12 +774,27 @@
         <class className="LevelViewController" superclassName="UICollectionViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/LevelViewController.h"/>
         </class>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
         <class className="StartPageViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/StartPageViewController.h"/>
             <relationships>
                 <relationship kind="action" name="emailButtonTapped:"/>
                 <relationship kind="action" name="playButtonTapped:"/>
             </relationships>
+        </class>
+        <class className="UICollectionReusableView" superclassName="UIView">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/UICollectionReusableView.h"/>
+        </class>
+        <class className="UICollectionViewCell" superclassName="UICollectionReusableView">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/UICollectionViewCell.h"/>
+        </class>
+        <class className="UICollectionViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/UICollectionViewController.h"/>
+        </class>
+        <class className="UICollectionViewFlowLayout" superclassName="UICollectionViewLayout">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/UICollectionViewFlowLayout.h"/>
         </class>
         <class className="ViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/ViewController.h"/>

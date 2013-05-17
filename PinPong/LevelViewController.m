@@ -70,8 +70,8 @@
     }else {
         bg = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"block.png"]];
     }
+    cell.numberLevelLabel.text = [levelsArray objectAtIndex:indexPath.row];
     cell.backgroundView = bg;
-    cell.numberLevel.text = [levelsArray objectAtIndex:indexPath.row];
     return cell;
 }
 
@@ -150,12 +150,12 @@
 
 - (UIEdgeInsets)collectionView:
 (UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout insetForSectionAtIndex:(NSInteger)section {
-    return UIEdgeInsetsMake(12, 12, 12, 12);
+    return UIEdgeInsetsMake(8, 8, 8, 8);
 }
 
 
 - (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout minimumInteritemSpacingForSectionAtIndex:(NSInteger)section {
-    return 20;
+    return 10;
 }
 
 
