@@ -64,7 +64,12 @@
                  cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
     LevelCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"cell" forIndexPath:indexPath];
-    UIImageView *bg = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"icon.png"]];
+    UIImageView *bg;
+    if (indexPath.section == 0) {
+        bg = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"icon.png"]];
+    }else {
+        bg = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"block.png"]];
+    }
     cell.backgroundView = bg;
     cell.numberLevel.text = [levelsArray objectAtIndex:indexPath.row];
     return cell;

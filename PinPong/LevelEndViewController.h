@@ -19,7 +19,7 @@
 @property (strong, nonatomic) IBOutlet UILabel *statusGameLabel;
 @property (retain, nonatomic) IBOutlet UIImageView *starImageView;
 @property (retain, nonatomic) NSMutableArray* objects;
-@property (nonatomic) BOOL* lvl;
+@property (nonatomic) BOOL* levelOverStatus;
 
 - (IBAction)nextLevelButtonTapped:(id)sender;
 - (IBAction)menuButtonTapped:(id)sender;

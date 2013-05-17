@@ -20,7 +20,7 @@
 @synthesize statusGameLabel;
 @synthesize starImageView;
 @synthesize objects;
-@synthesize lvl;
+@synthesize levelOverStatus;
 
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -56,7 +56,7 @@
                              cache:NO];
     [UIView commitAnimations];
     if (levelId <= intMaxLevel) {
-        if (lvl == YES) {
+        if (levelOverStatus == YES) {
             levelId++;
         }
     }
@@ -97,7 +97,7 @@
 
 
 -(void) setStatusLevelOver:(BOOL*)statusLVL{
-    lvl = statusLVL;
+    levelOverStatus = statusLVL;
 }
 
 
