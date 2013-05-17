@@ -49,6 +49,7 @@
 @synthesize blockDeleteScores;
 @synthesize numberBulletPlayerLabel;
 @synthesize bulletRobotSpecial;
+@synthesize goodLevelOver;
 
 
 -(void)viewDidLoad
@@ -400,9 +401,11 @@
     if (scoresPlayer >= intMaxScore || scoresRobot >= intMaxScore) {
         if (scoresPlayer >= intMaxScore) {
             statusGameString = [NSString stringWithFormat:@"You win !!!"];
+            goodLevelOver = YES;
         }
         if (scoresRobot >= intMaxScore) {
             statusGameString = [NSString stringWithFormat:@"You loser !!!"];
+            goodLevelOver = NO;
         }
         [self performSegueWithIdentifier:@"level" sender:self];
         [self killTimers];
@@ -447,7 +450,8 @@
         [c setScore1:[scoreLabel1.text intValue]];
         [c setScore2:[scoreLabel2.text intValue]];
         [c setStatusGame:statusGameString];
-        [c setStar:scoresPlayer :scoresRobot];
+        [c setStar:scoresPlayer:scoresRobot];
+        [c setStatusLevelOver:goodLevelOver];
     }
     if ([segue.identifier isEqualToString:@"gameOver"]) {
         GameOverViewController* c = (GameOverViewController*)segue.destinationViewController;

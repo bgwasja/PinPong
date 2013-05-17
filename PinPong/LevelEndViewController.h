@@ -19,6 +19,7 @@
 @property (strong, nonatomic) IBOutlet UILabel *statusGameLabel;
 @property (retain, nonatomic) IBOutlet UIImageView *starImageView;
 @property (retain, nonatomic) NSMutableArray* objects;
+@property (nonatomic) BOOL* lvl;
 
 - (IBAction)nextLevelButtonTapped:(id)sender;
 - (IBAction)menuButtonTapped:(id)sender;
@@ -28,5 +29,6 @@
 -(void)setScore2:(int)score2;
 -(void)setStatusGame:(NSString*)status;
 -(void)setStar:(int)score1 :(int)score2;
+-(void) setStatusLevelOver:(BOOL*)statusLVL;
 
 @end

@@ -57,6 +57,7 @@
 @property (strong, nonatomic) BlockDetonating *blockDetonating;
 @property (strong, nonatomic) BlockDeleteScores *blockDeleteScores;
 @property (strong, nonatomic) BulletRobotSpecial *bulletRobotSpecial;
+@property (nonatomic) BOOL *goodLevelOver;
 
 
 - (IBAction)addBallButtonTapped:(id)sender;

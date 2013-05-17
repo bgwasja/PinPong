@@ -20,6 +20,7 @@
 @synthesize statusGameLabel;
 @synthesize starImageView;
 @synthesize objects;
+@synthesize lvl;
 
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -54,8 +55,10 @@
                            forView:self.view
                              cache:NO];
     [UIView commitAnimations];
-    if (levelId <= 8) {
-        levelId++;
+    if (levelId <= intMaxLevel) {
+        if (lvl == YES) {
+            levelId++;
+        }
     }
 }
 
@@ -90,6 +93,11 @@
 
 -(void) setStatusGame:(NSString*)status{
     [statusGameLabel setText:[NSString stringWithString:status]];
+}
+
+
+-(void) setStatusLevelOver:(BOOL*)statusLVL{
+    lvl = statusLVL;
 }
 
 
