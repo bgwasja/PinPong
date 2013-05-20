@@ -37,10 +37,10 @@
     [super viewDidLoad];
     [self.collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:@"LevelCell"];
     self.levelsArray = [NSArray arrayWithObjects:
-                        @"Level  -  1", @"Level  -  2",
-                        @"Level  -  3", @"Level  -  4",
-                        @"Level  -  5", @"Level  -  6",
-                        @"Level  -  7", @"Level  -  8", nil];
+                        @"Level - 1", @"Level - 2",
+                        @"Level - 3", @"Level - 4",
+                        @"Level - 5", @"Level - 6",
+                        @"Level - 7", @"Level - 8", nil];
 }
 
 
@@ -49,7 +49,7 @@
 
 -(NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView
 {
-    return 2;
+    return 1;
 }
 
 
@@ -64,12 +64,7 @@
                  cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
     LevelCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"cell" forIndexPath:indexPath];
-    UIImageView *bg;
-    if (indexPath.section == 0) {
-        bg = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"icon.png"]];
-    }else {
-        bg = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"block.png"]];
-    }
+    UIImageView *bg = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"icon.png"]];
     cell.numberLevelLabel.text = [levelsArray objectAtIndex:indexPath.row];
     cell.backgroundView = bg;
     return cell;
@@ -84,11 +79,7 @@
         header = [collectionView dequeueReusableSupplementaryViewOfKind:kind
                                                     withReuseIdentifier:@"MyHeader"
                                                            forIndexPath:indexPath];
-        if (indexPath.section == 0) {
-            header.headerLabel.text = @"Open levels";
-        } else {
-            header.headerLabel.text = @"Blocked levels";
-        }
+        header.headerLabel.text = @"Select level";
     }
     return header;
 }

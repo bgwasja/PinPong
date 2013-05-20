@@ -14,7 +14,6 @@ float speedBulletAnimation;
 int numberCollideBulletPlayer;
 int numberCollideBulletRobot;
 
-
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
